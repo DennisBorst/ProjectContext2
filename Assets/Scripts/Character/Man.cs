@@ -5,6 +5,8 @@ using UnityEngine;
 public class Man : Player
 {
     private bool pulling;
+    private float x_input;
+    private float z_input;
     public override void Start()
     {
         base.Start();

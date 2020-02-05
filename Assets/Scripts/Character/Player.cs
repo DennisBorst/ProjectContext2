@@ -8,13 +8,13 @@ public class Player : MonoBehaviour
     public float movementSpeed;
     public bool interact;
     public bool deinteract;
+    public float inputX { get; set; }
+    public float inputZ { get; set; }
 
     //private serialized
     [SerializeField] private GameObject playerObject;
 
     //private
-    private float inputX;
-    private float inputZ;
     private float currentMovementSpeed;
     private float interactTime = 0.3f;
     private float deinteractTime = 0.3f;
