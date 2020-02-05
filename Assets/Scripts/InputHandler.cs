@@ -4,14 +4,13 @@ using UnityEngine;
 //using UnityStandardAssets.CrossPlatformInput;
 public class InputHandler : MonoBehaviour
 {
-    private Player player;
+    //private serialized
+    [SerializeField] private int controllerID = 0;
 
-    [SerializeField]
-    private int controllerID = 0;
-
+    //private
     private bool canOnlyMoveCamera = false;
-
-    //buttons
+    private Player player;
+    
     private KeyCode jumpCode;
     private KeyCode interact;
     private KeyCode deInteract;
@@ -45,8 +44,8 @@ public class InputHandler : MonoBehaviour
                 break;
             case 2:
                 //jumpCode = KeyCode.Joystick2Button0;
-                interact = KeyCode.Joystick1Button0;
-                deInteract = KeyCode.Joystick1Button1;
+                interact = KeyCode.Joystick2Button0;
+                deInteract = KeyCode.Joystick2Button1;
                 startButton = KeyCode.Joystick2Button7;
                 break;
             default:

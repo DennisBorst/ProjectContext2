@@ -2,27 +2,59 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PushPoint : MonoBehaviour
+public class PushPoint : Interactable
 {
-    private Player player;
+    [SerializeField] private GameObject manReadyCanvas;
+    [SerializeField] private Transform teleportPoint;
 
-    void Start()
-    {
-        
-    }
-    void Update()
-    {
-        
-    }
+    private bool manReady;
 
-    private void OnTriggerStay(Collider collider)
+    private void Update()
     {
-        if(collider.gameObject.tag == "Player")
+        if (manCollding)
         {
-            if (GetComponent<Man>())
+            if (man.interact)
             {
-
+                man.ResetCharacter(-1);
+                manReady = true;
+                manReadyCanvas.SetActive(true);
+                Debug.Log("Standing next to the wall");
+            }
+            else if (man.deinteract)
+            {
+                man.ResetCharacter(1);
+                manReady = false;
+                manReadyCanvas.SetActive(false);
+                Debug.Log("Walking away from the wall");
             }
         }
+
+        if (manReady)
+        {
+            if (womanCollding)
+            {
+                if (woman.interact)
+                {
+                    Debug.Log("Teleporting");
+                    man.ResetCharacter(1);
+                    manReady = false;
+                    manReadyCanvas.SetActive(false);
+                    woman.transform.position = teleportPoint.transform.position;
+                }
+            }
+        }
+    }
+
+    public override void OnTriggerEnter(Collider collider)
+    {
+        base.OnTriggerEnter(collider);
+    }
+    public override void OnTriggerExit(Collider collider)
+    {
+        base.OnTriggerExit(collider);
+    }
+    public override void SwitchBool(bool man)
+    {
+        base.SwitchBool(man);
     }
 }

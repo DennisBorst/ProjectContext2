@@ -9,9 +9,22 @@ public class Women : Player
         base.Start();
     }
 
-    void Update()
+    public override void Update()
     {
-        
+        base.Update();
+    }
+    public override void Interact()
+    {
+        //Does some interaction
+        Debug.Log("Interact");
+        interact = true;
+    }
+
+    public override void Deinteract()
+    {
+        base.Deinteract();
+        deinteract = true;
+
     }
 
     public override void Walking(float x_input, float z_input)

@@ -4,55 +4,58 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    [SerializeField] private bool manCollding;
-    [SerializeField] private bool womenCollding;
+    protected bool manCollding;
+    protected bool womanCollding;
 
+    protected Man man;
+    protected Women woman;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
+        man = FindObjectOfType<Man>();
+        woman = FindObjectOfType<Women>();
     }
 
-    // Update is called once per frame
-    private void Update()
-    {
-        if (manCollding)
-        {
-            if (Man.Instance.interact)
-            {
-                Debug.Log("Standing next to a rock");
-            }
-        }
-    }
-
-    private void OnTriggerEnter(Collider collider)
+    public virtual void OnTriggerEnter(Collider collider)
     {
         if(collider.gameObject.tag == "Player")
         {
             if(collider.gameObject.layer == 8)
             {
-                manCollding = true;
+                SwitchBool(true);
             }
             else if(collider.gameObject.layer == 9)
             {
-                womenCollding = true;
+                SwitchBool(false);
             }
         }
     }
 
-    private void OnTriggerExit(Collider collider)
+    public virtual void OnTriggerExit(Collider collider)
     {
         if (collider.gameObject.tag == "Player")
         {
             if (collider.gameObject.layer == 8)
             {
-                manCollding = false;
+                SwitchBool(true);
             }
             else if (collider.gameObject.layer == 9)
             {
-                womenCollding = false;
+                SwitchBool(false);
             }
         }
     }
+
+    public virtual void SwitchBool(bool man)
+    {
+        if (man)
+        {
+            manCollding = !manCollding;
+        }
+        else
+        {
+            womanCollding = !womanCollding;
+        }
+    }
+    
 }
