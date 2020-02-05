@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Man : Player
 {
+    private bool pulling;
     public override void Start()
     {
         base.Start();
@@ -29,6 +30,16 @@ public class Man : Player
     public override void Walking(float x_input, float z_input)
     {
         base.Walking(x_input, z_input);
+    }
+
+    public void Pull()
+    {
+
+    }
+    private float Timer(float timer)
+    {
+        timer -= Time.deltaTime;
+        return timer;
     }
 
     #region Singleton
