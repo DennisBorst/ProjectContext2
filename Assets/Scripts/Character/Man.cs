@@ -16,6 +16,10 @@ public class Man : Player
     {
         base.Update();
     }
+    public override void Input()
+    {
+        base.Input();
+    }
     public override void Interact()
     {
         //Does some interaction
@@ -32,11 +36,6 @@ public class Man : Player
     public override void Walking(float x_input, float z_input)
     {
         base.Walking(x_input, z_input);
-    }
-
-    public void Pull()
-    {
-
     }
     private float Timer(float timer)
     {

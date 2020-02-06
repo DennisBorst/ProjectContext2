@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class Player : MonoBehaviour
 {
@@ -13,12 +14,17 @@ public class Player : MonoBehaviour
 
     //private serialized
     [SerializeField] private GameObject playerObject;
+    [SerializeField] private Camera camera;
 
     //private
     private float currentMovementSpeed;
     private float interactTime = 0.2f;
     private float deinteractTime = 0.2f;
     private float currentInteractTimer;
+    private float cameraY;
+    private float lookDirectionY;
+    private Vector2 lookDirection;
+
 
     private Rigidbody rb;
 
@@ -26,10 +32,84 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         currentInteractTimer = interactTime;
-
+        
         currentMovementSpeed = movementSpeed;
+        //camera = GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineTrackedDolly>();
+        //camera = camera.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineTrackedDolly>().transform.rotation;
     }
     public virtual void Update()
+    {
+        cameraY = camera.transform.rotation.y * 200;
+        this.transform.rotation = Quaternion.Euler(transform.rotation.x, cameraY, transform.rotation.z);
+        Input();
+    }
+    public virtual void Walking(float x_input, float z_input)
+    {
+        inputX = x_input;
+        inputZ = z_input;
+
+        if(currentMovementSpeed != 0)
+        {
+            
+            rb.velocity = new Vector3(0, rb.velocity.y, 0);
+            rb.velocity += transform.right * x_input * currentMovementSpeed;
+            rb.velocity += transform.forward * z_input * currentMovementSpeed;
+
+
+            lookDirection.x = inputX * 90;
+            lookDirection.y = (inputZ * -90) + 90;
+            if (inputZ <= -0.9 && inputX >= -0.9 && inputX <= 0.9)
+            {
+                lookDirectionY = 0 + (cameraY - 180);
+            }
+            else if (inputX > 0 || inputZ > 0)
+            {
+                lookDirectionY = (lookDirection.x + lookDirection.y) / 2 - 180 + (cameraY - 180);
+            }
+            else if(inputX < 0 || inputZ < 0)
+            {
+                lookDirectionY = (lookDirection.x - lookDirection.y) / 2 - 180 + (cameraY - 180);
+            }
+            playerObject.transform.rotation = Quaternion.Euler(0, playerObject.transform.position.y + lookDirectionY, 0);
+
+            /*
+            if (x_input > 0.5f && z_input < 0.5f && z_input > -0.5f) //going to the right
+            {
+                playerObject.transform.rotation = Quaternion.Euler(0, playerObject.transform.position.y - 90, 0);
+            }
+            else if (x_input < -0.5f && z_input < 0.5f && z_input > -0.5f) //going to the left
+            {
+                playerObject.transform.rotation = Quaternion.Euler(0, playerObject.transform.position.y + 90, 0);
+            }
+            else if (x_input < 0.5f && x_input > -0.5f && z_input > 0.5f) //going to the up
+            {
+                playerObject.transform.rotation = Quaternion.Euler(0, playerObject.transform.position.y - 180, 0);
+            }
+            else if (x_input < 0.5f && x_input > -0.5f && z_input < -0.5f) //going to the down
+            {
+                playerObject.transform.rotation = Quaternion.Euler(0, playerObject.transform.position.y, 0);
+            }
+            else if (x_input > 0.5f && z_input > 0.5f) //going right and up
+            {
+                playerObject.transform.rotation = Quaternion.Euler(0, playerObject.transform.position.y - 135, 0);
+            }
+            else if (x_input < -0.5f && z_input < -0.5f) //going left and down
+            {
+                playerObject.transform.rotation = Quaternion.Euler(0, playerObject.transform.position.y + 45, 0);
+            }
+            else if (x_input < -0.5f && z_input > 0.5f) //going left and up
+            {
+                playerObject.transform.rotation = Quaternion.Euler(0, playerObject.transform.position.y + 135, 0);
+            }
+            else if (x_input > 0.5f && z_input < -0.5f) //going right and down
+            {
+                playerObject.transform.rotation = Quaternion.Euler(0, playerObject.transform.position.y - 45, 0);
+            }
+            */
+            
+        }
+    }
+    public virtual void Input()
     {
         if (interact)
         {
@@ -52,54 +132,9 @@ public class Player : MonoBehaviour
             }
         }
     }
-    public virtual void Walking(float x_input, float z_input)
-    {
-        inputX = x_input;
-        inputZ = z_input;
-
-        if(currentMovementSpeed != 0)
-        {
-            rb.velocity = new Vector3(0, rb.velocity.y, 0);
-            rb.velocity += transform.right * x_input * currentMovementSpeed;
-            rb.velocity += transform.forward * z_input * currentMovementSpeed;
-
-            if (x_input > 0.5f && z_input < 0.5f && z_input > -0.5f) //going to the right
-            {
-                playerObject.transform.rotation = Quaternion.Euler(0, playerObject.transform.position.y + 90, 0);
-            }
-            else if (x_input < -0.5f && z_input < 0.5f && z_input > -0.5f) //going to the left
-            {
-                playerObject.transform.rotation = Quaternion.Euler(0, playerObject.transform.position.y - 90, 0);
-            }
-            else if (x_input < 0.5f && x_input > -0.5f && z_input > 0.5f) //going to the up
-            {
-                playerObject.transform.rotation = Quaternion.Euler(0, playerObject.transform.position.y, 0);
-            }
-            else if (x_input < 0.5f && x_input > -0.5f && z_input < -0.5f) //going to the down
-            {
-                playerObject.transform.rotation = Quaternion.Euler(0, playerObject.transform.position.y - 180, 0);
-            }
-            else if (x_input > 0.5f && z_input > 0.5f) //going right and up
-            {
-                playerObject.transform.rotation = Quaternion.Euler(0, playerObject.transform.position.y + 45, 0);
-            }
-            else if (x_input < -0.5f && z_input < -0.5f) //going left and down
-            {
-                playerObject.transform.rotation = Quaternion.Euler(0, playerObject.transform.position.y - 135, 0);
-            }
-            else if (x_input < -0.5f && z_input > 0.5f) //going left and up
-            {
-                playerObject.transform.rotation = Quaternion.Euler(0, playerObject.transform.position.y - 45, 0);
-            }
-            else if (x_input > 0.5f && z_input < -0.5f) //going right and down
-            {
-                playerObject.transform.rotation = Quaternion.Euler(0, playerObject.transform.position.y + 135, 0);
-            }
-        }
-    }
     public virtual void Interact()
     {
-        //Interaction
+        //interact
     }
     public virtual void Deinteract()
     {
