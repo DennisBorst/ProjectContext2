@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class JumpAcross : Interactable
 {
+    [SerializeField] private bool oneWayPath;
     [SerializeField] private bool manUse;
     [SerializeField] private bool womanUse;
     [Space]
@@ -45,7 +46,10 @@ public class JumpAcross : Interactable
                     if (!manCrossed)
                     {
                         man.gameObject.transform.position += movingForward;
-                        manCrossed = true;
+                        if (!oneWayPath)
+                        {
+                            manCrossed = true;
+                        }
                     }
                     else
                     {
@@ -76,7 +80,10 @@ public class JumpAcross : Interactable
                     if (!womanCrossed)
                     {
                         woman.gameObject.transform.position += movingForward;
-                        womanCrossed = true;
+                        if (!oneWayPath)
+                        {
+                            womanCrossed = true;
+                        }
                     }
                     else
                     {

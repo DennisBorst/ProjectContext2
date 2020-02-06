@@ -16,8 +16,8 @@ public class Player : MonoBehaviour
 
     //private
     private float currentMovementSpeed;
-    private float interactTime = 0.3f;
-    private float deinteractTime = 0.3f;
+    private float interactTime = 0.2f;
+    private float deinteractTime = 0.2f;
     private float currentInteractTimer;
 
     private Rigidbody rb;
@@ -54,6 +54,9 @@ public class Player : MonoBehaviour
     }
     public virtual void Walking(float x_input, float z_input)
     {
+        inputX = x_input;
+        inputZ = z_input;
+
         if(currentMovementSpeed != 0)
         {
             rb.velocity = new Vector3(0, rb.velocity.y, 0);

@@ -6,30 +6,26 @@ public class Elevator : Interactable
 {
     //private serialized
     [SerializeField] private float pullSpeed;
+    [SerializeField] private int pullPushDirection;
+    [SerializeField] private bool verticalElevator;
+    [Space]
     [SerializeField] private GameObject elevator;
     [SerializeField] private Transform elevatorBeginPoint;
     [SerializeField] private Transform elevatorEndPoint;
 
     //private
-    private float pullTime;
-    private float currentPullTime;
     private bool readyToPull;
-    private bool pulling;
-    private Vector2 pullDirection;
     private Vector2 inputPlayer;
     private Vector3 elevatorBeginPointVector;
     private Vector3 elevatorEndPointVector;
+    private Vector3 elevatorCurrentPoint;
 
-    // Start is called before the first frame update
     private void Start()
     {
         elevatorBeginPointVector = elevatorBeginPoint.position;
         elevatorEndPointVector = elevatorEndPoint.position;
-        pullTime = Vector3.Distance(elevatorBeginPointVector, elevatorEndPointVector);
-        currentPullTime = pullTime;
     }
 
-    // Update is called once per frame
     private void Update()
     {
         if (manCollding && man.interact)
@@ -52,30 +48,45 @@ public class Elevator : Interactable
     {
         inputPlayer = new Vector2(man.inputX, man.inputZ);
 
-        if(pullDirection.x <= inputPlayer.x && pullDirection.y <= inputPlayer.y)
+        if (verticalElevator)
         {
-            Pulling();
+            //if (man.interact)
+            //{
+            if ((pullPushDirection * -1) >= inputPlayer.y)
+            {
+                Pulling();
+            }
+            else if (pullPushDirection <= inputPlayer.y)
+            {
+                Pushing();
+            }
+            //}
         }
         else
         {
-
+            //if (man.interact)
+            //{
+            if ((pullPushDirection * -1) >= inputPlayer.x)
+            {
+                Pulling();
+            }
+            else if (pullPushDirection <= inputPlayer.x)
+            {
+                Pushing();
+            }
+            //}
         }
+
+    }
+    private void Pushing()
+    {
+        elevatorCurrentPoint = elevator.transform.position;
+        elevator.transform.position = Vector3.Lerp(elevatorCurrentPoint, elevatorEndPointVector, pullSpeed);
     }
     private void Pulling()
     {
-        currentPullTime = Timer(currentPullTime);
-
-        elevator.transform.position = Vector3.Lerp(elevator.transform.position, elevatorEndPointVector, pullSpeed);
-        if(currentPullTime <= 0)
-        {
-            currentPullTime = 0;
-        }
-        /*
-        if (Vector3.Distance(startPos, endPos).ToString("0.00") == "0.00")
-        {
-            Debug.Log("Target Reached!!!");
-        }
-        */
+        elevatorCurrentPoint = elevator.transform.position;
+        elevator.transform.position = Vector3.Lerp(elevatorCurrentPoint, elevatorBeginPointVector, pullSpeed);
     }
     public override void OnTriggerEnter(Collider collider)
     {
@@ -88,11 +99,5 @@ public class Elevator : Interactable
     public override void SwitchBool(bool man)
     {
         base.SwitchBool(man);
-    }
-
-    private float Timer(float timer)
-    {
-        timer -= Time.deltaTime;
-        return timer;
     }
 }
