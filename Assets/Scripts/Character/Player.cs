@@ -15,27 +15,30 @@ public class Player : MonoBehaviour
     //private serialized
     [SerializeField] private GameObject playerObject;
     [SerializeField] private Camera camera;
+    [SerializeField] private AudioClip[] walkingSounds;
 
     //private
     private float currentMovementSpeed;
     private float interactTime = 0.2f;
     private float deinteractTime = 0.2f;
     private float currentInteractTimer;
+    private float walkingSoundTime = 0.5f;
+    private float currentSoundWalkingTimer;
     private float cameraY;
     private float lookDirectionY;
     private Vector2 lookDirection;
-
-
     private Rigidbody rb;
+    private AudioSource source;
 
     public virtual void Start()
     {
         rb = GetComponent<Rigidbody>();
+        source = GetComponent<AudioSource>();
+
         currentInteractTimer = interactTime;
-        
+        currentSoundWalkingTimer = walkingSoundTime;
+
         currentMovementSpeed = movementSpeed;
-        //camera = GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineTrackedDolly>();
-        //camera = camera.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineTrackedDolly>().transform.rotation;
     }
     public virtual void Update()
     {
@@ -50,12 +53,12 @@ public class Player : MonoBehaviour
 
         if(currentMovementSpeed != 0)
         {
-            
+            //Moving part
             rb.velocity = new Vector3(0, rb.velocity.y, 0);
             rb.velocity += transform.right * x_input * currentMovementSpeed;
             rb.velocity += transform.forward * z_input * currentMovementSpeed;
 
-
+            //Rotation Character
             lookDirection.x = inputX * 90;
             lookDirection.y = (inputZ * -90) + 90;
             if (inputZ <= -0.9 && inputX >= -0.9 && inputX <= 0.9)
@@ -72,41 +75,16 @@ public class Player : MonoBehaviour
             }
             playerObject.transform.rotation = Quaternion.Euler(0, playerObject.transform.position.y + lookDirectionY, 0);
 
-            /*
-            if (x_input > 0.5f && z_input < 0.5f && z_input > -0.5f) //going to the right
+            //Sounds
+            if(inputX > 0 || inputZ > 0 || inputX < 0 || inputZ < 0)
+            currentSoundWalkingTimer = Timer(currentSoundWalkingTimer);
+            if (currentSoundWalkingTimer <= 0)
             {
-                playerObject.transform.rotation = Quaternion.Euler(0, playerObject.transform.position.y - 90, 0);
+                currentSoundWalkingTimer = walkingSoundTime;
+                source.clip = walkingSounds[Random.Range(0, walkingSounds.Length - 1)];
+                source.pitch = Random.Range(0.8f, 1.2f);
+                source.Play();
             }
-            else if (x_input < -0.5f && z_input < 0.5f && z_input > -0.5f) //going to the left
-            {
-                playerObject.transform.rotation = Quaternion.Euler(0, playerObject.transform.position.y + 90, 0);
-            }
-            else if (x_input < 0.5f && x_input > -0.5f && z_input > 0.5f) //going to the up
-            {
-                playerObject.transform.rotation = Quaternion.Euler(0, playerObject.transform.position.y - 180, 0);
-            }
-            else if (x_input < 0.5f && x_input > -0.5f && z_input < -0.5f) //going to the down
-            {
-                playerObject.transform.rotation = Quaternion.Euler(0, playerObject.transform.position.y, 0);
-            }
-            else if (x_input > 0.5f && z_input > 0.5f) //going right and up
-            {
-                playerObject.transform.rotation = Quaternion.Euler(0, playerObject.transform.position.y - 135, 0);
-            }
-            else if (x_input < -0.5f && z_input < -0.5f) //going left and down
-            {
-                playerObject.transform.rotation = Quaternion.Euler(0, playerObject.transform.position.y + 45, 0);
-            }
-            else if (x_input < -0.5f && z_input > 0.5f) //going left and up
-            {
-                playerObject.transform.rotation = Quaternion.Euler(0, playerObject.transform.position.y + 135, 0);
-            }
-            else if (x_input > 0.5f && z_input < -0.5f) //going right and down
-            {
-                playerObject.transform.rotation = Quaternion.Euler(0, playerObject.transform.position.y - 45, 0);
-            }
-            */
-            
         }
     }
     public virtual void Input()
