@@ -63,15 +63,15 @@ public class JumpAcross : Interactable
         }
         else if (womanCollding && womanUse)
         {
-            currentInteractTimerMan = Timer(currentInteractTimerMan);
+            currentInteractTimerWoman = Timer(currentInteractTimerWoman);
 
-            if (currentInteractTimerMan > 0)
+            if (currentInteractTimerWoman > 0)
             {
                 return;
             }
             else
             {
-                currentInteractTimerMan = 0;
+                currentInteractTimerWoman = 0;
 
                 if (woman.interact)
                 {
