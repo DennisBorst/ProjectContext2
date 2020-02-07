@@ -35,12 +35,14 @@ public class Elevator : Interactable
         if (man.deinteract)
         {
             readyToPull = false;
+            man.gameObject.GetComponent<Rigidbody>().isKinematic = false;
             man.ResetCharacter(1);
         }
 
         if (readyToPull)
         {
             WaitForPulling();
+            man.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             man.ResetCharacter(-1);
         }
     }

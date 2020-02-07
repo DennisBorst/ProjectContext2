@@ -5,10 +5,12 @@ using UnityEngine;
 public class Bridge : Interactable
 {
     private Animator anim;
+    private AudioSource source;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
+        source = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -17,6 +19,7 @@ public class Bridge : Interactable
         {
             if (woman.interact)
             {
+                if(source != null) { source.Play(); }
                 anim.SetTrigger("BridgeOpen");
             }
         }
