@@ -42,25 +42,4 @@ public class Man : Player
         timer -= Time.deltaTime;
         return timer;
     }
-
-    #region Singleton
-    private static Man instance;
-    private void Awake()
-    {
-        instance = this;    
-    }
-
-    public static Man Instance
-    {
-        get
-        {
-            if(instance != null)
-            {
-                instance = new Man();
-            }
-
-            return instance;
-        }
-    }
-    #endregion
 }

@@ -122,7 +122,7 @@ public class Player : MonoBehaviour
     {
 
     }
-    public void ResetCharacter(int movementSpeedChange)
+    public void ResetCharacter(float movementSpeedChange)
     {
         if(movementSpeedChange < 0)
         {
@@ -130,7 +130,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            currentMovementSpeed = movementSpeed;
+            currentMovementSpeed = movementSpeedChange;
         }
     }
     private float Timer(float timer)
