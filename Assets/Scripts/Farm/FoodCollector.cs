@@ -62,6 +62,7 @@ public class FoodCollector : Interactable
         if (manCollding && womanCollding)
         {
             missionFinished = false;
+            GameManager.Instance.LoadNextLevel();
             anim.SetTrigger("FadeOut");
         }
     }

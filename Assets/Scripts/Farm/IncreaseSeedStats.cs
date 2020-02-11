@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IncreaseFarmStat : Interactable
+public class IncreaseSeedStats : Interactable
 {
     //private serialized
     [SerializeField] private int increaseStat;

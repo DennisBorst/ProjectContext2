@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RequirementsFarm : Interactable
+public class IncreaseWaterStat : Interactable
 {
     //private serialized
     [SerializeField] private int increaseWater;
     [SerializeField] private int maxWaterSize; //same int as the farmstats int
-    [SerializeField] private float slowWalking;
+    [SerializeField] private float slowWalkingTotal;
 
     //private
     private int currentWater;
@@ -29,7 +29,7 @@ public class RequirementsFarm : Interactable
     private void Start()
     {
         movementSpeed = woman.movementSpeed;
-        slowWalking *= ((float)increaseWater / (float)maxWaterSize);
+        slowWalkingTotal *= ((float)increaseWater / (float)maxWaterSize);
     }
 
     private void Update()
@@ -40,7 +40,7 @@ public class RequirementsFarm : Interactable
             {
                 farmStats.ChangeWaterNumber(increaseWater);
                 currentWater += increaseWater;
-                movementSpeed -= slowWalking;
+                movementSpeed -= slowWalkingTotal;
                 woman.ResetCharacter(movementSpeed);
             }
         }
@@ -48,7 +48,7 @@ public class RequirementsFarm : Interactable
         if(farmStats.currentWaterCarryAmount < currentWater)
         {
             currentWater -= increaseWater;
-            movementSpeed += slowWalking;
+            movementSpeed += slowWalkingTotal;
             woman.ResetCharacter(movementSpeed);
         }
     }
