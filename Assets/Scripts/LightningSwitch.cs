@@ -6,12 +6,15 @@ public class LightningSwitch : MonoBehaviour
 {
     [SerializeField] private Light directionalLight;
     [Header("Rotation")]
+    [Range(0, 0.1f)]
     [SerializeField] private float rotationChangeSpeed;
     [SerializeField] private Vector3 rotationLight;
     [Header("Color")]
+    [Range(0, 0.1f)]
     [SerializeField] private float colorChangeSpeed;
     [SerializeField] private Color32 colorLight;
     [Header("Light intensity")]
+    [Range(0, 0.1f)]
     [SerializeField] private float intensityChangeSpeed;
     [SerializeField] private float newIntensity;
 

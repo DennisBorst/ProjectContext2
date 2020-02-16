@@ -86,4 +86,25 @@ public class MiddlePointPlayers : MonoBehaviour
 
         return bounds.center;
     }
+
+    #region Singleton
+    private static MiddlePointPlayers instance;
+    private void Awake()
+    {
+        instance = this;
+    }
+
+    public static MiddlePointPlayers Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = new MiddlePointPlayers();
+            }
+
+            return instance;
+        }
+    }
+    #endregion
 }

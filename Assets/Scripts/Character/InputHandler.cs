@@ -101,6 +101,11 @@ public class InputHandler : MonoBehaviour
             player.Deinteract();
         }
 
+        if (Input.GetKeyDown(startButton))
+        {
+            PauseMenu.Instance.Toggle();
+        }
+
         //player movement
         player.Walking(Input.GetAxis("Horizontal" + controllerID), Input.GetAxis("Vertical" + controllerID));
     }

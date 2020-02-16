@@ -118,10 +118,7 @@ public class Player : MonoBehaviour
     {
         //Deinteract
     }
-    public virtual void Jump()
-    {
 
-    }
     public void ResetCharacter(float movementSpeedChange)
     {
         if(movementSpeedChange < 0)
