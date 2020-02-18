@@ -28,12 +28,14 @@ public class Player : MonoBehaviour
     private float lookDirectionY;
     private Vector2 lookDirection;
     private Rigidbody rb;
+    private Animator anim;
     private AudioSource source;
 
     public virtual void Start()
     {
         rb = GetComponent<Rigidbody>();
         source = GetComponent<AudioSource>();
+        anim = GetComponentInChildren<Animator>();
 
         currentInteractTimer = interactTime;
         currentSoundWalkingTimer = walkingSoundTime;
@@ -75,8 +77,26 @@ public class Player : MonoBehaviour
             }
             playerObject.transform.rotation = Quaternion.Euler(0, playerObject.transform.position.y + lookDirectionY, 0);
 
+
+
             //Sounds
             if(inputX > 0 || inputZ > 0 || inputX < 0 || inputZ < 0)
+            {
+                //Animaties
+                if (anim != null)
+                {
+                    anim.SetBool("isWalking", true);
+                }
+            }
+            else
+            {
+                //Animaties
+                if (anim != null)
+                {
+                    anim.SetBool("isWalking", false);
+                }
+            }
+
             currentSoundWalkingTimer = Timer(currentSoundWalkingTimer);
             if (currentSoundWalkingTimer <= 0)
             {

@@ -83,12 +83,12 @@ public class Elevator : Interactable
     private void Pushing()
     {
         elevatorCurrentPoint = elevator.transform.position;
-        elevator.transform.position = Vector3.Lerp(elevatorCurrentPoint, elevatorEndPointVector, pullSpeed);
+        elevator.transform.position = Vector3.MoveTowards(elevatorCurrentPoint, elevatorEndPointVector, pullSpeed);
     }
     private void Pulling()
     {
         elevatorCurrentPoint = elevator.transform.position;
-        elevator.transform.position = Vector3.Lerp(elevatorCurrentPoint, elevatorBeginPointVector, pullSpeed);
+        elevator.transform.position = Vector3.MoveTowards(elevatorCurrentPoint, elevatorBeginPointVector, pullSpeed);
     }
     public override void OnTriggerEnter(Collider collider)
     {
