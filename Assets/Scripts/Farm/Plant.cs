@@ -118,7 +118,9 @@ public class Plant : Interactable
                     //Get some food 
                     Debug.Log("You harvest a plant");
                     farmStatsBoy.emptyHanded = false;
-                    ResetPlant();
+                    man.SetAnimation("isHarvestingPlant", true);
+                    StartCoroutine(man.SetanimationBoolFalse("isHarvestingPlant", 3.1f));
+                    StartCoroutine(HarvestPlant(3.1f));
                     return;
                 }
             }
@@ -141,6 +143,8 @@ public class Plant : Interactable
     {
         planted = true;
         plantStages[0].SetActive(true);
+        man.SetAnimation("isPlacingSeed", true);
+        StartCoroutine(man.SetanimationBoolFalse("isPlacingSeed", 3.25f));
     }
 
     private void GrowPlant()
@@ -155,6 +159,12 @@ public class Plant : Interactable
 
             currentNextStageTime = nextStageTime;
         }
+    }
+
+    IEnumerator HarvestPlant(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        ResetPlant();
     }
 
     private float Timer(float timer)

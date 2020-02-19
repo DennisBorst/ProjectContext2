@@ -9,7 +9,7 @@ public class Bridge : Interactable
 
     private void Start()
     {
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
         source = GetComponent<AudioSource>();
     }
 

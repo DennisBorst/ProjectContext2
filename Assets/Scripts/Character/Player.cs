@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     private float currentSoundWalkingTimer;
     private float cameraY;
     private float lookDirectionY;
+    private bool animationPlaying;
     private Vector2 lookDirection;
     private Rigidbody rb;
     private Animator anim;
@@ -50,6 +51,11 @@ public class Player : MonoBehaviour
     }
     public virtual void Walking(float x_input, float z_input)
     {
+        if (animationPlaying)
+        {
+            return;
+        }
+
         inputX = x_input;
         inputZ = z_input;
 
@@ -85,7 +91,7 @@ public class Player : MonoBehaviour
                 //Animaties
                 if (anim != null)
                 {
-                    anim.SetBool("isWalking", true);
+                    SetAnimation("isWalking", true);
                 }
             }
             else
@@ -93,7 +99,7 @@ public class Player : MonoBehaviour
                 //Animaties
                 if (anim != null)
                 {
-                    anim.SetBool("isWalking", false);
+                    SetAnimation("isWalking", false);
                 }
             }
 
@@ -149,6 +155,20 @@ public class Player : MonoBehaviour
         {
             currentMovementSpeed = movementSpeedChange;
         }
+    }
+
+    public void SetAnimation(string state, bool val)
+    {
+        anim.SetBool(state, val);
+    }
+    public IEnumerator SetanimationBoolFalse(string val, float duration)
+    {
+        animationPlaying = true;
+        currentMovementSpeed = 0;
+        yield return new WaitForSeconds(duration);
+        currentMovementSpeed = movementSpeed;
+        animationPlaying = false;
+        anim.SetBool(val, false);
     }
     private float Timer(float timer)
     {
