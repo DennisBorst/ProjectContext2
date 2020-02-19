@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.2339978, g: 0.12192977, b: 0.04416635, a: 1}
+  m_IndirectSpecularColor: {r: 0.28720972, g: 0.19302191, b: 0.1368724, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4545,6 +4545,10 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 1.4010439
       objectReference: {fileID: 0}
+    - target: {fileID: 1135741632, guid: 043e2e0a0dfed47418ce6916294c6016, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3856130705601848525, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
       propertyPath: m_IsActive
@@ -5048,22 +5052,22 @@ PrefabInstance:
     - target: {fileID: 5089726616946185812, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.38616112
+      value: 0.3861611
       objectReference: {fileID: 0}
     - target: {fileID: 5089726616946185812, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.31874976
+      value: 0.31874987
       objectReference: {fileID: 0}
     - target: {fileID: 5089726616946185812, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.14421467
+      value: -0.14421475
       objectReference: {fileID: 0}
     - target: {fileID: 5089726616946185812, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8535106
+      value: 0.85351056
       objectReference: {fileID: 0}
     - target: {fileID: 5089726616946185812, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
@@ -5188,22 +5192,22 @@ PrefabInstance:
     - target: {fileID: 5089726617667668134, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.38616112
+      value: 0.3861611
       objectReference: {fileID: 0}
     - target: {fileID: 5089726617667668134, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.14421467
+      value: -0.14421475
       objectReference: {fileID: 0}
     - target: {fileID: 5089726617667668134, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.31874976
+      value: 0.31874987
       objectReference: {fileID: 0}
     - target: {fileID: 5089726617667668134, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8535106
+      value: 0.85351056
       objectReference: {fileID: 0}
     - target: {fileID: 5089726617667668134, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
@@ -5354,6 +5358,34 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 418716581}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &418716589
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418716585}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.6
+  m_Height: 2.5
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.2, z: 0}
+--- !u!136 &418716600
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418716582}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.6
+  m_Height: 2.9
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.4, z: 0}
 --- !u!1001 &421315816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15610,40 +15642,600 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2192845301594563250, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301594563250, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterTimer
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301594563250, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301594563250, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2192845301634237698, guid: 2e0da405d2054114d88d050196d35048,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301634237724, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301634237724, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301637456873, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301637456873, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterTimer
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301637456873, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301637456873, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301760689992, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301760689992, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterTimer
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301760689992, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301760689992, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301772636867, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301772636867, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301858420482, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301858420482, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterTimer
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301858420482, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301858420482, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301867452000, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301867452000, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterTimer
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301867452000, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301867452000, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301898714399, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301898714399, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterTimer
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301898714399, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301898714399, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301939227090, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301939227090, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterTimer
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301939227090, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301939227090, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301998077799, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301998077799, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterTimer
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301998077799, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845301998077799, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302057912491, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302057912491, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterTimer
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302057912491, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302057912491, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302197509956, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302197509956, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302214762366, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302214762366, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterTimer
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302214762366, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302214762366, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302222124759, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302222124759, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302411987211, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302411987211, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterTimer
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302411987211, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302411987211, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302476888651, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302476888651, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2192845302476888661, guid: 2e0da405d2054114d88d050196d35048,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2192845302554449368, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302554449368, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302577980202, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302577980202, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterTimer
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302577980202, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302577980202, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302579265638, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302579265638, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2192845302579265656, guid: 2e0da405d2054114d88d050196d35048,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302629370621, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302629370621, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302693903757, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302693903757, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2192845302711171044, guid: 2e0da405d2054114d88d050196d35048,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2192845302711171066, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302711171066, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302763799053, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302763799053, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterTimer
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302763799053, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302763799053, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302851388320, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302851388320, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterTimer
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302851388320, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302851388320, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302853435567, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302853435567, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2192845302853435569, guid: 2e0da405d2054114d88d050196d35048,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302907182195, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302907182195, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterTimer
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302907182195, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302907182195, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302979082293, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302979082293, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterTimer
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302979082293, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845302979082293, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2192845303282578947, guid: 2e0da405d2054114d88d050196d35048,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2192845303282578973, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845303282578973, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845303396868417, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845303396868417, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterTimer
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845303396868417, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845303396868417, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845303432444593, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845303432444593, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845303433888557, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845303433888557, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2192845303433888563, guid: 2e0da405d2054114d88d050196d35048,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845303500031309, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845303500031309, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterTimer
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845303500031309, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845303500031309, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845303550277020, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845303550277020, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterTimer
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845303550277020, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845303550277020, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845303722491598, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845303722491598, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterTimer
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845303722491598, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845303722491598, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845303722811260, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845303722811260, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterTimer
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845303722811260, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192845303722811260, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7394291748083275945, guid: 2e0da405d2054114d88d050196d35048,
         type: 3}
@@ -15710,6 +16302,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7394291748713788787, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7394291748713788787, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7394291748858890248, guid: 2e0da405d2054114d88d050196d35048,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15760,6 +16362,11 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 1101774124}
+    - target: {fileID: 7394291749127337563, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: maxFoodCarryAmount
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7394291749274314834, guid: 2e0da405d2054114d88d050196d35048,
         type: 3}
       propertyPath: m_LocalPosition.x
