@@ -306,8 +306,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7394291748083275944}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10, y: 1, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 20}
+  m_LocalPosition: {x: -10, y: 1, z: 0.39}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 14}
   m_Children: []
   m_Father: {fileID: 7394291749833705900}
   m_RootOrder: 6
@@ -492,7 +492,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7394291748185237011}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6, y: 1, z: -10}
+  m_LocalPosition: {x: 7.5, y: 1, z: -6.74}
   m_LocalScale: {x: 0.5, y: 2, z: 0.5}
   m_Children: []
   m_Father: {fileID: 7394291749833705900}
@@ -616,7 +616,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7394291748299991106}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10, y: 1, z: 10}
+  m_LocalPosition: {x: 14, y: 1, z: 7.16}
   m_LocalScale: {x: 0.5, y: 2, z: 0.5}
   m_Children: []
   m_Father: {fileID: 7394291749833705900}
@@ -926,7 +926,7 @@ Transform:
   m_GameObject: {fileID: 7394291748587751549}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.5, y: -0.2, z: 0}
-  m_LocalScale: {x: 1.2, y: 1, z: 15}
+  m_LocalScale: {x: 1.2, y: 1, z: 11}
   m_Children: []
   m_Father: {fileID: 7394291749274314834}
   m_RootOrder: 3
@@ -1002,7 +1002,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7394291748594714565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.62, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7394291748713788786}
@@ -1071,8 +1071,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7394291748655625113}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10, y: 1, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 20}
+  m_LocalPosition: {x: 14, y: 1, z: 0.3899994}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 14}
   m_Children: []
   m_Father: {fileID: 7394291749833705900}
   m_RootOrder: 7
@@ -1160,15 +1160,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7394291748858890251}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9, y: 0.5, z: 0}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.00000034272668}
+  m_LocalPosition: {x: 13.06, y: 0.5, z: 1.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7394291749066782207}
   - {fileID: 7394291749127337562}
   m_Father: {fileID: 7394291749741043457}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 179.99998, z: 0}
 --- !u!1 &7394291748882962581
 GameObject:
   m_ObjectHideFlags: 0
@@ -1196,7 +1196,7 @@ Transform:
   m_GameObject: {fileID: 7394291748882962581}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.5, y: -0.2, z: 0}
-  m_LocalScale: {x: 1.2, y: 1, z: 15}
+  m_LocalScale: {x: 1.2, y: 1, z: 11}
   m_Children: []
   m_Father: {fileID: 7394291749274314834}
   m_RootOrder: 1
@@ -1275,7 +1275,7 @@ Transform:
   m_GameObject: {fileID: 7394291748902644922}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7, y: -0.2, z: 0}
-  m_LocalScale: {x: 1.2, y: 1, z: 15}
+  m_LocalScale: {x: 1.2, y: 1, z: 11}
   m_Children: []
   m_Father: {fileID: 7394291749274314834}
   m_RootOrder: 0
@@ -1579,7 +1579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba2d32090a5855340a852d49bcb263dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxFoodCarryAmount: 2
+  maxFoodCarryAmount: 10
   anim: {fileID: 0}
   particles: {fileID: 7394291748346454628}
 --- !u!1 &7394291749274314829
@@ -1606,7 +1606,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7394291749274314829}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.15, z: 0}
+  m_LocalPosition: {x: -2.62, y: -0.15, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7394291748902644923}
@@ -1643,7 +1643,7 @@ Transform:
   m_GameObject: {fileID: 7394291749378000857}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.2, z: 0}
-  m_LocalScale: {x: 1.2, y: 1, z: 15}
+  m_LocalScale: {x: 1.2, y: 1, z: 11}
   m_Children: []
   m_Father: {fileID: 7394291749274314834}
   m_RootOrder: 2
@@ -1815,8 +1815,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7394291749471274299}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2, y: 1, z: -10}
-  m_LocalScale: {x: 16, y: 0.3, z: 0.3}
+  m_LocalPosition: {x: -1, y: 1, z: -6.65}
+  m_LocalScale: {x: 18, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 7394291749833705900}
   m_RootOrder: 5
@@ -2001,7 +2001,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7394291749551758076}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10, y: 1, z: 10}
+  m_LocalPosition: {x: -10, y: 1, z: 7.159996}
   m_LocalScale: {x: 0.5, y: 2, z: 0.5}
   m_Children: []
   m_Father: {fileID: 7394291749833705900}
@@ -2094,7 +2094,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7394291749600144625}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10, y: 1, z: -10}
+  m_LocalPosition: {x: -10, y: 1, z: -6.65}
   m_LocalScale: {x: 0.5, y: 2, z: 0.5}
   m_Children: []
   m_Father: {fileID: 7394291749833705900}
@@ -2280,8 +2280,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7394291749630923343}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 10}
-  m_LocalScale: {x: 20, y: 0.3, z: 0.3}
+  m_LocalPosition: {x: 2, y: 1, z: 7.16}
+  m_LocalScale: {x: 24, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 7394291749833705900}
   m_RootOrder: 4
@@ -2373,7 +2373,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7394291749648443087}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10, y: 1, z: -10}
+  m_LocalPosition: {x: 14, y: 1, z: -6.6499996}
   m_LocalScale: {x: 0.5, y: 2, z: 0.5}
   m_Children: []
   m_Father: {fileID: 7394291749833705900}
@@ -2624,7 +2624,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7394291749878066841
 Transform:
   m_ObjectHideFlags: 0
@@ -2706,6 +2706,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2766,6 +2781,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plant
       objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766520, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01091bb668e513b498b6c82ae74f0294, type: 3}
 --- !u!4 &7394291748713788786 stripped
@@ -2781,6 +2801,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2841,6 +2881,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plant (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766520, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01091bb668e513b498b6c82ae74f0294, type: 3}
 --- !u!4 &2192845303433888556 stripped
@@ -2856,6 +2901,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2931,6 +2991,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3006,6 +3081,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3066,6 +3161,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plant (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766520, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01091bb668e513b498b6c82ae74f0294, type: 3}
 --- !u!4 &2192845303282578972 stripped
@@ -3081,6 +3181,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3156,6 +3271,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3231,6 +3366,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3306,6 +3461,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3381,6 +3556,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3456,6 +3651,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3531,6 +3746,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3591,6 +3826,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plant (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766520, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01091bb668e513b498b6c82ae74f0294, type: 3}
 --- !u!4 &2192845302853435566 stripped
@@ -3606,6 +3846,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3681,6 +3941,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3741,6 +4021,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plant (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766520, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01091bb668e513b498b6c82ae74f0294, type: 3}
 --- !u!4 &2192845302711171067 stripped
@@ -3756,6 +4041,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3831,6 +4136,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3906,6 +4226,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3981,6 +4321,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4056,6 +4416,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4131,6 +4511,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4206,6 +4606,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4281,6 +4701,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4341,6 +4781,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plant (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766520, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01091bb668e513b498b6c82ae74f0294, type: 3}
 --- !u!4 &2192845302579265639 stripped
@@ -4356,6 +4801,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4431,6 +4896,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4491,6 +4976,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plant (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766520, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01091bb668e513b498b6c82ae74f0294, type: 3}
 --- !u!4 &2192845302476888650 stripped
@@ -4506,6 +4996,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4581,6 +5091,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4656,6 +5186,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4731,6 +5281,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4791,6 +5361,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plant (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766520, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01091bb668e513b498b6c82ae74f0294, type: 3}
 --- !u!4 &2192845301634237725 stripped
@@ -4806,6 +5381,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4881,6 +5476,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5036,6 +5651,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5111,6 +5746,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5186,6 +5841,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5261,6 +5936,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5336,6 +6031,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5411,6 +6121,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterNeeded
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: nextStageTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: waterTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
