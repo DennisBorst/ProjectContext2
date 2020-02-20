@@ -5855,9 +5855,9 @@ MonoBehaviour:
   pullSpeed: 0.05
   pullPushDirection: 1
   verticalElevator: 0
-  elevator: {fileID: 0}
-  elevatorBeginPoint: {fileID: 0}
-  elevatorEndPoint: {fileID: 0}
+  elevator: {fileID: 9013890701974549812}
+  elevatorBeginPoint: {fileID: 7175137815750333244}
+  elevatorEndPoint: {fileID: 3499153943657600187}
 --- !u!1 &6062233706926431993
 GameObject:
   m_ObjectHideFlags: 0
@@ -9165,6 +9165,8 @@ GameObject:
   - component: {fileID: 5840128959139781174}
   - component: {fileID: 4631882722016293065}
   - component: {fileID: 5530719403726869114}
+  - component: {fileID: 815678911}
+  - component: {fileID: 815678910}
   m_Layer: 0
   m_Name: Lift_low 1 (1)
   m_TagString: Untagged
@@ -9284,6 +9286,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79df7404f1fd724ca126b69b324f20b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &815678911
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9013890701974549812}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 30, y: 100, z: 250}
+  m_Center: {x: 110, y: -300, z: 0}
+--- !u!95 &815678910
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9013890701974549812}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 24b58072645ddf94093e71f427667578, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &9072068183861402954
 GameObject:
   m_ObjectHideFlags: 0
