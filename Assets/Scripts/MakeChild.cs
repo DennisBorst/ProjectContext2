@@ -7,24 +7,13 @@ public class MakeChild : MonoBehaviour
     private Transform playerObject;
     private Transform previousParent;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter(Collider collider)
     {
         if(collider.gameObject.tag == "Player")
         {
             previousParent = collider.transform.parent;
             collider.transform.parent = transform;
+            Debug.Log(previousParent);
         }
     }
 
@@ -32,6 +21,7 @@ public class MakeChild : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
+            Debug.Log("Exit elevator");
             collider.transform.parent = previousParent;
         }
     }

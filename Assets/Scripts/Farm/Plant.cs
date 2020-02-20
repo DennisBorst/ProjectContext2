@@ -119,7 +119,7 @@ public class Plant : Interactable
                     Debug.Log("You harvest a plant");
                     farmStatsBoy.emptyHanded = false;
                     man.SetAnimation("isHarvestingPlant", true);
-                    StartCoroutine(man.SetanimationBoolFalse("isHarvestingPlant", 3.1f));
+                    StartCoroutine(man.SetanimationBoolFalse("isHarvestingPlant", 1.9f));
                     StartCoroutine(HarvestPlant(3.1f));
                     return;
                 }

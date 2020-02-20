@@ -15,15 +15,19 @@ public class Elevator : Interactable
 
     //private
     private bool readyToPull;
+    private bool isPulling = false;
     private Vector2 inputPlayer;
     private Vector3 elevatorBeginPointVector;
     private Vector3 elevatorEndPointVector;
     private Vector3 elevatorCurrentPoint;
 
+    private Animator anim;
+
     private void Start()
     {
         elevatorBeginPointVector = elevatorBeginPoint.position;
         elevatorEndPointVector = elevatorEndPoint.position;
+        anim = GetComponentInChildren<Animator>();
     }
 
     private void Update()
@@ -45,6 +49,17 @@ public class Elevator : Interactable
             man.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             man.ResetCharacter(-1);
         }
+
+
+        //Animations
+        if (isPulling)
+        {
+            anim.SetBool("ElevatorMoving", true);
+        }
+        else
+        {
+            anim.SetBool("ElevatorMoving", false);
+        }
     }
     private void WaitForPulling()
     {
@@ -52,31 +67,37 @@ public class Elevator : Interactable
 
         if (verticalElevator)
         {
-            //if (man.interact)
-            //{
             if ((pullPushDirection * -1) >= inputPlayer.y)
             {
                 Pulling();
+                isPulling = true;
             }
             else if (pullPushDirection <= inputPlayer.y)
             {
                 Pushing();
+                isPulling = true;
             }
-            //}
+            else
+            {
+                isPulling = false;
+            }
         }
         else
         {
-            //if (man.interact)
-            //{
             if ((pullPushDirection * -1) >= inputPlayer.x)
             {
                 Pulling();
+                isPulling = true;
             }
             else if (pullPushDirection <= inputPlayer.x)
             {
                 Pushing();
+                isPulling = true;
             }
-            //}
+            else
+            {
+                isPulling = false;
+            }
         }
 
     }
