@@ -9,15 +9,25 @@ public class FarmStats : MonoBehaviour
     [HideInInspector] public bool carryingMais;
     [HideInInspector] public bool outOfSeeds;
     [HideInInspector] public bool outOfWater;
-    public int currentWaterCarryAmount { get; set; }
+    [HideInInspector] public int currentWaterCarryAmount;
     public int currentSeedCarryAmount { get; set; }
 
 
     //private serialized
     [SerializeField] private int maxWaterCarryAmount;
     [SerializeField] private int maxSeedCarryAmount;
-
     [SerializeField] private GameObject mais;
+
+    //private
+    private Player woman;
+
+    private void Start()
+    {
+        if (GetComponent<Women>())
+        {
+            woman = GetComponent<Player>();
+        }
+    }
 
     private void Update()
     {
@@ -49,10 +59,14 @@ public class FarmStats : MonoBehaviour
         {
             currentWaterCarryAmount = 0;
             outOfWater = true;
+
+            woman.SetAnimation("waterIsEmpty", true);
         }
         else
         {
             outOfWater = false;
+
+            woman.SetAnimation("waterIsEmpty", false);
         }
 
         UIManagerFarm.Instance.WaterGirl(currentWaterCarryAmount, maxWaterCarryAmount);

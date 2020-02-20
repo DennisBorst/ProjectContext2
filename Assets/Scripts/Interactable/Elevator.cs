@@ -50,7 +50,6 @@ public class Elevator : Interactable
             man.ResetCharacter(-1);
         }
 
-
         //Animations
         if (isPulling)
         {
