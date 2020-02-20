@@ -17,7 +17,10 @@ public class FoodCollector : Interactable
     public override void OnTriggerEnter(Collider collider)
     {
         base.OnTriggerEnter(collider);
-        farmStats = collider.gameObject.GetComponent<FarmStats>();
+        if (manCollding)
+        {
+            farmStats = collider.gameObject.GetComponent<FarmStats>();
+        }
     }
 
     public override void OnTriggerExit(Collider collider)
@@ -27,11 +30,13 @@ public class FoodCollector : Interactable
 
     private void Update()
     {
-        if (manCollding && !farmStats.emptyHanded)
+        if (manCollding)
         {
-            if (Input.GetKeyDown(KeyCode.Joystick1Button0))
+            if (Input.GetKeyDown(KeyCode.Joystick1Button0) && !farmStats.emptyHanded)
             {
                 farmStats.emptyHanded = true;
+                man.SetAnimation("isHarvestingPlant", true);
+                StartCoroutine(man.SetanimationBoolFalse("isHarvestingPlant", 1f));
                 ChangeFoodNumber();
             }
         }

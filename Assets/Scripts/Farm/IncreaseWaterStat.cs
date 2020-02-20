@@ -38,10 +38,16 @@ public class IncreaseWaterStat : Interactable
         {
             if (Input.GetKeyDown(KeyCode.Joystick2Button0))
             {
-                farmStats.ChangeWaterNumber(increaseWater);
-                currentWater += increaseWater;
-                movementSpeed -= slowWalkingTotal;
-                woman.ResetCharacter(movementSpeed);
+                if(farmStats.currentWaterCarryAmount < maxWaterSize)
+                {
+                    farmStats.ChangeWaterNumber(increaseWater);
+                    currentWater += increaseWater;
+                    movementSpeed -= slowWalkingTotal;
+                    woman.ResetCharacter(movementSpeed);
+
+                    woman.SetAnimation("getWater", true);
+                    StartCoroutine(woman.SetanimationBoolFalse("getWater", 6f));
+                }
             }
         }
 

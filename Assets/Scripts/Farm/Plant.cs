@@ -38,11 +38,12 @@ public class Plant : Interactable
     public override void OnTriggerEnter(Collider collider)
     {
         base.OnTriggerEnter(collider);
-        if (manCollding)
+        if (collider.gameObject.layer == 8)
         {
             farmStatsBoy = collider.gameObject.GetComponent<FarmStats>();
         }
-        else
+        
+        if(collider.gameObject.layer == 9)
         {
             farmStatsGirl = collider.gameObject.GetComponent<FarmStats>();
         }
@@ -117,10 +118,9 @@ public class Plant : Interactable
                 {
                     //Get some food 
                     Debug.Log("You harvest a plant");
-                    farmStatsBoy.emptyHanded = false;
                     man.SetAnimation("isHarvestingPlant", true);
-                    StartCoroutine(man.SetanimationBoolFalse("isHarvestingPlant", 1.9f));
-                    StartCoroutine(HarvestPlant(3.1f));
+                    StartCoroutine(man.SetanimationBoolFalse("isHarvestingPlant", 1f));
+                    StartCoroutine(HarvestPlant(1f));
                     return;
                 }
             }
@@ -131,10 +131,13 @@ public class Plant : Interactable
         {
             if (Input.GetKeyDown(KeyCode.Joystick2Button0))
             {
-                if (!farmStatsGirl.outOfWater && planted)
+                if(farmStatsGirl != null)
                 {
-                    currentWaterTime = waterTimer;
-                    farmStatsGirl.ChangeWaterNumber(-waterNeeded);
+                    if (farmStatsGirl.currentWaterCarryAmount > 0 && planted)
+                    {
+                        currentWaterTime = waterTimer;
+                        farmStatsGirl.ChangeWaterNumber(-waterNeeded);
+                    }
                 }
             }
         }
@@ -144,7 +147,7 @@ public class Plant : Interactable
         planted = true;
         plantStages[0].SetActive(true);
         man.SetAnimation("isPlacingSeed", true);
-        StartCoroutine(man.SetanimationBoolFalse("isPlacingSeed", 3.25f));
+        StartCoroutine(man.SetanimationBoolFalse("isPlacingSeed", 1.4f));
     }
 
     private void GrowPlant()
@@ -164,6 +167,7 @@ public class Plant : Interactable
     IEnumerator HarvestPlant(float duration)
     {
         yield return new WaitForSeconds(duration);
+        farmStatsBoy.emptyHanded = false;
         ResetPlant();
     }
 
