@@ -51,11 +51,14 @@ public class IncreaseWaterStat : Interactable
             }
         }
 
-        if(farmStats.currentWaterCarryAmount < currentWater)
+        if(farmStats != null)
         {
-            currentWater -= increaseWater;
-            movementSpeed += slowWalkingTotal;
-            woman.ResetCharacter(movementSpeed);
+            if (farmStats.currentWaterCarryAmount < currentWater)
+            {
+                currentWater -= increaseWater;
+                movementSpeed += slowWalkingTotal;
+                woman.ResetCharacter(movementSpeed);
+            }
         }
     }
 }

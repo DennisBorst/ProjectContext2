@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public bool deinteract;
     public float inputX { get; set; }
     public float inputZ { get; set; }
+    public bool animationPlaying;
 
     //private serialized
     [SerializeField] private GameObject playerObject;
@@ -26,7 +27,6 @@ public class Player : MonoBehaviour
     private float currentSoundWalkingTimer;
     private float cameraY;
     private float lookDirectionY;
-    private bool animationPlaying;
     private Vector2 lookDirection;
     private Rigidbody rb;
     private Animator anim;
@@ -51,15 +51,20 @@ public class Player : MonoBehaviour
     }
     public virtual void Walking(float x_input, float z_input)
     {
-        if (animationPlaying)
-        {
-            return;
-        }
-
         inputX = x_input;
         inputZ = z_input;
 
-        if(currentMovementSpeed != 0)
+        if (animationPlaying)
+        {
+            rb.isKinematic = true;
+            return;
+        }
+        else
+        {
+            rb.isKinematic = false;
+        }
+
+        if (currentMovementSpeed != 0)
         {
             //Moving part
             rb.velocity = new Vector3(0, rb.velocity.y, 0);
@@ -67,17 +72,17 @@ public class Player : MonoBehaviour
             rb.velocity += transform.forward * z_input * currentMovementSpeed;
 
             //Rotation Character
-            lookDirection.x = inputX * 90;
-            lookDirection.y = (inputZ * -90) + 90;
-            if (inputZ <= -0.9 && inputX >= -0.9 && inputX <= 0.9)
+            lookDirection.x = x_input * 90;
+            lookDirection.y = (z_input * -90) + 90;
+            if (z_input <= -0.9 && x_input >= -0.9 && x_input <= 0.9)
             {
                 lookDirectionY = 0 + (cameraY - 180);
             }
-            else if (inputX > 0 || inputZ > 0)
+            else if (x_input > 0 || z_input > 0)
             {
                 lookDirectionY = (lookDirection.x + lookDirection.y) / 2 - 180 + (cameraY - 180);
             }
-            else if(inputX < 0 || inputZ < 0)
+            else if(x_input < 0 || z_input < 0)
             {
                 lookDirectionY = (lookDirection.x - lookDirection.y) / 2 - 180 + (cameraY - 180);
             }
@@ -86,7 +91,7 @@ public class Player : MonoBehaviour
 
 
             //Sounds
-            if(inputX > 0 || inputZ > 0 || inputX < 0 || inputZ < 0)
+            if(x_input > 0 || z_input > 0 || x_input < 0 || z_input < 0)
             {
                 //Animaties
                 if (anim != null)
@@ -164,6 +169,7 @@ public class Player : MonoBehaviour
     public IEnumerator SetanimationBoolFalse(string val, float duration)
     {
         animationPlaying = true;
+        Debug.Log("Made it here");
         currentMovementSpeed = 0;
         yield return new WaitForSeconds(duration);
         currentMovementSpeed = movementSpeed;

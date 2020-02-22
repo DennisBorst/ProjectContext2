@@ -98,8 +98,6 @@ public class Plant : Interactable
         {
             if (Input.GetKeyDown(KeyCode.Joystick1Button0))
             {
-                Debug.Log("Clicking");
-
                 if (cropIsDead)
                 {
                     ResetPlant();
@@ -146,8 +144,8 @@ public class Plant : Interactable
     {
         planted = true;
         plantStages[0].SetActive(true);
-        man.SetAnimation("isPlacingSeed", true);
         StartCoroutine(man.SetanimationBoolFalse("isPlacingSeed", 1.4f));
+        man.SetAnimation("isPlacingSeed", true);
     }
 
     private void GrowPlant()

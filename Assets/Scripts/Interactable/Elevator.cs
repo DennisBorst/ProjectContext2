@@ -16,6 +16,7 @@ public class Elevator : Interactable
     //private
     private bool readyToPull;
     private bool isPulling = false;
+    private bool startsPulling = false;
     private Vector2 inputPlayer;
     private Vector3 elevatorBeginPointVector;
     private Vector3 elevatorEndPointVector;
@@ -35,10 +36,16 @@ public class Elevator : Interactable
         if (manCollding && man.interact)
         {
             readyToPull = true;
+            man.animationPlaying = true;
+            man.SetAnimation("isWalking", false);
+            man.SetAnimation("stopsInteracting", false);
         }
         if (man.deinteract)
         {
             readyToPull = false;
+            man.animationPlaying = false;
+            man.SetAnimation("isPullingRope", false);
+            man.SetAnimation("stopsInteracting", true);
             man.gameObject.GetComponent<Rigidbody>().isKinematic = false;
             man.ResetCharacter(1);
         }
@@ -49,15 +56,21 @@ public class Elevator : Interactable
             man.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             man.ResetCharacter(-1);
         }
+        else
+        {
+            man.SetAnimation("isPullingRope", false);
+        }
 
         //Animations
-        if (isPulling)
+        if (isPulling && readyToPull)
         {
             anim.SetBool("ElevatorMoving", true);
+            man.SetAnimation("isPullingRope", true);
         }
         else
         {
             anim.SetBool("ElevatorMoving", false);
+            man.SetAnimation("isPullingRope", false);
         }
     }
     private void WaitForPulling()
