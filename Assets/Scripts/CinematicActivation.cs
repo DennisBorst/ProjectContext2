@@ -6,6 +6,7 @@ public class CinematicActivation : MonoBehaviour
 
     //private serialized
     [SerializeField] private float cinematicTime;
+    [SerializeField] private bool endCinematic;
     [SerializeField] private GameObject[] deActiveObject;
 
     //private
@@ -28,6 +29,12 @@ public class CinematicActivation : MonoBehaviour
 
         if(currentCinematicTimer <= 0)
         {
+            if (endCinematic)
+            {
+                GameManager.Instance.LoadNextLevel();
+                return;
+            }
+
             for (int i = 0; i < deActiveObject.Length; i++)
             {
                 deActiveObject[i].SetActive(true);

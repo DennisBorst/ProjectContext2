@@ -6,8 +6,10 @@ public class FoodCollector : Interactable
 {
     //private serialized
     [SerializeField] private int maxFoodCarryAmount;
+    [SerializeField] private float timeToCinematic;
     [SerializeField] private Animator anim;
     [SerializeField] private GameObject particles;
+    [SerializeField] private GameObject cinematic;
 
     //private
     private int currentFoodCarryAmount;
@@ -28,6 +30,12 @@ public class FoodCollector : Interactable
         base.OnTriggerExit(collider);
     }
 
+    private void Start()
+    {
+        UIManagerFarm.Instance.MaisChange(currentFoodCarryAmount, maxFoodCarryAmount);
+        cinematic.SetActive(false);
+    }
+
     private void Update()
     {
         if (manCollding)
@@ -44,6 +52,11 @@ public class FoodCollector : Interactable
         if (missionFinished)
         {
             EndLevel();
+        }
+
+        if (maxFoodCarryAmount == 0)
+        {
+            missionFinished = true;
         }
     }
 
@@ -67,8 +80,15 @@ public class FoodCollector : Interactable
         if (manCollding && womanCollding)
         {
             missionFinished = false;
-            GameManager.Instance.LoadNextLevel();
+            //GameManager.Instance.LoadNextLevel();
             anim.SetTrigger("FadeOut");
+            StartCoroutine(WaitForCinematic());
         }
+    }
+
+    IEnumerator WaitForCinematic()
+    {
+        yield return new WaitForSeconds(timeToCinematic);
+        cinematic.SetActive(true);
     }
 }

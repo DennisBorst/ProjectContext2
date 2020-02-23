@@ -26,6 +26,11 @@ public class FarmStats : MonoBehaviour
         if (GetComponent<Women>())
         {
             woman = GetComponent<Player>();
+            UIManagerFarm.Instance.WaterGirl(currentWaterCarryAmount, maxWaterCarryAmount);
+        }
+        else
+        {
+            UIManagerFarm.Instance.SeedsBoy(currentSeedCarryAmount, maxSeedCarryAmount);
         }
     }
 
