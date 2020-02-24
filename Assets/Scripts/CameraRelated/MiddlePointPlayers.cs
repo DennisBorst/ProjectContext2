@@ -1,11 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class MiddlePointPlayers : MonoBehaviour
 {
     [SerializeField] private float walkingDistance;
+    [SerializeField] private float zoomInFOV = 20f;
+    [SerializeField] private float zoomOutFOV = 50f;
+    [SerializeField] private float zoomLimiter;
     [SerializeField] private List<Player> players;
+    [SerializeField] private CinemachineVirtualCamera cam;
 
     private float distancePlayer;
     private Vector3 centerPoint;
@@ -20,12 +25,7 @@ public class MiddlePointPlayers : MonoBehaviour
     }
     private void Update()
     {
-        distancePlayer = Vector3.Distance(players[0].transform.position, players[1].transform.position);
-
-        if(distancePlayer < 0)
-        {
-            distancePlayer *= -1;
-        }
+        distancePlayer = Mathf.Abs(Vector3.Distance(players[0].transform.position, players[1].transform.position));
 
         if(distancePlayer >= walkingDistance)
         {
@@ -42,7 +42,13 @@ public class MiddlePointPlayers : MonoBehaviour
             }
         }
     }
+    private void LateUpdate()
+    {
+        centerPoint = GetCenterPoint();
+        transform.position = centerPoint;
 
+        ZoomCamera();
+    }
     private void CheckPlayerPosition()
     {
         if(players[0].inputX > 0.5f && -0.5 > players[1].inputX || players[1].inputX > 0.5f && -0.5 > players[0].inputX ||
@@ -65,11 +71,10 @@ public class MiddlePointPlayers : MonoBehaviour
             players[1].transform.position = Vector3.MoveTowards(players[1].transform.position, centerPoint, 0.1f);
         }
     }
-    private void LateUpdate()
+    private void ZoomCamera()
     {
-        centerPoint = GetCenterPoint();
-
-        transform.position = centerPoint;
+        float newZoom = Mathf.Lerp(zoomInFOV, zoomOutFOV, distancePlayer / zoomLimiter);
+        cam.m_Lens.FieldOfView = newZoom;
     }
     private Vector3 GetCenterPoint()
     {

@@ -6,19 +6,25 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private float nextLevelDelay;
+    [SerializeField] private Animator fadeOutAnim;
+    
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            Reload();
+            Reload(0.5f);
         }
     }
-
-    private void Reload()
+    public void Reload(float reloadDelay)
     {
+        StartCoroutine(ReloadDelay(reloadDelay));
+    }
+    IEnumerator ReloadDelay(float duration)
+    {
+        fadeOutAnim.SetTrigger("FadeOut");
+        yield return new WaitForSeconds(duration);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-
     public void LoadNextLevel()
     {
         StartCoroutine(LoadNextLevelDelay());
