@@ -70,7 +70,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3746904613652859732}
   - component: {fileID: 3746904613652859734}
-  - component: {fileID: 3746904613652859733}
   - component: {fileID: 3746904613652859735}
   m_Layer: 0
   m_Name: ClimbUp
@@ -109,22 +108,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.5, z: 2.85}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3746904613652859733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3746904613652859723}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd455fb2512fc344b93ac9742435b3d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lerpSpeed: 0.1
-  distanceToTeleport: 0.5
-  beginPoint: {fileID: 3746904613752010890}
-  endPoint: {fileID: 3746904612436987809}
 --- !u!114 &3746904613652859735
 MonoBehaviour:
   m_ObjectHideFlags: 0
