@@ -93,18 +93,6 @@ public class JumpOn : Interactable
             }
         }
     }
-    public override void OnTriggerEnter(Collider collider)
-    {
-        base.OnTriggerEnter(collider);
-    }
-    public override void OnTriggerExit(Collider collider)
-    {
-        base.OnTriggerExit(collider);
-    }
-    public override void SwitchBool(bool man)
-    {
-        base.SwitchBool(man);
-    }
     private float Timer(float timer)
     {
         timer -= Time.deltaTime;

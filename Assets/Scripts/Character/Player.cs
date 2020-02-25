@@ -9,12 +9,12 @@ public class Player : MonoBehaviour
     public float movementSpeed;
     public bool interact;
     public bool deinteract;
+    public bool animationPlaying;
     public float inputX { get; set; }
     public float inputZ { get; set; }
-    public bool animationPlaying;
+    public GameObject playerObject;
 
     //private serialized
-    [SerializeField] private GameObject playerObject;
     [SerializeField] private Camera camera;
     [SerializeField] private AudioClip[] walkingSounds;
 
@@ -45,9 +45,12 @@ public class Player : MonoBehaviour
     }
     public virtual void Update()
     {
-        cameraY = camera.transform.rotation.y * 200;
-        this.transform.rotation = Quaternion.Euler(transform.rotation.x, cameraY, transform.rotation.z);
-        Input();
+        if (!animationPlaying)
+        {
+            cameraY = camera.transform.rotation.y * 200;
+            this.transform.rotation = Quaternion.Euler(transform.rotation.x, cameraY, transform.rotation.z);
+            Input();
+        }
     }
     public virtual void Walking(float x_input, float z_input)
     {
