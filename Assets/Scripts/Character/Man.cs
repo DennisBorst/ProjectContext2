@@ -31,7 +31,6 @@ public class Man : Player
     {
         base.Deinteract();
         deinteract = true;
-        
     }
     public override void Walking(float x_input, float z_input)
     {

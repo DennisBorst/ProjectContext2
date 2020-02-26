@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class TinyCrack : Interactable
 {
-
     //private serialized
     [SerializeField] private float walkToBeginSpeed;
     [SerializeField] private float sneakSpeed;
     [SerializeField] private float distanceToPlaySneak;
-
     [SerializeField] private Transform crackBegin;
     [SerializeField] private Transform crackEnd;
 
@@ -19,10 +17,37 @@ public class TinyCrack : Interactable
     private bool animationStarted;
     private bool startSneaking;
     private bool sneakToEnd;
-
     private CapsuleCollider collider;
 
-    void Update()
+    public override void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.tag == "Player")
+        {
+            if (collider.gameObject.layer == 8)
+            {
+                manCollding = true;
+            }
+            else if (collider.gameObject.layer == 9)
+            {
+                womanCollding = true;
+            }
+        }
+    }
+    public override void OnTriggerExit(Collider collider)
+    {
+        if (collider.gameObject.tag == "Player")
+        {
+            if (collider.gameObject.layer == 8)
+            {
+                manCollding = false;
+            }
+            else if (collider.gameObject.layer == 9)
+            {
+                womanCollding = false;
+            }
+        }
+    }
+    private void Update()
     {
         if (womanCollding)
         {
@@ -44,7 +69,6 @@ public class TinyCrack : Interactable
             Sneaking();
         }
     }
-
     private void Animation()
     {
         distanceBeginCrack = Vector3.Distance(woman.gameObject.transform.position, crackBegin.position);
@@ -78,7 +102,6 @@ public class TinyCrack : Interactable
             }
         }
     }
-
     private void Sneaking()
     {
 
@@ -109,7 +132,6 @@ public class TinyCrack : Interactable
             }
         }
     }
-
     private void ResetBools()
     {
         woman.SetAnimation("isSneaking", false);

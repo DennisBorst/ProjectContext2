@@ -25,8 +25,10 @@ public class Women : Player
     public override void Deinteract()
     {
         base.Deinteract();
-        deinteract = true;
-
+        if (!animationPlaying)
+        {
+            deinteract = true;
+        }
     }
     public override void Walking(float x_input, float z_input)
     {
