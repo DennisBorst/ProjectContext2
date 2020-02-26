@@ -40,7 +40,7 @@ public class Elevator : Interactable
             man.SetAnimation("isWalking", false);
             man.SetAnimation("stopsInteracting", false);
         }
-        if (man.deinteract)
+        if (manCollding && man.deinteract)
         {
             readyToPull = false;
             man.animationPlaying = false;
