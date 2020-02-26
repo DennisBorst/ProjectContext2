@@ -8,9 +8,9 @@ public class AttackState : State
     {
         this.id = id;
     }
-    public override void OnEnter()
+    public override void OnEnter(BlackBoard blackBoard)
     {
-        throw new System.NotImplementedException();
+        base.OnEnter(blackBoard);
     }
     public override void OnExit()
     {

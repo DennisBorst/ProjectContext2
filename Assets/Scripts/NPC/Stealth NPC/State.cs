@@ -3,15 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 public abstract class State
 {
+    //public
     public FSM fsm;
     public StateEnum id;
+
+    //protected
+    private BlackBoard blackBoard;
 
     public void Init(FSM _owner)
     {
         fsm = _owner;
     }
 
-    public abstract void OnEnter();
+    public virtual void OnEnter(BlackBoard blackBoard)
+    {
+        this.blackBoard = blackBoard;
+    }
     public abstract void OnUpdate();
     public abstract void OnExit();
 }

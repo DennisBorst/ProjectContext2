@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FSM : MonoBehaviour
+public class FSM
 {
     public Dictionary<StateEnum, State> states = new Dictionary<StateEnum, State>();
 
     private State currentState;
+    private BlackBoard blackBoard;
 
-    public FSM(StateEnum startState, params State[] statesList)
+    public FSM(BlackBoard blackBoard, StateEnum startState, params State[] statesList)
     {
+        this.blackBoard = blackBoard;
 
         foreach (State state in statesList)
         {
@@ -31,7 +33,7 @@ public class FSM : MonoBehaviour
 
         if (currentState != null)
         {
-            currentState.OnEnter();
+            currentState.OnEnter(blackBoard);
         }
     }
 

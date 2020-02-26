@@ -75,8 +75,8 @@ public class ClimbOn : Interactable
             }
             else
             {
-                man.transform.position = climbEnd.position;
                 man.SetAnimation("isClimbing", false);
+                man.transform.position = climbEnd.position;
                 walking = true;
             }
         }
@@ -125,8 +125,8 @@ public class ClimbOn : Interactable
             }
             else
             {
-                woman.transform.position = climbEnd.position;
                 woman.SetAnimation("isClimbing", false);
+                woman.transform.position = climbEnd.position;
                 walking = true;
             }
         }

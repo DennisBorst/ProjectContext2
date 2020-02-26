@@ -131,10 +131,12 @@ public class Plant : Interactable
             {
                 if(farmStatsGirl != null)
                 {
-                    if (farmStatsGirl.currentWaterCarryAmount > 0 && planted)
+                    if (farmStatsGirl.currentWaterCarryAmount > 0 && planted && !woman.animationPlaying)
                     {
                         currentWaterTime = waterTimer;
                         farmStatsGirl.ChangeWaterNumber(-waterNeeded);
+                        woman.SetAnimation("giveWater", true);
+                        StartCoroutine(woman.SetanimationBoolFalse("giveWater", 3.55f));
                     }
                 }
             }

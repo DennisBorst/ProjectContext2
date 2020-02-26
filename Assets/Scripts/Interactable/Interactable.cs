@@ -22,11 +22,13 @@ public class Interactable : MonoBehaviour
         {
             if(collider.gameObject.layer == 8)
             {
-                SwitchBool(true);
+                //SwitchBool(true);
+                manCollding = true;
             }
             else if(collider.gameObject.layer == 9)
             {
-                SwitchBool(false);
+                //SwitchBool(false);
+                womanCollding = true;
             }
         }
     }
@@ -37,11 +39,13 @@ public class Interactable : MonoBehaviour
         {
             if (collider.gameObject.layer == 8)
             {
-                SwitchBool(true);
+                //SwitchBool(true);
+                manCollding = false;
             }
             else if (collider.gameObject.layer == 9)
             {
-                SwitchBool(false);
+                //SwitchBool(false);
+                womanCollding = false;
             }
         }
     }
