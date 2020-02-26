@@ -8,8 +8,14 @@ public class WarningSign : Interactable
     [SerializeField] private GameObject womanCanvas;
 
     private bool collidingHere;
-    private bool manReading;
-    private bool womanReading;
+    private bool manReading = false;
+    private bool womanReading = false;
+
+    private void Start()
+    {
+        manCanvas.SetActive(false);
+        womanCanvas.SetActive(false);
+    }
 
     private void Update()
     {
@@ -21,13 +27,17 @@ public class WarningSign : Interactable
                 {
                     manReading = true;
                     manCanvas.SetActive(true);
-                    man.ResetCharacter(-1);
+                    man.animationPlaying = true;
+                    man.SetAnimation("isWalking", false);
+                    //man.ResetCharacter(-1);
                 }
-                else if (man.deinteract)
+
+                if (man.deinteract)
                 {
                     manReading = false;
                     manCanvas.SetActive(false);
-                    man.ResetCharacter(1);
+                    man.animationPlaying = false;
+                    //man.ResetCharacter(1);
                 }
             }
         }
@@ -40,13 +50,17 @@ public class WarningSign : Interactable
                 {
                     womanReading = true;
                     womanCanvas.SetActive(true);
-                    woman.ResetCharacter(-1);
+                    woman.animationPlaying = true;
+                    woman.SetAnimation("isWalking", false);
+                    //woman.ResetCharacter(-1);
                 }
-                else if (woman.deinteract)
+
+                if (woman.deinteract)
                 {
                     womanReading = false;
                     womanCanvas.SetActive(false);
-                    woman.ResetCharacter(1);
+                    woman.animationPlaying = false;
+                    //woman.ResetCharacter(1);
                 }
             }
         }

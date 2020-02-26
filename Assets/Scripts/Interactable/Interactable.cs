@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    public bool deinteractPossible;
+    //public bool deinteractPossible;
 
     protected bool manCollding;
     protected bool womanCollding;
