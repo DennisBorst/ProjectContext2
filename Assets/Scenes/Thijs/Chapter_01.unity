@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4693254, g: 0.30944392, b: 0.21303192, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9829,12 +9829,12 @@ PrefabInstance:
     - target: {fileID: 5089726616946185812, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.20860362
+      value: 0.2086036
       objectReference: {fileID: 0}
     - target: {fileID: 5089726616946185812, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.39268446
+      value: 0.39268443
       objectReference: {fileID: 0}
     - target: {fileID: 5089726616946185812, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
@@ -9969,7 +9969,7 @@ PrefabInstance:
     - target: {fileID: 5089726617667668134, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.20860362
+      value: 0.2086036
       objectReference: {fileID: 0}
     - target: {fileID: 5089726617667668134, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
@@ -9979,7 +9979,7 @@ PrefabInstance:
     - target: {fileID: 5089726617667668134, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.39268446
+      value: 0.39268443
       objectReference: {fileID: 0}
     - target: {fileID: 5089726617667668134, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
@@ -25574,6 +25574,71 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1301482087}
     m_Modifications:
+    - target: {fileID: 1369747287565270165, guid: de91ca799bcbabd41ae2cef9c728d73f,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1369747287565270165, guid: de91ca799bcbabd41ae2cef9c728d73f,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 0.7019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 1369747287565270165, guid: de91ca799bcbabd41ae2cef9c728d73f,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1369747287565270165, guid: de91ca799bcbabd41ae2cef9c728d73f,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1369747287565270165, guid: de91ca799bcbabd41ae2cef9c728d73f,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1369747287565270165, guid: de91ca799bcbabd41ae2cef9c728d73f,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.atime1
+      value: 32189
+      objectReference: {fileID: 0}
+    - target: {fileID: 1810820661993205396, guid: de91ca799bcbabd41ae2cef9c728d73f,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 7.957747
+      objectReference: {fileID: 0}
+    - target: {fileID: 1810820661993205396, guid: de91ca799bcbabd41ae2cef9c728d73f,
+        type: 3}
+      propertyPath: m_ShadowRadius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1810820661993205396, guid: de91ca799bcbabd41ae2cef9c728d73f,
+        type: 3}
+      propertyPath: m_Range
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2697552678408165665, guid: de91ca799bcbabd41ae2cef9c728d73f,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 2.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 2697552678408165665, guid: de91ca799bcbabd41ae2cef9c728d73f,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 0.46666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360118024938539515, guid: de91ca799bcbabd41ae2cef9c728d73f,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360118024938539515, guid: de91ca799bcbabd41ae2cef9c728d73f,
+        type: 3}
+      propertyPath: m_ShapeRadius
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4389218642365669678, guid: de91ca799bcbabd41ae2cef9c728d73f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25629,25 +25694,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4389218642365669678, guid: de91ca799bcbabd41ae2cef9c728d73f,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.009999997
-      objectReference: {fileID: 0}
-    - target: {fileID: 4389218642365669678, guid: de91ca799bcbabd41ae2cef9c728d73f,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.009999997
-      objectReference: {fileID: 0}
     - target: {fileID: 4389218642365669679, guid: de91ca799bcbabd41ae2cef9c728d73f,
         type: 3}
       propertyPath: m_Name
       value: WoodSignTutorial
       objectReference: {fileID: 0}
-    - target: {fileID: 4389218643030898949, guid: de91ca799bcbabd41ae2cef9c728d73f,
+    - target: {fileID: 7014272017759990180, guid: de91ca799bcbabd41ae2cef9c728d73f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 32.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7014272017759990180, guid: de91ca799bcbabd41ae2cef9c728d73f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8045183193970231874, guid: de91ca799bcbabd41ae2cef9c728d73f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8045183193970231874, guid: de91ca799bcbabd41ae2cef9c728d73f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8045183193970231874, guid: de91ca799bcbabd41ae2cef9c728d73f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8045183193970231874, guid: de91ca799bcbabd41ae2cef9c728d73f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de91ca799bcbabd41ae2cef9c728d73f, type: 3}
@@ -29552,25 +29632,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7614520394879703332, guid: 7d00b5388d6911b42a39842a712260de,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.009999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 7614520394879703332, guid: 7d00b5388d6911b42a39842a712260de,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.009999999
-      objectReference: {fileID: 0}
     - target: {fileID: 7614520394879703333, guid: 7d00b5388d6911b42a39842a712260de,
         type: 3}
       propertyPath: m_Name
       value: WoodSign
       objectReference: {fileID: 0}
-    - target: {fileID: 7614520395539874063, guid: 7d00b5388d6911b42a39842a712260de,
+    - target: {fileID: 7675605569551836479, guid: 7d00b5388d6911b42a39842a712260de,
         type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
+      propertyPath: m_LocalPosition.y
+      value: 43
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d00b5388d6911b42a39842a712260de, type: 3}
@@ -30983,25 +31053,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7614520394879703332, guid: 7d00b5388d6911b42a39842a712260de,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.009999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 7614520394879703332, guid: 7d00b5388d6911b42a39842a712260de,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.009999999
-      objectReference: {fileID: 0}
     - target: {fileID: 7614520394879703333, guid: 7d00b5388d6911b42a39842a712260de,
         type: 3}
       propertyPath: m_Name
       value: WoodSign (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 7614520395539874063, guid: 7d00b5388d6911b42a39842a712260de,
+    - target: {fileID: 7675605569551836479, guid: 7d00b5388d6911b42a39842a712260de,
         type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
+      propertyPath: m_LocalPosition.y
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d00b5388d6911b42a39842a712260de, type: 3}
