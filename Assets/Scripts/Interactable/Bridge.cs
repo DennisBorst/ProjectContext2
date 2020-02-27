@@ -7,6 +7,12 @@ public class Bridge : Interactable
     private Animator anim;
     private AudioSource source;
 
+    //FMOD
+    //[FMODUnity.EventRef]
+    //public string fallingPlankSFX;
+
+    //FMOD.Studio.EventInstance fallingState;
+
     private void Start()
     {
         anim = GetComponentInChildren<Animator>();
@@ -19,22 +25,10 @@ public class Bridge : Interactable
         {
             if (woman.interact)
             {
-                if(source != null) { source.Play(); }
+                //fallingState = FMODUnity.RuntimeManager.CreateInstance(fallingPlankSFX);
+                //fallingState.start();
                 anim.SetTrigger("BridgeOpen");
             }
         }
-    }
-
-    public override void OnTriggerEnter(Collider collider)
-    {
-        base.OnTriggerEnter(collider);
-    }
-    public override void OnTriggerExit(Collider collider)
-    {
-        base.OnTriggerExit(collider);
-    }
-    public override void SwitchBool(bool man)
-    {
-        base.SwitchBool(man);
     }
 }

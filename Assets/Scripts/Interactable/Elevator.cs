@@ -24,6 +24,15 @@ public class Elevator : Interactable
 
     private Animator anim;
 
+    //FMOD
+    //[FMODUnity.EventRef]
+    //public string bridgeLeftSFX;
+    //[FMODUnity.EventRef]
+    //public string bridgeRightSFX;
+
+    //FMOD.Studio.EventInstance bridgeLeft;
+    //FMOD.Studio.EventInstance bridgeRight;
+
     private void Start()
     {
         elevatorBeginPointVector = elevatorBeginPoint.position;
@@ -117,12 +126,17 @@ public class Elevator : Interactable
     {
         elevatorCurrentPoint = elevator.transform.position;
         elevator.transform.position = Vector3.MoveTowards(elevatorCurrentPoint, elevatorEndPointVector, pullSpeed);
+        //bridgeLeft = FMODUnity.RuntimeManager.CreateInstance(bridgeLeftSFX);
+        //bridgeLeft.start();
     }
     private void Pulling()
     {
         elevatorCurrentPoint = elevator.transform.position;
         elevator.transform.position = Vector3.MoveTowards(elevatorCurrentPoint, elevatorBeginPointVector, pullSpeed);
+        //bridgeRight = FMODUnity.RuntimeManager.CreateInstance(bridgeRightSFX);
+        //bridgeRight.start();
     }
+
     public override void OnTriggerEnter(Collider collider)
     {
         base.OnTriggerEnter(collider);

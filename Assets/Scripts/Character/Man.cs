@@ -7,9 +7,15 @@ public class Man : Player
     private bool pulling;
     private float x_input;
     private float z_input;
+    private Vector3 cpm;
     public override void Start()
     {
         base.Start();
+        if (CheckPointManager.Instance.thisEnabled)
+        {
+            cpm = CheckPointManager.Instance.lastCheckPoint;
+            this.transform.position = new Vector3(cpm.x, cpm.y, cpm.z + 0.5f);
+        }
     }
 
     public override void Update()
