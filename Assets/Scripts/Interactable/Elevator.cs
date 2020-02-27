@@ -40,7 +40,7 @@ public class Elevator : Interactable
             man.SetAnimation("isWalking", false);
             man.SetAnimation("stopsInteracting", false);
         }
-        if (man.deinteract)
+        if (manCollding && man.deinteract)
         {
             readyToPull = false;
             man.animationPlaying = false;
@@ -123,6 +123,7 @@ public class Elevator : Interactable
         elevatorCurrentPoint = elevator.transform.position;
         elevator.transform.position = Vector3.MoveTowards(elevatorCurrentPoint, elevatorBeginPointVector, pullSpeed);
     }
+
     public override void OnTriggerEnter(Collider collider)
     {
         base.OnTriggerEnter(collider);

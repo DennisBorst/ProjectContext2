@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class Women : Player
 {
+    private Vector3 cpm;
     public override void Start()
     {
         base.Start();
+        if (CheckPointManager.Instance.thisEnabled)
+        {
+            cpm = CheckPointManager.Instance.lastCheckPoint;
+            this.transform.position = new Vector3(cpm.x, cpm.y, cpm.z - 0.5f);
+        }
     }
     public override void Update()
     {
@@ -26,7 +32,6 @@ public class Women : Player
     {
         base.Deinteract();
         deinteract = true;
-
     }
     public override void Walking(float x_input, float z_input)
     {

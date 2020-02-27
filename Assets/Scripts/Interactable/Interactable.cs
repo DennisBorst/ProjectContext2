@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
+    //public bool deinteractPossible;
+
     protected bool manCollding;
     protected bool womanCollding;
 
@@ -23,10 +25,12 @@ public class Interactable : MonoBehaviour
             if(collider.gameObject.layer == 8)
             {
                 SwitchBool(true);
+                //manCollding = true;
             }
             else if(collider.gameObject.layer == 9)
             {
                 SwitchBool(false);
+                //womanCollding = true;
             }
         }
     }
@@ -38,10 +42,12 @@ public class Interactable : MonoBehaviour
             if (collider.gameObject.layer == 8)
             {
                 SwitchBool(true);
+                //manCollding = false;
             }
             else if (collider.gameObject.layer == 9)
             {
                 SwitchBool(false);
+                //womanCollding = false;
             }
         }
     }
