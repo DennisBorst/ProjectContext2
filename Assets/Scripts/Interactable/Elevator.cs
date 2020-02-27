@@ -123,6 +123,7 @@ public class Elevator : Interactable
         elevatorCurrentPoint = elevator.transform.position;
         elevator.transform.position = Vector3.MoveTowards(elevatorCurrentPoint, elevatorBeginPointVector, pullSpeed);
     }
+
     public override void OnTriggerEnter(Collider collider)
     {
         base.OnTriggerEnter(collider);

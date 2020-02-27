@@ -6,6 +6,7 @@ public class CinematicActivation : MonoBehaviour
 
     //private serialized
     [SerializeField] private float cinematicTime;
+    [SerializeField] private bool firstCinematic;
     [SerializeField] private bool endCinematic;
     [SerializeField] private GameObject[] deActiveObject;
 
@@ -15,6 +16,15 @@ public class CinematicActivation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (firstCinematic)
+        {
+            if (CheckPointManager.Instance.disableCinematic)
+            {
+                this.gameObject.SetActive(false);
+                return;
+            }
+        }
+
         currentCinematicTimer = cinematicTime;
         for (int i = 0; i < deActiveObject.Length; i++)
         {
