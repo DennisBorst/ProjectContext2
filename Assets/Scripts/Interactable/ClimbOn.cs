@@ -14,7 +14,7 @@ public class ClimbOn : Interactable
     [SerializeField] private Transform walkEnd;
 
     //private
-    private float climbAnimationTime = 3.8f;
+    private float climbAnimationTime = 4.17f;
     private bool manClimbing = false;
     private bool womanClimbing = false;
     private bool teleported;

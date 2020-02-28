@@ -167,7 +167,10 @@ public class Player : MonoBehaviour
 
     public void SetAnimation(string state, bool val)
     {
-        anim.SetBool(state, val);
+        if(state != null && val != null)
+        {
+            anim.SetBool(state, val);
+        }
     }
     public IEnumerator SetanimationBoolFalse(string val, float duration)
     {

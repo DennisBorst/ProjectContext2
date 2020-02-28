@@ -6,8 +6,11 @@ public class UIDisable : Interactable
 {
     //private serialized
     [SerializeField] private GameObject UIToDisable;
+    [SerializeField] private float timeBeforeDisappear;
     [SerializeField] private bool manCanDisable;
     [SerializeField] private bool womanCanDisable;
+
+    private bool actived;
 
     private void Update()
     {
@@ -17,7 +20,7 @@ public class UIDisable : Interactable
             {
                 if (manCanDisable)
                 {
-                    UIToDisable.gameObject.SetActive(false);
+                    actived = true;
                 }
             }
         }
@@ -27,9 +30,24 @@ public class UIDisable : Interactable
             {
                 if (womanCanDisable)
                 {
-                    UIToDisable.gameObject.SetActive(false);
+                    actived = true;
                 }
             }
         }
+
+        if (actived)
+        {
+            timeBeforeDisappear = Timer(timeBeforeDisappear);
+            if(timeBeforeDisappear < 0)
+            {
+                UIToDisable.gameObject.SetActive(false);
+            }
+        }
+    }
+
+    private float Timer(float timer)
+    {
+        timer -= Time.deltaTime;
+        return timer;
     }
 }
