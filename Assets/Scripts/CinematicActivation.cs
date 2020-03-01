@@ -25,6 +25,11 @@ public class CinematicActivation : MonoBehaviour
             }
         }
 
+        if (endCinematic)
+        {
+            CheckPointManager.Instance.Destroy();
+        }
+
         currentCinematicTimer = cinematicTime;
         for (int i = 0; i < deActiveObject.Length; i++)
         {
