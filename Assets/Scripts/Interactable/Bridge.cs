@@ -8,15 +8,15 @@ public class Bridge : Interactable
     private AudioSource source;
 
     //FMOD
-    //[FMODUnity.EventRef]
-    //public string fallingPlankSFX;
-
-    //FMOD.Studio.EventInstance fallingState;
+    [FMODUnity.EventRef]
+    public string fallingPlankSFX;
 
     private void Start()
     {
         anim = GetComponentInChildren<Animator>();
         source = GetComponent<AudioSource>();
+        FMODUnity.RuntimeManager.PlayOneShot("event:/PlankBridge", transform.position);
+        Debug.Log(transform.position);
     }
 
     private void Update()
@@ -25,8 +25,7 @@ public class Bridge : Interactable
         {
             if (woman.interact)
             {
-                //fallingState = FMODUnity.RuntimeManager.CreateInstance(fallingPlankSFX);
-                //fallingState.start();
+                FMODUnity.RuntimeManager.PlayOneShot(fallingPlankSFX, transform.position);
                 anim.SetTrigger("BridgeOpen");
             }
         }
