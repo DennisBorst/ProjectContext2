@@ -16,6 +16,10 @@ public class FoodCollector : Interactable
     private bool missionFinished = false;
     private FarmStats farmStats;
 
+    //FMOD
+    [FMODUnity.EventRef]
+    public string PutDownCropEvent;
+
     public override void OnTriggerEnter(Collider collider)
     {
         base.OnTriggerEnter(collider);
@@ -45,6 +49,7 @@ public class FoodCollector : Interactable
                 farmStats.emptyHanded = true;
                 man.SetAnimation("isHarvestingPlant", true);
                 StartCoroutine(man.SetanimationBoolFalse("isHarvestingPlant", 1f));
+                FMODUnity.RuntimeManager.PlayOneShot(PutDownCropEvent, transform.position);
                 ChangeFoodNumber();
             }
         }

@@ -29,6 +29,16 @@ public class Plant : Interactable
     private FarmStats farmStatsBoy;
     private FarmStats farmStatsGirl;
 
+    //FMOD
+    [FMODUnity.EventRef]
+    public string PlantSeedEvent;
+    [FMODUnity.EventRef]
+    public string CutCropEvent;
+    [FMODUnity.EventRef]
+    public string PutDownSeedEvent;
+    [FMODUnity.EventRef]
+    public string WaterPlantEvent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -120,6 +130,7 @@ public class Plant : Interactable
                     man.SetAnimation("isHarvestingPlant", true);
                     StartCoroutine(man.SetanimationBoolFalse("isHarvestingPlant", 1f));
                     StartCoroutine(HarvestPlant(1f));
+                    FMODUnity.RuntimeManager.PlayOneShot(CutCropEvent, transform.position);
                     return;
                 }
             }
@@ -138,6 +149,7 @@ public class Plant : Interactable
                         farmStatsGirl.ChangeWaterNumber(-waterNeeded);
                         woman.SetAnimation("giveWater", true);
                         StartCoroutine(woman.SetanimationBoolFalse("giveWater", 3.55f));
+                        FMODUnity.RuntimeManager.PlayOneShot(WaterPlantEvent, transform.position);
                     }
                 }
             }
@@ -149,6 +161,8 @@ public class Plant : Interactable
         plantStages[0].SetActive(true);
         StartCoroutine(man.SetanimationBoolFalse("isPlacingSeed", 1.4f));
         man.SetAnimation("isPlacingSeed", true);
+        FMODUnity.RuntimeManager.PlayOneShot(PlantSeedEvent, transform.position);
+
     }
 
     private void GrowPlant()

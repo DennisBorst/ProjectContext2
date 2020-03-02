@@ -15,6 +15,9 @@ public class IncreaseWaterStat : Interactable
     private float decreasePercentage;
     private FarmStats farmStats;
 
+    [FMODUnity.EventRef]
+    public string getWaterEvent;
+
     public override void OnTriggerEnter(Collider collider)
     {
         base.OnTriggerEnter(collider);
@@ -44,6 +47,7 @@ public class IncreaseWaterStat : Interactable
                     currentWater += increaseWater;
                     movementSpeed -= slowWalkingTotal;
                     woman.ResetCharacter(movementSpeed);
+                    FMODUnity.RuntimeManager.PlayOneShot(getWaterEvent, transform.position);
 
                     woman.SetAnimation("getWater", true);
                     StartCoroutine(woman.SetanimationBoolFalse("getWater", 6f));

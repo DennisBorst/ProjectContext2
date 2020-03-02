@@ -4662,6 +4662,7 @@ GameObject:
   - component: {fileID: 3383137624807440843}
   - component: {fileID: 3383137624807440833}
   - component: {fileID: 3383137624807440844}
+  - component: {fileID: 1206362757}
   m_Layer: 0
   m_Name: Bridge 1
   m_TagString: Untagged
@@ -4732,6 +4733,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b3d64201a35ccb438b161722606a65e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1206362757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6760673423311460554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/PlankBridge
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 1
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 1000
 --- !u!1 &6763816824628483707
 GameObject:
   m_ObjectHideFlags: 0
