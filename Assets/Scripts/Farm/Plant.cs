@@ -62,6 +62,7 @@ public class Plant : Interactable
             return;
         }
 
+
         if (currentStage == (amountOfStages - 1))
         {
             finished = true;
@@ -86,7 +87,7 @@ public class Plant : Interactable
             {
                 cropIsDead = true;
                 plantStages[currentStage].SetActive(false);
-                plantStages[plantStages.Length - 1].SetActive(true);
+                plantStages[currentStage + 3].SetActive(true);
             }
         }
     }

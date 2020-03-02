@@ -8,6 +8,9 @@ public class TinyCrack : Interactable
     [SerializeField] private float walkToBeginSpeed;
     [SerializeField] private float sneakSpeed;
     [SerializeField] private float distanceToPlaySneak;
+    [SerializeField] private float rotationToEnd;
+    [SerializeField] private float rotationToBegin;
+
     [SerializeField] private Transform crackBegin;
     [SerializeField] private Transform crackEnd;
 
@@ -111,17 +114,19 @@ public class TinyCrack : Interactable
 
             if (woman.transform.position == crackEnd.position)
             {
-                woman.playerObject.transform.rotation = Quaternion.Euler(womanRotation.x, womanRotation.y + 90, womanRotation.z);
+                woman.playerObject.transform.rotation = Quaternion.Euler(womanRotation.x, womanRotation.y + rotationToEnd, womanRotation.z);
                 ResetBools();
             }
             else
             {
                 woman.transform.position = Vector3.MoveTowards(woman.transform.position, crackEnd.position, sneakSpeed);
-                woman.playerObject.transform.rotation = Quaternion.Euler(womanRotation.x, womanRotation.y - 90, womanRotation.z);
+                woman.playerObject.transform.rotation = Quaternion.Euler(womanRotation.x, womanRotation.y - rotationToEnd, womanRotation.z);
             }
         }
         else
         {
+            Quaternion womanRotation = woman.playerObject.transform.rotation;
+
             if (woman.transform.position == crackBegin.position)
             {
                 ResetBools();
@@ -129,6 +134,7 @@ public class TinyCrack : Interactable
             else
             {
                 woman.transform.position = Vector3.MoveTowards(woman.transform.position, crackBegin.position, sneakSpeed);
+                woman.playerObject.transform.rotation = Quaternion.Euler(womanRotation.x, womanRotation.y + rotationToBegin, womanRotation.z);
             }
         }
     }

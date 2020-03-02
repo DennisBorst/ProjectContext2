@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     //private serialized
     [SerializeField] private Camera camera;
     [SerializeField] private AudioClip[] walkingSounds;
+    [SerializeField] private Transform cameraObject;
 
     //private
     private float currentMovementSpeed;
@@ -47,7 +48,7 @@ public class Player : MonoBehaviour
     {
         if (!animationPlaying)
         {
-            cameraY = camera.transform.rotation.y * 200;
+            cameraY = camera.transform.eulerAngles.y;
             this.transform.rotation = Quaternion.Euler(transform.rotation.x, cameraY, transform.rotation.z);
             Input();
         }
@@ -75,8 +76,10 @@ public class Player : MonoBehaviour
             rb.velocity += transform.forward * z_input * currentMovementSpeed;
 
             //Rotation Character
+
             lookDirection.x = x_input * 90;
             lookDirection.y = (z_input * -90) + 90;
+            
             if (z_input <= -0.9 && x_input >= -0.9 && x_input <= 0.9)
             {
                 lookDirectionY = 0 + (cameraY - 180);
@@ -89,8 +92,9 @@ public class Player : MonoBehaviour
             {
                 lookDirectionY = (lookDirection.x - lookDirection.y) / 2 - 180 + (cameraY - 180);
             }
-            playerObject.transform.rotation = Quaternion.Euler(0, playerObject.transform.position.y + lookDirectionY, 0);
 
+            playerObject.transform.rotation = Quaternion.Euler(0, lookDirectionY, 0);
+            
 
 
             //Sounds
@@ -167,7 +171,10 @@ public class Player : MonoBehaviour
 
     public void SetAnimation(string state, bool val)
     {
-        anim.SetBool(state, val);
+        if(state != null && val != null)
+        {
+            anim.SetBool(state, val);
+        }
     }
     public IEnumerator SetanimationBoolFalse(string val, float duration)
     {
