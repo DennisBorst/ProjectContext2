@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.46936604, g: 0.3095226, b: 0.2130715, a: 1}
+  m_IndirectSpecularColor: {r: 0.46936604, g: 0.30951974, b: 0.21307674, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -733,6 +733,35 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 29013511}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &30090541 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5998348726896282869, guid: 9428962ffff7f8c44b33aaab0bfd709f,
+    type: 3}
+  m_PrefabInstance: {fileID: 815678900}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &30090542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30090541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/LiftLoopLeft
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &32362876
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9437,7 +9466,7 @@ PrefabInstance:
     - target: {fileID: 5089726616946185812, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.016433751
+      value: -0.016433744
       objectReference: {fileID: 0}
     - target: {fileID: 5089726616946185812, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
@@ -9447,12 +9476,12 @@ PrefabInstance:
     - target: {fileID: 5089726616946185812, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.14441288
+      value: 0.14441295
       objectReference: {fileID: 0}
     - target: {fileID: 5089726616946185812, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.11186653
+      value: -0.111866474
       objectReference: {fileID: 0}
     - target: {fileID: 5089726616946185812, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
@@ -9582,12 +9611,12 @@ PrefabInstance:
     - target: {fileID: 5089726617667668134, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.016433751
+      value: -0.016433744
       objectReference: {fileID: 0}
     - target: {fileID: 5089726617667668134, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.14441288
+      value: 0.14441295
       objectReference: {fileID: 0}
     - target: {fileID: 5089726617667668134, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
@@ -9597,7 +9626,7 @@ PrefabInstance:
     - target: {fileID: 5089726617667668134, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.11186653
+      value: -0.111866474
       objectReference: {fileID: 0}
     - target: {fileID: 5089726617667668134, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
@@ -25042,11 +25071,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 764758623}
     m_Modifications:
-    - target: {fileID: 3383137624807440844, guid: 56ac2c3108e97e54eb70e8ab26b0cd76,
-        type: 3}
-      propertyPath: fallingPlankSFX
-      value: event:/PlankBridge
-      objectReference: {fileID: 0}
     - target: {fileID: 6760673423311460554, guid: 56ac2c3108e97e54eb70e8ab26b0cd76,
         type: 3}
       propertyPath: m_Name
@@ -29038,6 +29062,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7394291748713788787, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 7394291748713788787, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 7394291748713788787, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 7394291748713788787, guid: 2e0da405d2054114d88d050196d35048,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 7394291748858890248, guid: 2e0da405d2054114d88d050196d35048,
         type: 3}
