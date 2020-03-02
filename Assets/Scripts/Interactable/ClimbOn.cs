@@ -9,6 +9,7 @@ public class ClimbOn : Interactable
     [SerializeField] private float walkToEndSpeed;
     [SerializeField] private float climbSpeed;
     [SerializeField] private float distanceToClimb;
+    [SerializeField] private float distanceToEnd;
     [SerializeField] private Transform climbBegin;
     [SerializeField] private Transform climbEnd;
     [SerializeField] private Transform walkEnd;
@@ -44,8 +45,7 @@ public class ClimbOn : Interactable
                 man.animationPlaying = true;
                 manClimbing = true;
                 man.transform.position = Vector3.MoveTowards(man.transform.position, climbBegin.position, walkToBeginSpeed);
-                Vector3 direction = (climbBegin.position - man.transform.position).normalized;
-                man.playerObject.transform.LookAt(direction);
+                man.playerObject.transform.eulerAngles = climbBegin.eulerAngles;
 
                 if (distance <= distanceToClimb)
                 {
@@ -64,9 +64,11 @@ public class ClimbOn : Interactable
         {
             if (walking)
             {
+                float distanceToEnd = Vector3.Distance(man.gameObject.transform.position, walkEnd.position);
+
                 man.SetAnimation("isWalking", true);
                 man.transform.position = Vector3.MoveTowards(man.transform.position, walkEnd.position, walkToEndSpeed);
-                if (man.transform.position == walkEnd.position)
+                if (distanceToEnd <= distanceToEnd)
                 {
                     man.SetAnimation("isWalking", false);
                     man.animationPlaying = false;
@@ -94,8 +96,7 @@ public class ClimbOn : Interactable
                 woman.animationPlaying = true;
                 womanClimbing = true;
                 woman.transform.position = Vector3.MoveTowards(woman.transform.position, climbBegin.position, walkToBeginSpeed);
-                Vector3 direction = (climbBegin.position - woman.transform.position).normalized;
-                woman.playerObject.transform.LookAt(direction);
+                woman.playerObject.transform.eulerAngles = climbBegin.eulerAngles;
 
                 if (distance <= distanceToClimb)
                 {
@@ -114,9 +115,11 @@ public class ClimbOn : Interactable
         {
             if (walking)
             {
+                float distanceToEnd = Vector3.Distance(woman.gameObject.transform.position, walkEnd.position);
+
                 woman.SetAnimation("isWalking", true);
                 woman.transform.position = Vector3.MoveTowards(woman.transform.position, walkEnd.position, walkToEndSpeed);
-                if (woman.transform.position == walkEnd.position)
+                if (distanceToEnd <= distanceToEnd)
                 {
                     woman.SetAnimation("isWalking", false);
                     woman.animationPlaying = false;
