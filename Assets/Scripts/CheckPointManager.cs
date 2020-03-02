@@ -27,11 +27,6 @@ public class CheckPointManager : MonoBehaviour
         cinematicDisableCount = cinematicNumber;
         disableCinematic = true;
     }
-
-    public void Destroy()
-    {
-        Destroy(this.gameObject);
-    }
     public static CheckPointManager Instance
     {
         get

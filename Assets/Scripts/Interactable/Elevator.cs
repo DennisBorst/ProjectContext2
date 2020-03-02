@@ -24,6 +24,15 @@ public class Elevator : Interactable
 
     private Animator anim;
 
+    [Header("Only for vertical elevator")]
+    [SerializeField] private Transform contraWeight;
+    [SerializeField] private Transform ropeContraWeight;
+    [SerializeField] private Transform ropeElevator;
+
+    private Vector3 contraWeightBeginPoint;
+    private Vector3 contraWeightCurrentPoint;
+
+
     //FMOD
     //[FMODUnity.EventRef]
     //public string bridgeLeftSFX;
@@ -38,6 +47,12 @@ public class Elevator : Interactable
         elevatorBeginPointVector = elevatorBeginPoint.position;
         elevatorEndPointVector = elevatorEndPoint.position;
         anim = GetComponentInChildren<Animator>();
+
+
+        if (verticalElevator)
+        {
+            contraWeightBeginPoint = contraWeight.transform.position;
+        }
     }
 
     private void Update()
@@ -126,6 +141,19 @@ public class Elevator : Interactable
     {
         elevatorCurrentPoint = elevator.transform.position;
         elevator.transform.position = Vector3.MoveTowards(elevatorCurrentPoint, elevatorEndPointVector, pullSpeed);
+
+        if (verticalElevator)
+        {
+            contraWeightCurrentPoint = contraWeight.transform.position;
+            contraWeight.transform.position = Vector3.MoveTowards(contraWeightCurrentPoint, contraWeightBeginPoint - (Vector3.down * -4), pullSpeed * 0.8f);
+
+            Vector3 currentScaleRopeContra = ropeContraWeight.localScale;
+            ropeContraWeight.transform.localScale = Vector3.MoveTowards(currentScaleRopeContra, new Vector3(currentScaleRopeContra.x, 0.095f, currentScaleRopeContra.z), pullSpeed * 0.018f);
+
+            Vector3 currentScaleRopeElevator = ropeElevator.localScale;
+            ropeElevator.transform.localScale = Vector3.MoveTowards(currentScaleRopeElevator, new Vector3(currentScaleRopeElevator.x, 0.001962778f, currentScaleRopeElevator.z), pullSpeed * 0.002f);
+        }
+
         //bridgeLeft = FMODUnity.RuntimeManager.CreateInstance(bridgeLeftSFX);
         //bridgeLeft.start();
     }
@@ -133,6 +161,20 @@ public class Elevator : Interactable
     {
         elevatorCurrentPoint = elevator.transform.position;
         elevator.transform.position = Vector3.MoveTowards(elevatorCurrentPoint, elevatorBeginPointVector, pullSpeed);
+
+
+        if (verticalElevator)
+        {
+            contraWeightCurrentPoint = contraWeight.transform.position;
+            contraWeight.transform.position = Vector3.MoveTowards(contraWeightCurrentPoint, contraWeightBeginPoint, pullSpeed * 0.8f);
+
+            Vector3 currentScaleRopeContra = ropeContraWeight.localScale;
+            ropeContraWeight.transform.localScale = Vector3.MoveTowards(currentScaleRopeContra, new Vector3(currentScaleRopeContra.x, 0.011f, currentScaleRopeContra.z), pullSpeed * 0.018f);
+
+            Vector3 currentScaleRopeElevator = ropeElevator.localScale;
+            ropeElevator.transform.localScale = Vector3.MoveTowards(currentScaleRopeElevator, new Vector3(currentScaleRopeElevator.x, 0.011f, currentScaleRopeElevator.z), pullSpeed * 0.002f);
+        }
+
         //bridgeRight = FMODUnity.RuntimeManager.CreateInstance(bridgeRightSFX);
         //bridgeRight.start();
     }
