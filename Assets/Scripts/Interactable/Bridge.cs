@@ -11,7 +11,6 @@ public class Bridge : Interactable
     {
         anim = GetComponentInChildren<Animator>();
         source = GetComponent<AudioSource>();
-        Debug.Log(transform.position);
     }
 
     private void Update()
