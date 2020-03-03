@@ -11,6 +11,7 @@ public class MiddlePointPlayers : MonoBehaviour
     [SerializeField] private float zoomLimiter;
     [SerializeField] private List<Player> players;
     [SerializeField] private CinemachineVirtualCamera cam;
+    [SerializeField] private CinemachineVirtualCamera cam2;
 
     private float distancePlayer;
     private Vector3 centerPoint;
@@ -74,7 +75,14 @@ public class MiddlePointPlayers : MonoBehaviour
     private void ZoomCamera()
     {
         float newZoom = Mathf.Lerp(zoomInFOV, zoomOutFOV, distancePlayer / zoomLimiter);
-        cam.m_Lens.FieldOfView = newZoom;
+        if(cam != null)
+        {
+            cam.m_Lens.FieldOfView = newZoom;
+        }
+        else
+        {
+            cam2.m_Lens.FieldOfView = newZoom;
+        }
     }
     private Vector3 GetCenterPoint()
     {

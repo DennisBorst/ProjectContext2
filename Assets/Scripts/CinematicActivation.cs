@@ -9,6 +9,7 @@ public class CinematicActivation : MonoBehaviour
     [SerializeField] private bool firstCinematic;
     [SerializeField] private bool endCinematic;
     [SerializeField] private GameObject[] deActiveObject;
+    [SerializeField] private GameObject[] objectsToDisableForEver;
 
     //private
     private float currentCinematicTimer;
@@ -30,6 +31,11 @@ public class CinematicActivation : MonoBehaviour
         {
             deActiveObject[i].SetActive(false);
         }
+
+        for (int i = 0; i < objectsToDisableForEver.Length; i++)
+        {
+            objectsToDisableForEver[i].SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -41,6 +47,7 @@ public class CinematicActivation : MonoBehaviour
         {
             if (endCinematic)
             {
+                Destroy(CheckPointManager.Instance.gameObject);
                 GameManager.Instance.LoadNextLevel();
                 return;
             }
@@ -51,6 +58,7 @@ public class CinematicActivation : MonoBehaviour
             }
 
             this.enabled = false;
+            this.gameObject.SetActive(false);
         }
     }
 
