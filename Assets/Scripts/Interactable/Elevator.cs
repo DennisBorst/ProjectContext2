@@ -87,6 +87,7 @@ public class Elevator : Interactable
         {
             anim.SetBool("ElevatorMoving", false);
             man.SetAnimation("isPullingRope", false);
+            GetComponent<FMODUnity.StudioEventEmitter>().Stop();
         }
 
         Debug.Log(GetComponent<FMODUnity.StudioEventEmitter>().IsPlaying());
