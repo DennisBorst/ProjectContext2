@@ -13,18 +13,18 @@ public class UIManagerFarm : MonoBehaviour
 
     public void SeedsBoy(int amount, int maxAmount)
     {
-        seedsBoy.text = "Seeds\n" + amount + "/" + maxAmount;
+        seedsBoy.text = amount + "/" + maxAmount;
     }
 
     public void WaterGirl(int amount, int maxAmount)
     {
-        waterGirl.text = "Water \n" + amount + "/" + maxAmount;
+        waterGirl.text = amount + "/" + maxAmount;
         
     }
 
     public void MaisChange(int wheat, int maxWheat)
     {
-        wheatBoy.text = "Mais \n" + wheat + "/" + maxWheat;
+        wheatBoy.text = wheat + "/" + maxWheat;
     }
 
     #region Singleton

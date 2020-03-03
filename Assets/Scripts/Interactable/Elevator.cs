@@ -32,16 +32,6 @@ public class Elevator : Interactable
     private Vector3 contraWeightBeginPoint;
     private Vector3 contraWeightCurrentPoint;
 
-
-    //FMOD
-    //[FMODUnity.EventRef]
-    //public string bridgeLeftSFX;
-    //[FMODUnity.EventRef]
-    //public string bridgeRightSFX;
-
-    //FMOD.Studio.EventInstance bridgeLeft;
-    //FMOD.Studio.EventInstance bridgeRight;
-
     private void Start()
     {
         elevatorBeginPointVector = elevatorBeginPoint.position;
@@ -79,13 +69,15 @@ public class Elevator : Interactable
             WaitForPulling();
             man.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             man.ResetCharacter(-1);
+
         }
         else
         {
             man.SetAnimation("isPullingRope", false);
+
         }
 
-        //Animations
+        //Animationsw
         if (isPulling && readyToPull)
         {
             anim.SetBool("ElevatorMoving", true);
@@ -95,6 +87,9 @@ public class Elevator : Interactable
         {
             anim.SetBool("ElevatorMoving", false);
             man.SetAnimation("isPullingRope", false);
+            GetComponent<FMODUnity.StudioEventEmitter>().Stop();
+
+
         }
     }
     private void WaitForPulling()
@@ -152,8 +147,12 @@ public class Elevator : Interactable
 
             Vector3 currentScaleRopeElevator = ropeElevator.localScale;
             ropeElevator.transform.localScale = Vector3.MoveTowards(currentScaleRopeElevator, new Vector3(currentScaleRopeElevator.x, 0.001962778f, currentScaleRopeElevator.z), pullSpeed * 0.002f);
+
+
         }
 
+        GetComponent<FMODUnity.StudioEventEmitter>().SetParameter("LeftRight", 0.0f);
+        GetComponent<FMODUnity.StudioEventEmitter>().Play();
         //bridgeLeft = FMODUnity.RuntimeManager.CreateInstance(bridgeLeftSFX);
         //bridgeLeft.start();
     }
@@ -173,7 +172,13 @@ public class Elevator : Interactable
 
             Vector3 currentScaleRopeElevator = ropeElevator.localScale;
             ropeElevator.transform.localScale = Vector3.MoveTowards(currentScaleRopeElevator, new Vector3(currentScaleRopeElevator.x, 0.011f, currentScaleRopeElevator.z), pullSpeed * 0.002f);
+
+
+
         }
+
+        GetComponent<FMODUnity.StudioEventEmitter>().SetParameter("LeftRight", 1.0f);
+        GetComponent<FMODUnity.StudioEventEmitter>().Play();
 
         //bridgeRight = FMODUnity.RuntimeManager.CreateInstance(bridgeRightSFX);
         //bridgeRight.start();
