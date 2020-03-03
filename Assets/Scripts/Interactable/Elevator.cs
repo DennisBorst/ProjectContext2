@@ -87,10 +87,9 @@ public class Elevator : Interactable
         {
             anim.SetBool("ElevatorMoving", false);
             man.SetAnimation("isPullingRope", false);
-            GetComponent<FMODUnity.StudioEventEmitter>().Stop();
-
-
         }
+
+        Debug.Log(GetComponent<FMODUnity.StudioEventEmitter>().IsPlaying());
     }
     private void WaitForPulling()
     {
@@ -111,6 +110,8 @@ public class Elevator : Interactable
             else
             {
                 isPulling = false;
+                GetComponent<FMODUnity.StudioEventEmitter>().Stop();
+
             }
         }
         else
@@ -128,6 +129,8 @@ public class Elevator : Interactable
             else
             {
                 isPulling = false;
+                GetComponent<FMODUnity.StudioEventEmitter>().Stop();
+
             }
         }
 
@@ -152,9 +155,11 @@ public class Elevator : Interactable
         }
 
         GetComponent<FMODUnity.StudioEventEmitter>().SetParameter("LeftRight", 0.0f);
-        GetComponent<FMODUnity.StudioEventEmitter>().Play();
-        //bridgeLeft = FMODUnity.RuntimeManager.CreateInstance(bridgeLeftSFX);
-        //bridgeLeft.start();
+        if (!GetComponent<FMODUnity.StudioEventEmitter>().IsPlaying())
+        {
+            GetComponent<FMODUnity.StudioEventEmitter>().Play();
+
+        }
     }
     private void Pulling()
     {
@@ -173,15 +178,15 @@ public class Elevator : Interactable
             Vector3 currentScaleRopeElevator = ropeElevator.localScale;
             ropeElevator.transform.localScale = Vector3.MoveTowards(currentScaleRopeElevator, new Vector3(currentScaleRopeElevator.x, 0.011f, currentScaleRopeElevator.z), pullSpeed * 0.002f);
 
-
-
         }
 
         GetComponent<FMODUnity.StudioEventEmitter>().SetParameter("LeftRight", 1.0f);
-        GetComponent<FMODUnity.StudioEventEmitter>().Play();
+        if (!GetComponent<FMODUnity.StudioEventEmitter>().IsPlaying())
+        {
+            GetComponent<FMODUnity.StudioEventEmitter>().Play();
 
-        //bridgeRight = FMODUnity.RuntimeManager.CreateInstance(bridgeRightSFX);
-        //bridgeRight.start();
+        }
+
     }
 
     public override void OnTriggerEnter(Collider collider)

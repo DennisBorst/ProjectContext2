@@ -14,6 +14,10 @@ public class CinematicActivation : MonoBehaviour
     //private
     private float currentCinematicTimer;
 
+    //FMOD
+    [SerializeField] private GameObject ambienceEvent;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +52,7 @@ public class CinematicActivation : MonoBehaviour
             if (endCinematic)
             {
                 Destroy(CheckPointManager.Instance.gameObject);
+                ambienceEvent.GetComponent<FMODUnity.StudioEventEmitter>().Stop();
                 GameManager.Instance.LoadNextLevel();
                 return;
             }

@@ -418,6 +418,7 @@ GameObject:
   - component: {fileID: 5089726616946185813}
   - component: {fileID: 867621411}
   - component: {fileID: 867621412}
+  - component: {fileID: 1225036678600610958}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -633,6 +634,19 @@ MonoBehaviour:
       data1: 0
       data2: 0
   defaultFrameSettings: 0
+--- !u!114 &1225036678600610958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5089726616946185809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
 --- !u!1 &5089726617034863003
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,6 +661,7 @@ GameObject:
   - component: {fileID: 5089726617034863005}
   - component: {fileID: 418716600}
   - component: {fileID: 418716584}
+  - component: {fileID: 514506163799272822}
   m_Layer: 8
   m_Name: Player 1 (Man)
   m_TagString: Player
@@ -725,6 +740,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5eca9853ae26e2e488f5e357852bc07a, type: 3}
   - {fileID: 8300000, guid: bf049312384ebcc4997000897f3a7203, type: 3}
   cameraObject: {fileID: 0}
+  walkingEvent: 
 --- !u!136 &418716600
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -759,6 +775,29 @@ MonoBehaviour:
   maxWaterCarryAmount: 0
   maxSeedCarryAmount: 10
   mais: {fileID: 753992836}
+--- !u!114 &514506163799272822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5089726617034863003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/FS_Boy
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 5.6
+  OverrideMaxDistance: 100
 --- !u!1 &5089726617043079174
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,6 +849,7 @@ MonoBehaviour:
   - {fileID: 5089726617034863005}
   - {fileID: 5089726617397483447}
   cam: {fileID: 5089726617667668133}
+  cam2: {fileID: 0}
 --- !u!1 &5089726617397483445
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,6 +865,7 @@ GameObject:
   - component: {fileID: 5089726617397483447}
   - component: {fileID: 418716589}
   - component: {fileID: 418716586}
+  - component: {fileID: 2920586466826044197}
   m_Layer: 9
   m_Name: Player 2 (Woman)
   m_TagString: Player
@@ -998,6 +1039,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5eca9853ae26e2e488f5e357852bc07a, type: 3}
   - {fileID: 8300000, guid: bf049312384ebcc4997000897f3a7203, type: 3}
   cameraObject: {fileID: 0}
+  walkingEvent: 
 --- !u!136 &418716589
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1032,6 +1074,29 @@ MonoBehaviour:
   maxWaterCarryAmount: 10
   maxSeedCarryAmount: 0
   mais: {fileID: 0}
+--- !u!114 &2920586466826044197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5089726617397483445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/FS_Girl
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 5.6
+  OverrideMaxDistance: 100
 --- !u!1 &5089726617667668132
 GameObject:
   m_ObjectHideFlags: 0
@@ -2189,12 +2254,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226f93a0a4b684545bdfb7078b22b2b9, type: 3}
---- !u!4 &5006512734800754363 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 226f93a0a4b684545bdfb7078b22b2b9,
-    type: 3}
-  m_PrefabInstance: {fileID: 14491041}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8296172669197501608 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 226f93a0a4b684545bdfb7078b22b2b9,
@@ -2204,6 +2263,12 @@ GameObject:
 --- !u!4 &6003052535682331096 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3220319501169496967, guid: 226f93a0a4b684545bdfb7078b22b2b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 14491041}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5006512734800754363 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 226f93a0a4b684545bdfb7078b22b2b9,
     type: 3}
   m_PrefabInstance: {fileID: 14491041}
   m_PrefabAsset: {fileID: 0}
@@ -3196,15 +3261,15 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1351219574}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &5006512736139498092 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 9af55dd76b60dd44d9073f77b8b27a48,
-    type: 3}
-  m_PrefabInstance: {fileID: 1351219574}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6003052534872053007 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3220319501169496967, guid: 9af55dd76b60dd44d9073f77b8b27a48,
+    type: 3}
+  m_PrefabInstance: {fileID: 1351219574}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5006512736139498092 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 9af55dd76b60dd44d9073f77b8b27a48,
     type: 3}
   m_PrefabInstance: {fileID: 1351219574}
   m_PrefabAsset: {fileID: 0}

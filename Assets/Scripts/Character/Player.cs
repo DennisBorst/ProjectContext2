@@ -33,6 +33,12 @@ public class Player : MonoBehaviour
     private Animator anim;
     private AudioSource source;
 
+    //FMOD
+    [FMODUnity.EventRef]
+    public string walkingEvent;
+
+    FMOD.Studio.EventInstance walkingInstance;
+
     public virtual void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -43,6 +49,8 @@ public class Player : MonoBehaviour
         currentSoundWalkingTimer = walkingSoundTime;
 
         currentMovementSpeed = movementSpeed;
+
+        walkingInstance = FMODUnity.RuntimeManager.CreateInstance(walkingEvent);
     }
     public virtual void Update()
     {
@@ -105,6 +113,12 @@ public class Player : MonoBehaviour
                 {
                     SetAnimation("isWalking", true);
                 }
+                if (!GetComponent<FMODUnity.StudioEventEmitter>().IsPlaying())
+                {
+                    GetComponent<FMODUnity.StudioEventEmitter>().Play();
+
+                }
+
             }
             else
             {
@@ -113,16 +127,9 @@ public class Player : MonoBehaviour
                 {
                     SetAnimation("isWalking", false);
                 }
+                GetComponent<FMODUnity.StudioEventEmitter>().Stop();
             }
 
-            currentSoundWalkingTimer = Timer(currentSoundWalkingTimer);
-            if (currentSoundWalkingTimer <= 0)
-            {
-                currentSoundWalkingTimer = walkingSoundTime;
-                source.clip = walkingSounds[Random.Range(0, walkingSounds.Length - 1)];
-                source.pitch = Random.Range(0.8f, 1.2f);
-                source.Play();
-            }
         }
     }
     public virtual void Input()
