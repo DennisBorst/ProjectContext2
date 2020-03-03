@@ -29,6 +29,10 @@ public class GameManager : MonoBehaviour
     {
         StartCoroutine(LoadNextLevelDelay());
     }
+    public void Quit()
+    {
+        Application.Quit();
+    }
     IEnumerator LoadNextLevelDelay()
     {
         yield return new WaitForSeconds(nextLevelDelay);
