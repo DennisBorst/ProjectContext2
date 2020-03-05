@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2275491327789471292}
   m_Layer: 0
-  m_Name: House_low
+  m_Name: House_low_Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,6 +31,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 93.047005, z: 0}
+--- !u!65 &4504194733678461197
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3164487458570143102}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3000, y: 30000, z: 20000}
+  m_Center: {x: 0, y: 0, z: 7000}
 --- !u!1001 &4740536334352332765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -208,6 +221,12 @@ PrefabInstance:
 --- !u!4 &338737969575664839 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 2e526aa5af6238a4db19d0bff158f037,
+    type: 3}
+  m_PrefabInstance: {fileID: 4740536334352332765}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3164487458570143102 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -1575344808851426653, guid: 2e526aa5af6238a4db19d0bff158f037,
     type: 3}
   m_PrefabInstance: {fileID: 4740536334352332765}
   m_PrefabAsset: {fileID: 0}

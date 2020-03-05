@@ -10,6 +10,7 @@ public class FoodCollector : Interactable
     [SerializeField] private Animator anim;
     [SerializeField] private GameObject particles;
     [SerializeField] private GameObject cinematic;
+    [SerializeField] private GameObject[] cornObjects;
 
     //private
     private int currentFoodCarryAmount;
@@ -29,15 +30,15 @@ public class FoodCollector : Interactable
         }
     }
 
-    public override void OnTriggerExit(Collider collider)
-    {
-        base.OnTriggerExit(collider);
-    }
-
     private void Start()
     {
         UIManagerFarm.Instance.MaisChange(currentFoodCarryAmount, maxFoodCarryAmount);
         cinematic.SetActive(false);
+
+        for (int i = 0; i < cornObjects.Length; i++)
+        {
+            cornObjects[i].SetActive(false);
+        }
     }
 
     private void Update()
@@ -68,6 +69,7 @@ public class FoodCollector : Interactable
     public void ChangeFoodNumber()
     {
         currentFoodCarryAmount++;
+        cornObjects[currentFoodCarryAmount - 1].SetActive(true);
 
         if (currentFoodCarryAmount >= maxFoodCarryAmount)
         {
