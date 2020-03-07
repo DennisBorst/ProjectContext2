@@ -8,7 +8,7 @@ public abstract class State
     public StateEnum id;
 
     //protected
-    private BlackBoard blackBoard;
+    protected BlackBoard blackBoard;
 
     public void Init(FSM _owner)
     {

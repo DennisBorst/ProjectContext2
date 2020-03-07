@@ -1,9 +1,15 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class WanderState : State
 {
+    private float distanceFromDestination = 2f;
+    private float distanceToLocation;
+    private Transform targetPoint;
+
     public WanderState(StateEnum id)
     {
         this.id = id;
@@ -11,13 +17,34 @@ public class WanderState : State
     public override void OnEnter(BlackBoard blackBoard)
     {
         base.OnEnter(blackBoard);
+
+        GetRandomWanderPoint();
     }
     public override void OnExit()
     {
-        throw new System.NotImplementedException();
+        Debug.Log("Exit state");
     }
     public override void OnUpdate()
     {
-        throw new System.NotImplementedException();
+        blackBoard.npcStealth.SetAnimation("isWalking", true);
+        distanceToLocation = Math.Abs(Vector3.Distance(blackBoard.npcStealth.transform.position, targetPoint.transform.position));
+        Debug.Log(distanceToLocation);
+
+        if (distanceFromDestination >= distanceToLocation)
+        {
+            fsm.SwitchState(StateEnum.Idle);
+        }
+        else
+        {
+            blackBoard.navMeshAgent.destination = targetPoint.transform.position;
+        }
+    }
+
+    private Vector3 GetRandomWanderPoint()
+    {
+        System.Random random = new System.Random();
+        int wanderNumberPoint = random.Next(0, blackBoard.wanderPoints.Length);
+        targetPoint = blackBoard.wanderPoints[wanderNumberPoint];
+        return targetPoint.transform.position;
     }
 }

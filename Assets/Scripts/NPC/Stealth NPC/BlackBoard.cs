@@ -5,8 +5,10 @@ using UnityEngine.AI;
 
 public class BlackBoard
 {
-    public float speed;
     public float viewRadius;
     public float viewAngle;
+    public Transform[] wanderPoints;
     public NavMeshAgent navMeshAgent;
+
+    public NPCStealth npcStealth;
 }

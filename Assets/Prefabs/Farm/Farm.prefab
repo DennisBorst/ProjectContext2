@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7394291748083275944}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10, y: 1, z: 0.39}
+  m_LocalPosition: {x: -5.49, y: 1, z: 0.39}
   m_LocalScale: {x: 0.3, y: 0.3, z: 14}
   m_Children: []
   m_Father: {fileID: 7394291749833705900}
@@ -310,37 +310,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &7394291748346454628
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7394291748346454629}
-  m_Layer: 0
-  m_Name: Particles
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7394291748346454629
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7394291748346454628}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1, z: 2}
-  m_Children:
-  - {fileID: 2470683150717052492}
-  m_Father: {fileID: 7394291749127337562}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7394291748587751549
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,7 +413,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7394291748594714565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.62, y: 0, z: -0}
+  m_LocalPosition: {x: 0.14, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7394291748713788786}
@@ -891,132 +860,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   increaseStat: 50
---- !u!1 &7394291749127337557
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7394291749127337562}
-  - component: {fileID: 7394291749127337567}
-  - component: {fileID: 7394291749127337566}
-  - component: {fileID: 7394291749127337561}
-  - component: {fileID: 7394291749127337560}
-  - component: {fileID: 7394291749127337563}
-  m_Layer: 0
-  m_Name: Mais
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7394291749127337562
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7394291749127337557}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3.87}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 7394291748346454629}
-  m_Father: {fileID: 7394291748858890248}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7394291749127337567
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7394291749127337557}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &7394291749127337566
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7394291749127337557}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 038f1f83fc39c6340ab799ac2e53cc96, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!65 &7394291749127337561
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7394291749127337557}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &7394291749127337560
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7394291749127337557}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 1.4}
-  m_Center: {x: 0.5, y: 0, z: 0}
---- !u!114 &7394291749127337563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7394291749127337557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba2d32090a5855340a852d49bcb263dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxFoodCarryAmount: 10
-  timeToCinematic: 0
-  anim: {fileID: 0}
-  particles: {fileID: 7394291748346454628}
-  cinematic: {fileID: 0}
 --- !u!1 &7394291749274314829
 GameObject:
   m_ObjectHideFlags: 0
@@ -1041,7 +884,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7394291749274314829}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.62, y: -0.15, z: -0}
+  m_LocalPosition: {x: 0.14, y: -0.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7394291748902644923}
@@ -1157,8 +1000,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7394291749471274299}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 1, z: -6.65}
-  m_LocalScale: {x: 18, y: 0.3, z: 0.3}
+  m_LocalPosition: {x: 1.02, y: 1, z: -6.65}
+  m_LocalScale: {x: 13.231461, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 7394291749833705900}
   m_RootOrder: 5
@@ -1250,7 +1093,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7394291749551758076}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10, y: 1, z: 7.159996}
+  m_LocalPosition: {x: -5.49, y: 1, z: 7.159996}
   m_LocalScale: {x: 0.5, y: 2, z: 0.5}
   m_Children: []
   m_Father: {fileID: 7394291749833705900}
@@ -1343,7 +1186,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7394291749600144625}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10, y: 1, z: -6.65}
+  m_LocalPosition: {x: -5.49, y: 1, z: -6.65}
   m_LocalScale: {x: 0.5, y: 2, z: 0.5}
   m_Children: []
   m_Father: {fileID: 7394291749833705900}
@@ -1436,8 +1279,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7394291749630923343}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2, y: 1, z: 7.16}
-  m_LocalScale: {x: 24, y: 0.3, z: 0.3}
+  m_LocalPosition: {x: 4.1601906, y: 1, z: 7.16}
+  m_LocalScale: {x: 19.601074, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 7394291749833705900}
   m_RootOrder: 4
@@ -1713,7 +1556,7 @@ Transform:
   m_GameObject: {fileID: 7394291749741043456}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 20, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 7394291749833705900}
   - {fileID: 7394291748291619798}
@@ -1738,7 +1581,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7394291749833705900
 Transform:
   m_ObjectHideFlags: 0
@@ -1877,6 +1720,26 @@ PrefabInstance:
       propertyPath: waterTimer
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1950,6 +1813,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2192845303061899157}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6937979192052640986
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7394291748858890248}
+    m_Modifications:
+    - target: {fileID: 492416813482596992, guid: 879a84d6469881b47afd0a1700aca2d0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492416813482596992, guid: 879a84d6469881b47afd0a1700aca2d0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492416813482596992, guid: 879a84d6469881b47afd0a1700aca2d0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 492416813482596992, guid: 879a84d6469881b47afd0a1700aca2d0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492416813482596992, guid: 879a84d6469881b47afd0a1700aca2d0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492416813482596992, guid: 879a84d6469881b47afd0a1700aca2d0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492416813482596992, guid: 879a84d6469881b47afd0a1700aca2d0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 492416813482596992, guid: 879a84d6469881b47afd0a1700aca2d0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 492416813482596992, guid: 879a84d6469881b47afd0a1700aca2d0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492416813482596992, guid: 879a84d6469881b47afd0a1700aca2d0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492416813482596992, guid: 879a84d6469881b47afd0a1700aca2d0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 492416813482597007, guid: 879a84d6469881b47afd0a1700aca2d0,
+        type: 3}
+      propertyPath: m_Name
+      value: Mais
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 879a84d6469881b47afd0a1700aca2d0, type: 3}
+--- !u!4 &7394291749127337562 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 492416813482596992, guid: 879a84d6469881b47afd0a1700aca2d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 6937979192052640986}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7394291747800682955
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1976,6 +1914,26 @@ PrefabInstance:
         type: 3}
       propertyPath: cropDeathTimer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
@@ -2057,6 +2015,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 972242418293754637, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8173740156952860391, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380090547018780, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380090793754109, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterNeeded
@@ -2070,7 +2048,37 @@ PrefabInstance:
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterTimer
-      value: 60
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
@@ -2132,6 +2140,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plant (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 8715380091790136023, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01091bb668e513b498b6c82ae74f0294, type: 3}
 --- !u!4 &2192845303432444592 stripped
@@ -2147,6 +2160,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 972242418293754637, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380090547018780, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380090793754109, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterNeeded
@@ -2160,7 +2188,37 @@ PrefabInstance:
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterTimer
-      value: 60
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
@@ -2222,6 +2280,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plant (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8715380091790136023, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043238122523092505, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01091bb668e513b498b6c82ae74f0294, type: 3}
 --- !u!4 &2192845303396868416 stripped
@@ -2256,6 +2324,26 @@ PrefabInstance:
         type: 3}
       propertyPath: cropDeathTimer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
@@ -2350,7 +2438,32 @@ PrefabInstance:
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterTimer
-      value: 60
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
@@ -2440,12 +2553,32 @@ PrefabInstance:
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterTimer
-      value: 5
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: cropDeathTimer
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
@@ -2522,6 +2655,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 972242418293754637, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8173740156952860391, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380090547018780, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380090793754109, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterNeeded
@@ -2535,12 +2688,37 @@ PrefabInstance:
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterTimer
-      value: 5
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: cropDeathTimer
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
@@ -2602,6 +2780,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plant (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 8715380091790136023, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01091bb668e513b498b6c82ae74f0294, type: 3}
 --- !u!4 &2192845303550277021 stripped
@@ -2630,12 +2813,32 @@ PrefabInstance:
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterTimer
-      value: 5
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: cropDeathTimer
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
@@ -2725,12 +2928,32 @@ PrefabInstance:
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterTimer
-      value: 5
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: cropDeathTimer
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
@@ -2820,12 +3043,32 @@ PrefabInstance:
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterTimer
-      value: 5
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: cropDeathTimer
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
@@ -2922,6 +3165,26 @@ PrefabInstance:
       propertyPath: cropDeathTimer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3015,12 +3278,32 @@ PrefabInstance:
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterTimer
-      value: 5
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: cropDeathTimer
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
@@ -3117,6 +3400,26 @@ PrefabInstance:
       propertyPath: cropDeathTimer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3210,12 +3513,32 @@ PrefabInstance:
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterTimer
-      value: 5
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: cropDeathTimer
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
@@ -3292,6 +3615,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 972242418293754637, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380090547018780, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380090793754109, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterNeeded
@@ -3305,7 +3643,37 @@ PrefabInstance:
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterTimer
-      value: 60
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
@@ -3367,6 +3735,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plant (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 8715380091790136023, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043238122523092505, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01091bb668e513b498b6c82ae74f0294, type: 3}
 --- !u!4 &2192845302979082292 stripped
@@ -3395,12 +3773,32 @@ PrefabInstance:
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterTimer
-      value: 5
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: cropDeathTimer
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
@@ -3490,12 +3888,32 @@ PrefabInstance:
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterTimer
-      value: 5
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: cropDeathTimer
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
@@ -3572,6 +3990,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 972242418293754637, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8173740156952860391, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380090547018780, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380090793754109, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterNeeded
@@ -3585,12 +4023,37 @@ PrefabInstance:
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterTimer
-      value: 5
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: cropDeathTimer
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
@@ -3652,6 +4115,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plant (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 8715380091790136023, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01091bb668e513b498b6c82ae74f0294, type: 3}
 --- !u!4 &2192845302197509957 stripped
@@ -3667,6 +4135,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7394291748594714570}
     m_Modifications:
+    - target: {fileID: 972242418293754637, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8173740156952860391, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380090547018780, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380090793754109, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterNeeded
@@ -3680,12 +4168,37 @@ PrefabInstance:
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterTimer
-      value: 5
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: cropDeathTimer
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
@@ -3747,6 +4260,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plant (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 8715380091790136023, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01091bb668e513b498b6c82ae74f0294, type: 3}
 --- !u!4 &2192845302629370620 stripped
@@ -3775,12 +4293,32 @@ PrefabInstance:
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterTimer
-      value: 5
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: cropDeathTimer
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
@@ -3877,6 +4415,26 @@ PrefabInstance:
       propertyPath: cropDeathTimer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3970,12 +4528,32 @@ PrefabInstance:
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterTimer
-      value: 5
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: cropDeathTimer
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
@@ -4072,6 +4650,26 @@ PrefabInstance:
       propertyPath: cropDeathTimer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4165,12 +4763,32 @@ PrefabInstance:
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterTimer
-      value: 5
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: cropDeathTimer
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
@@ -4260,12 +4878,32 @@ PrefabInstance:
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterTimer
-      value: 5
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: cropDeathTimer
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
@@ -4355,12 +4993,32 @@ PrefabInstance:
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterTimer
-      value: 5
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: cropDeathTimer
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
@@ -4457,6 +5115,26 @@ PrefabInstance:
       propertyPath: cropDeathTimer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
+      objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4550,12 +5228,32 @@ PrefabInstance:
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterTimer
-      value: 5
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: cropDeathTimer
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
@@ -4645,12 +5343,32 @@ PrefabInstance:
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterTimer
-      value: 5
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: cropDeathTimer
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
@@ -4720,86 +5438,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7394291749643956308}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &7394291749705422600
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 7394291748346454629}
-    m_Modifications:
-    - target: {fileID: 4959707936986460484, guid: 22b3ac1f7f7e6f54f9fbe1ac7cb11647,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.392
-      objectReference: {fileID: 0}
-    - target: {fileID: 4959707936986460484, guid: 22b3ac1f7f7e6f54f9fbe1ac7cb11647,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4959707936986460484, guid: 22b3ac1f7f7e6f54f9fbe1ac7cb11647,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4959707936986460484, guid: 22b3ac1f7f7e6f54f9fbe1ac7cb11647,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4959707936986460484, guid: 22b3ac1f7f7e6f54f9fbe1ac7cb11647,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4959707936986460484, guid: 22b3ac1f7f7e6f54f9fbe1ac7cb11647,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4959707936986460484, guid: 22b3ac1f7f7e6f54f9fbe1ac7cb11647,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4959707936986460484, guid: 22b3ac1f7f7e6f54f9fbe1ac7cb11647,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4959707936986460484, guid: 22b3ac1f7f7e6f54f9fbe1ac7cb11647,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4959707936986460484, guid: 22b3ac1f7f7e6f54f9fbe1ac7cb11647,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4959707936986460484, guid: 22b3ac1f7f7e6f54f9fbe1ac7cb11647,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6016418592560810779, guid: 22b3ac1f7f7e6f54f9fbe1ac7cb11647,
-        type: 3}
-      propertyPath: m_Name
-      value: VFX_CircleTogheter
-      objectReference: {fileID: 0}
-    - target: {fileID: 7394325324836177278, guid: 22b3ac1f7f7e6f54f9fbe1ac7cb11647,
-        type: 3}
-      propertyPath: prewarm
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 22b3ac1f7f7e6f54f9fbe1ac7cb11647, type: 3}
---- !u!4 &2470683150717052492 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4959707936986460484, guid: 22b3ac1f7f7e6f54f9fbe1ac7cb11647,
-    type: 3}
-  m_PrefabInstance: {fileID: 7394291749705422600}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7394291749713566285
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4820,12 +5458,32 @@ PrefabInstance:
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterTimer
-      value: 5
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: cropDeathTimer
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
@@ -4915,12 +5573,32 @@ PrefabInstance:
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterTimer
-      value: 5
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: cropDeathTimer
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
@@ -5010,12 +5688,32 @@ PrefabInstance:
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterTimer
-      value: 5
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: cropDeathTimer
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
@@ -5105,12 +5803,32 @@ PrefabInstance:
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterTimer
-      value: 5
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: cropDeathTimer
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
@@ -5200,7 +5918,32 @@ PrefabInstance:
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterTimer
-      value: 60
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: cropDeathTimer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
@@ -5290,12 +6033,32 @@ PrefabInstance:
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: waterTimer
-      value: 5
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
       propertyPath: cropDeathTimer
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PlantSeedEvent
+      value: event:/PlantSeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: CutCropEvent
+      value: event:/CutCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: PutDownSeedEvent
+      value: event:/PutDownCrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715380091691766502, guid: 01091bb668e513b498b6c82ae74f0294,
+        type: 3}
+      propertyPath: WaterPlantEvent
+      value: event:/WaterPlant
       objectReference: {fileID: 0}
     - target: {fileID: 8715380091691766503, guid: 01091bb668e513b498b6c82ae74f0294,
         type: 3}
