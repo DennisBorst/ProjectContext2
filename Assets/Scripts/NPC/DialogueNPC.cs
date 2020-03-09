@@ -13,7 +13,6 @@ public class DialogueNPC : Interactable
     private int currentTextNumber;
     private bool interactingMan;
     private bool interactingWoman;
-    //private bool manInRange;
     private bool womanInRange;
     private TextMeshProUGUI dialogueTextUI;
     private Camera mainCamera;
@@ -65,7 +64,7 @@ public class DialogueNPC : Interactable
             if (interactingMan)
             {
                 man.ResetCharacter(0);
-                transform.LookAt(man.transform);
+                transform.LookAt(new Vector3(transform.rotation.x ,man.transform.rotation.y, transform.rotation.z));
                 canvasDialogue.SetActive(true);
             }
             else
@@ -102,7 +101,7 @@ public class DialogueNPC : Interactable
             if (interactingWoman)
             {
                 woman.ResetCharacter(0);
-                transform.LookAt(woman.transform);
+                transform.LookAt(new Vector3(transform.rotation.x, woman.transform.rotation.y, transform.rotation.z));
                 canvasDialogue.SetActive(true);
             }
             else

@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class ChaseState : State
 {
+    private float grabRange = 1f;
+    private float distToPlayer;
+    private float distToLastPlayerPos;
+    private float outOfSightTimer = 3f;
+    private float currentOutOfSightTime;
+    private Vector3 lastPlayerPosition;
+
     public ChaseState(StateEnum id)
     {
         this.id = id;
@@ -11,13 +18,71 @@ public class ChaseState : State
     public override void OnEnter(BlackBoard blackBoard)
     {
         base.OnEnter(blackBoard);
+        blackBoard.navMeshAgent.speed = blackBoard.npcStealth.chaseSpeed;
+        currentOutOfSightTime = outOfSightTimer;
     }
     public override void OnExit()
     {
-        throw new System.NotImplementedException();
+
     }
     public override void OnUpdate()
     {
-        throw new System.NotImplementedException();
+        if (!blackBoard.npcStealth.following)
+        {
+            distToLastPlayerPos = Mathf.Abs(Vector3.Distance(blackBoard.npcStealth.transform.position, lastPlayerPosition));
+
+            if (distToLastPlayerPos <= 1f)
+            {
+                fsm.SwitchState(StateEnum.Idle);
+            }
+            return;
+        }
+        Debug.Log(currentOutOfSightTime);
+
+        blackBoard.npcStealth.SetAnimation("isWalking", true);
+        distToPlayer = Mathf.Abs(Vector3.Distance(blackBoard.npcStealth.transform.position, blackBoard.players[0].transform.position));
+
+        if(grabRange >= distToPlayer)
+        {
+            Debug.Log("Game Over");
+            GameManager.Instance.Reload(2f);
+            blackBoard.navMeshAgent.destination = blackBoard.npcStealth.transform.position;
+        }
+        else
+        {
+            blackBoard.navMeshAgent.destination = blackBoard.players[0].transform.position;
+            KeepTargetInSight();
+        }
+    }
+
+    private void KeepTargetInSight()
+    {
+        Transform target = blackBoard.npcStealth.visibleTargets[0];
+        Vector3 dirToTarget = (target.position - blackBoard.npcStealth.transform.position).normalized;
+        if (Vector3.Angle(blackBoard.npcStealth.transform.forward, dirToTarget) < blackBoard.npcStealth.viewAngle / 2)
+        {
+            float dstToTarget = Vector3.Distance(blackBoard.npcStealth.transform.position, target.position);
+            if (!Physics.Raycast(blackBoard.npcStealth.transform.position, dirToTarget, dstToTarget, blackBoard.npcStealth.obstacleMask))
+            {
+                currentOutOfSightTime = outOfSightTimer;
+            }
+        }
+        else
+        {
+            currentOutOfSightTime = Timer(currentOutOfSightTime);
+        }
+
+        if (currentOutOfSightTime <= 0)
+        {
+            blackBoard.npcStealth.following = false;
+            lastPlayerPosition = blackBoard.players[0].transform.position;
+            blackBoard.navMeshAgent.destination = lastPlayerPosition;
+        }
+    }
+
+    private float Timer(float timer)
+    {
+        timer -= Time.deltaTime;
+        return timer;
     }
 }

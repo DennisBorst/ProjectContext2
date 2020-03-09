@@ -17,7 +17,7 @@ public class WanderState : State
     public override void OnEnter(BlackBoard blackBoard)
     {
         base.OnEnter(blackBoard);
-
+        blackBoard.navMeshAgent.speed = blackBoard.npcStealth.walkSpeed;
         GetRandomWanderPoint();
     }
     public override void OnExit()
@@ -27,7 +27,7 @@ public class WanderState : State
     public override void OnUpdate()
     {
         blackBoard.npcStealth.SetAnimation("isWalking", true);
-        distanceToLocation = Math.Abs(Vector3.Distance(blackBoard.npcStealth.transform.position, targetPoint.transform.position));
+        distanceToLocation = Mathf.Abs(Vector3.Distance(blackBoard.npcStealth.transform.position, targetPoint.transform.position));
         Debug.Log(distanceToLocation);
 
         if (distanceFromDestination >= distanceToLocation)
@@ -39,7 +39,6 @@ public class WanderState : State
             blackBoard.navMeshAgent.destination = targetPoint.transform.position;
         }
     }
-
     private Vector3 GetRandomWanderPoint()
     {
         System.Random random = new System.Random();
