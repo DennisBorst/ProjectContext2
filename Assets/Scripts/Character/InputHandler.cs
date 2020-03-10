@@ -14,6 +14,7 @@ public class InputHandler : MonoBehaviour
     private KeyCode jumpCode;
     private KeyCode interact;
     private KeyCode deInteract;
+    private KeyCode funInteraction;
     private KeyCode startButton;
 
     private void Start()
@@ -40,12 +41,14 @@ public class InputHandler : MonoBehaviour
                 //jumpCode = KeyCode.Joystick1Button0;
                 interact = KeyCode.Joystick1Button0;
                 deInteract = KeyCode.Joystick1Button1;
+                funInteraction = KeyCode.Joystick1Button2;
                 startButton = KeyCode.Joystick1Button7;
                 break;
             case 2:
                 //jumpCode = KeyCode.Joystick2Button0;
                 interact = KeyCode.Joystick2Button0;
                 deInteract = KeyCode.Joystick2Button1;
+                funInteraction = KeyCode.Joystick2Button2;
                 startButton = KeyCode.Joystick2Button7;
                 break;
             default:
@@ -83,11 +86,6 @@ public class InputHandler : MonoBehaviour
         }
 
         if (Time.timeScale == 0) { return; }
-        //player view change
-        //character.Rotate(
-            //CrossPlatformInputManager.GetAxis("RotateHorizontal" + controllerID),
-            //CrossPlatformInputManager.GetAxis("RotateVertical" + controllerID)
-            //);
 
         if (canOnlyMoveCamera) { return; }
 
@@ -99,6 +97,11 @@ public class InputHandler : MonoBehaviour
         if (Input.GetKeyDown(deInteract))
         {
             player.Deinteract();
+        }
+
+        if (Input.GetKeyDown(funInteraction))
+        {
+            player.FunInteraction();
         }
 
         if (Input.GetKeyDown(startButton))

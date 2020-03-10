@@ -7,8 +7,8 @@ public class FarmStats : MonoBehaviour
     //public
     public bool emptyHanded = true;
     [HideInInspector] public bool carryingMais;
-    [HideInInspector] public bool outOfSeeds;
-    [HideInInspector] public bool outOfWater;
+    [HideInInspector] public bool outOfSeeds = true;
+    [HideInInspector] public bool outOfWater = true;
     [HideInInspector] public int currentWaterCarryAmount;
     public int currentSeedCarryAmount { get; set; }
 

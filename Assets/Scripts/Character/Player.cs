@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public float movementSpeed;
     public bool interact;
     public bool deinteract;
+    public bool funInteract;
     public bool animationPlaying;
     public float inputX { get; set; }
     public float inputZ { get; set; }
@@ -154,6 +155,16 @@ public class Player : MonoBehaviour
                 currentInteractTimer = interactTime;
             }
         }
+        else if (funInteract)
+        {
+            currentInteractTimer = Timer(currentInteractTimer);
+
+            if (currentInteractTimer <= 0)
+            {
+                funInteract = false;
+                currentInteractTimer = interactTime;
+            }
+        }
     }
     public virtual void Interact()
     {
@@ -162,6 +173,10 @@ public class Player : MonoBehaviour
     public virtual void Deinteract()
     {
         //Deinteract
+    }
+    public virtual void FunInteraction()
+    {
+        //Funinteract
     }
 
     public void ResetCharacter(float movementSpeedChange)
@@ -186,12 +201,12 @@ public class Player : MonoBehaviour
     public IEnumerator SetanimationBoolFalse(string val, float duration)
     {
         animationPlaying = true;
-        Debug.Log("Made it here");
         currentMovementSpeed = 0;
         yield return new WaitForSeconds(duration);
         currentMovementSpeed = movementSpeed;
         animationPlaying = false;
         anim.SetBool(val, false);
+        Debug.Log(val);
     }
     private float Timer(float timer)
     {

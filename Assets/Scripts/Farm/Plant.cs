@@ -13,6 +13,8 @@ public class Plant : Interactable
     [SerializeField] private float cropDeathTimer;
 
     [SerializeField] private GameObject[] plantStages;
+    [SerializeField] private MeshRenderer groundMeshRenderer;
+    [SerializeField] private Material[] groundTextures; //0 is droog, 1 is nat
 
     //private
     private int currentStage;
@@ -87,10 +89,13 @@ public class Plant : Interactable
         if (currentWaterTime > 0)
         {
             currentWaterTime = Timer(currentWaterTime);
+            groundMeshRenderer.material = groundTextures[1];
+            currentDeathtime = cropDeathTimer;
             GrowPlant();
         }
         else
         {
+            groundMeshRenderer.material = groundTextures[0];
             currentDeathtime = Timer(currentDeathtime);
 
             if (currentDeathtime <= 0)
@@ -139,7 +144,7 @@ public class Plant : Interactable
         //Woman Input
         if (womanCollding)
         {
-            if (Input.GetKeyDown(KeyCode.Joystick2Button0))
+            if (Input.GetKeyDown(KeyCode.Joystick2Button0) && !cropIsDead)
             {
                 if(farmStatsGirl != null)
                 {
@@ -207,5 +212,7 @@ public class Plant : Interactable
         currentNextStageTime = nextStageTime;
         currentWaterTime = 0;
         currentDeathtime = cropDeathTimer;
+
+        groundMeshRenderer.material = groundTextures[0];
     }
 }

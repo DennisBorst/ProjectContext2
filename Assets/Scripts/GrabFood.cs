@@ -48,6 +48,7 @@ public class GrabFood : Interactable
     IEnumerator GrabTime()
     {
         yield return new WaitForSeconds(1f);
+        FoodManager.Instance.AddFoodNumber();
         grabCheck.grabbingFood = false;
     }
 }

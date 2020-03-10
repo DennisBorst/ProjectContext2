@@ -38,6 +38,13 @@ public class Man : Player
         base.Deinteract();
         deinteract = true;
     }
+
+    public override void FunInteraction()
+    {
+        base.FunInteraction();
+        funInteract = true;
+    }
+
     public override void Walking(float x_input, float z_input)
     {
         base.Walking(x_input, z_input);
