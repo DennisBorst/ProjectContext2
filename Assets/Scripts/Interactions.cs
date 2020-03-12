@@ -12,6 +12,7 @@ public class Interactions : MonoBehaviour
 
     //private
     private float distance;
+    private float damping = 5f;
     private int randomNumber;
     private Player thisPlayer;
     private KeyCode playerButton;
@@ -39,15 +40,24 @@ public class Interactions : MonoBehaviour
         
         if (Input.GetKeyDown(playerButton) && !thisPlayer.animationPlaying)
         {
-
             thisPlayer.animationPlaying = true;
             currentBools.Clear();
             currentTime.Clear();
 
             for (int i = 0; i < animationBool.Length; i++)
             {
+                if (distance > 0)
+                {
+                    if (animationTriggerRange[i] > 0)
+                    {
+                        currentBools.Add(animationBool[i]);
+                        currentTime.Add(animationTime[i]);
+                    }
+                }
+
+                /*
                 //Far range
-                if(distance > 10)
+                if (distance > 10)
                 {
                     if(animationTriggerRange[i] > 10)
                     {
@@ -73,6 +83,7 @@ public class Interactions : MonoBehaviour
                         currentTime.Add(animationTime[i]);
                     }
                 }
+                */
             }
 
             randomNumber = Random.Range(0, currentBools.Count);
