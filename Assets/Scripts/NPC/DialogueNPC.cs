@@ -10,12 +10,16 @@ public class DialogueNPC : Interactable
     [SerializeField] private GameObject canvasDialogue;
 
     //private
+    private float damping = 5f;
     private int currentTextNumber;
     private bool interactingMan;
     private bool interactingWoman;
     private bool womanInRange;
+    private Vector3 lookPos;
     private TextMeshProUGUI dialogueTextUI;
     private Camera mainCamera;
+    private Player talkingPlayer;
+    private List<Player> player = new List<Player>();
 
     private void Start()
     {
@@ -32,16 +36,24 @@ public class DialogueNPC : Interactable
         InteractingMan();
         InteractingWoman();
         TurnCanvas();
+        TurnCharacter();
 
-        if(!interactingMan && !interactingWoman)
+        if (player != null && talkingPlayer == null)
         {
-            TurnCharacter();
+            for (int i = 0; i < player.Count; i++)
+            {
+                if (player[i].interact)
+                {
+                    talkingPlayer = player[i];
+                    //fsm.SwitchState(StateEnum.Talk);
+                }
+            }
         }
     }
 
     private void InteractingMan()
     {
-        if (manCollding && !interactingWoman)
+        if (manCollding && talkingPlayer == null)
         {
             if (Input.GetKeyDown(KeyCode.Joystick1Button0))
             {
@@ -71,6 +83,7 @@ public class DialogueNPC : Interactable
             {
                 man.ResetCharacter(man.movementSpeed);
                 canvasDialogue.SetActive(false);
+                talkingPlayer = null;
                 currentTextNumber = 0;
             }
         }
@@ -78,7 +91,7 @@ public class DialogueNPC : Interactable
 
     private void InteractingWoman()
     {
-        if (womanCollding && !interactingMan)
+        if (womanCollding && talkingPlayer == null)
         {
             if (Input.GetKeyDown(KeyCode.Joystick2Button0))
             {
@@ -108,6 +121,7 @@ public class DialogueNPC : Interactable
             {
                 woman.ResetCharacter(woman.movementSpeed);
                 canvasDialogue.SetActive(false);
+                talkingPlayer = null;
                 currentTextNumber = 0;
             }
         }
@@ -120,35 +134,51 @@ public class DialogueNPC : Interactable
 
     private void TurnCharacter()
     {
-        if (manCollding && !womanInRange)
+        if(player != null)
         {
-            transform.LookAt(man.transform);
-        }
-        else if (womanCollding && womanInRange)
-        {
-            transform.LookAt(woman.transform);
+            if(talkingPlayer != null)
+            {
+                //transform.LookAt(talkingPlayer.transform);
+                lookPos = talkingPlayer.transform.position - transform.position;
+            }
+            else
+            {
+                //transform.LookAt(player[0].transform);
+                lookPos = player[0].transform.position - transform.position;
+            }
+
+            Quaternion lookRot = Quaternion.LookRotation(lookPos, Vector3.up);
+            float eulerY = lookRot.eulerAngles.y;
+            Quaternion rotation = Quaternion.Euler(0, eulerY, 0);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * damping);
         }
     }
 
-    public override void OnTriggerEnter(Collider collider)
+    private void OnTriggerEnter(Collider collider)
     {
-        base.OnTriggerEnter(collider);
-
-        if (womanCollding)
+        if (collider.gameObject.tag == "Player")
         {
-            if (!manCollding)
+            if (collider.GetComponent<Women>())
             {
-                womanInRange = true;
+                player.Add(collider.GetComponent<Women>());
+            }
+
+            if (collider.GetComponent<Man>())
+            {
+                player.Add(collider.GetComponent<Man>());
             }
         }
     }
-
-    public override void OnTriggerExit(Collider collider)
+    private void OnTriggerExit(Collider collider)
     {
-        base.OnTriggerExit(collider);
-        if (woman)
+        if (collider.gameObject.GetComponent<Women>())
         {
-            womanInRange = false;
+            player.Remove(collider.gameObject.GetComponent<Women>());
+        }
+
+        if (collider.gameObject.GetComponent<Man>())
+        {
+            player.Remove(collider.gameObject.GetComponent<Man>());
         }
     }
 }
