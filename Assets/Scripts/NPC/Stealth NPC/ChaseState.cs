@@ -39,7 +39,7 @@ public class ChaseState : State
         }
         Debug.Log(currentOutOfSightTime);
 
-        blackBoard.npcStealth.SetAnimation("isWalking", true);
+        blackBoard.npcStealth.SetAnimation("isRunning", true);
         distToPlayer = Mathf.Abs(Vector3.Distance(blackBoard.npcStealth.transform.position, blackBoard.players[0].transform.position));
 
         if(grabRange >= distToPlayer)

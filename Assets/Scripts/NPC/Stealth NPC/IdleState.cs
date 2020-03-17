@@ -18,7 +18,8 @@ public class IdleState : State
     public override void OnEnter(BlackBoard blackBoard)
     {
         base.OnEnter(blackBoard);
-        currentIdleTime = idleTime;
+        currentIdleTime = Random.Range(idleTime * 0.75f, idleTime);
+
         if(!setPosition)
         {
             setPosition = true;
@@ -43,6 +44,7 @@ public class IdleState : State
         else
         {
             blackBoard.npcStealth.SetAnimation("isWalking", false);
+            blackBoard.npcStealth.SetAnimation("isRunning", false);
             blackBoard.npcStealth.transform.rotation = beginRotation;
         }
 
