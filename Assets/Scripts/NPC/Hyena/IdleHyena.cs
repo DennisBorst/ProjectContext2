@@ -45,6 +45,7 @@ public class IdleHyena : State
             return;
         }
 
+
         distToPlayer = Mathf.Abs(Vector3.Distance(blackBoard.hyena.transform.position, blackBoard.playerScripts[0].transform.position));
 
         if (distToPlayer < blackBoard.hyena.distanceFromPlayer)
