@@ -25,9 +25,9 @@ public class InputHandler : MonoBehaviour
             player = GetComponent<Man>();
         }
 
-        if (GetComponent<Women>())
+        if (GetComponent<Woman>())
         {
-            player = GetComponent<Women>();
+            player = GetComponent<Woman>();
         }
         ConfigureControlButtons();
 

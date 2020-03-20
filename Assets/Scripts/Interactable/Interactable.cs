@@ -10,12 +10,12 @@ public class Interactable : MonoBehaviour
     protected bool womanCollding;
 
     protected Man man;
-    protected Women woman;
+    protected Woman woman;
 
     private void Awake()
     {
         man = FindObjectOfType<Man>();
-        woman = FindObjectOfType<Women>();
+        woman = FindObjectOfType<Woman>();
     }
 
     public virtual void OnTriggerEnter(Collider collider)

@@ -70,6 +70,8 @@ public class Player : MonoBehaviour
         if (animationPlaying)
         {
             rb.isKinematic = true;
+            SetAnimation("isWalking", false);
+            GetComponent<FMODUnity.StudioEventEmitter>().Stop();
             return;
         }
         else
@@ -77,60 +79,55 @@ public class Player : MonoBehaviour
             rb.isKinematic = false;
         }
 
-        if (currentMovementSpeed != 0)
+        if (currentMovementSpeed == 0)
         {
-            //Moving part
-            rb.velocity = new Vector3(0, rb.velocity.y, 0);
-            rb.velocity += transform.right * x_input * currentMovementSpeed;
-            rb.velocity += transform.forward * z_input * currentMovementSpeed;
+            return;
+        }
 
-            //Rotation Character
+        //Moving part
+        rb.velocity = new Vector3(0, rb.velocity.y, 0);
+        rb.velocity += transform.right * x_input * currentMovementSpeed;
+        rb.velocity += transform.forward * z_input * currentMovementSpeed;
 
-            lookDirection.x = x_input * 90;
-            lookDirection.y = (z_input * -90) + 90;
+        //Rotation Character
+        lookDirection.x = x_input * 90;
+        lookDirection.y = (z_input * -90) + 90;
             
-            if (z_input <= -0.9 && x_input >= -0.9 && x_input <= 0.9)
+        if (z_input <= -0.9 && x_input >= -0.9 && x_input <= 0.9)
+        {
+            lookDirectionY = 0 + (cameraY - 180);
+        }
+        else if (x_input > 0 || z_input > 0)
+        {
+            lookDirectionY = (lookDirection.x + lookDirection.y) / 2 - 180 + (cameraY - 180);
+        }
+        else if(x_input < 0 || z_input < 0)
+        {
+            lookDirectionY = (lookDirection.x - lookDirection.y) / 2 - 180 + (cameraY - 180);
+        }
+
+        playerObject.transform.rotation = Quaternion.Euler(0, lookDirectionY, 0);
+
+        //Sounds & Animatie
+        if (inputX > 0.5f || inputZ > 0.5f || inputX < -0.5f || inputZ < -0.5f && !animationPlaying)
+        {
+            if (anim != null)
             {
-                lookDirectionY = 0 + (cameraY - 180);
+                SetAnimation("isWalking", true);
             }
-            else if (x_input > 0 || z_input > 0)
+            if (!GetComponent<FMODUnity.StudioEventEmitter>().IsPlaying())
             {
-                lookDirectionY = (lookDirection.x + lookDirection.y) / 2 - 180 + (cameraY - 180);
-            }
-            else if(x_input < 0 || z_input < 0)
-            {
-                lookDirectionY = (lookDirection.x - lookDirection.y) / 2 - 180 + (cameraY - 180);
-            }
-
-            playerObject.transform.rotation = Quaternion.Euler(0, lookDirectionY, 0);
-            
-
-
-            //Sounds
-            if(x_input > 0 || z_input > 0 || x_input < 0 || z_input < 0)
-            {
-                //Animaties
-                if (anim != null)
-                {
-                    SetAnimation("isWalking", true);
-                }
-                if (!GetComponent<FMODUnity.StudioEventEmitter>().IsPlaying())
-                {
-                    GetComponent<FMODUnity.StudioEventEmitter>().Play();
-
-                }
+                GetComponent<FMODUnity.StudioEventEmitter>().Play();
 
             }
-            else
+        }
+        else
+        {
+            if (anim != null)
             {
-                //Animaties
-                if (anim != null)
-                {
-                    SetAnimation("isWalking", false);
-                }
-                GetComponent<FMODUnity.StudioEventEmitter>().Stop();
+                SetAnimation("isWalking", false);
             }
-
+            GetComponent<FMODUnity.StudioEventEmitter>().Stop();
         }
     }
     public virtual void Input()

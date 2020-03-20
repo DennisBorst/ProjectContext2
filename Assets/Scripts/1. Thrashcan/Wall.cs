@@ -25,7 +25,7 @@ public class Wall : MonoBehaviour
         {
 
         }
-        else if (GetComponent<Women>())
+        else if (GetComponent<Woman>())
         {
 
         }

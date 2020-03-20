@@ -29,7 +29,7 @@ public class Interactions : MonoBehaviour
             playerButton = KeyCode.Joystick1Button2;
         }
 
-        if (GetComponent<Women>())
+        if (GetComponent<Woman>())
         {
             playerButton = KeyCode.Joystick2Button2;
         }

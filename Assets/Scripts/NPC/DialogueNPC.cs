@@ -151,10 +151,10 @@ public class DialogueNPC : Interactable
         base.OnTriggerEnter(collider);
         if (collider.gameObject.tag == "Player")
         {
-            if (collider.GetComponent<Women>())
+            if (collider.GetComponent<Woman>())
             {
-                womanScript = collider.GetComponent<Women>();
-                player.Add(collider.GetComponent<Women>());
+                womanScript = collider.GetComponent<Woman>();
+                player.Add(collider.GetComponent<Woman>());
             }
 
             if (collider.GetComponent<Man>())
@@ -167,10 +167,10 @@ public class DialogueNPC : Interactable
     private void OnTriggerExit(Collider collider)
     {
         base.OnTriggerExit(collider);
-        if (collider.gameObject.GetComponent<Women>())
+        if (collider.gameObject.GetComponent<Woman>())
         {
             womanScript = null;
-            player.Remove(collider.GetComponent<Women>());
+            player.Remove(collider.GetComponent<Woman>());
         }
 
         if (collider.gameObject.GetComponent<Man>())

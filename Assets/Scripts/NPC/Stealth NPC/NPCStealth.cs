@@ -86,9 +86,9 @@ public class NPCStealth : MonoBehaviour
     {
         if(collider.gameObject.tag == "Player")
         {
-            if (collider.GetComponent<Women>())
+            if (collider.GetComponent<Woman>())
             {
-                player.Add(collider.GetComponent<Women>());
+                player.Add(collider.GetComponent<Woman>());
             }
 
             if (collider.GetComponent<Man>())
@@ -99,9 +99,9 @@ public class NPCStealth : MonoBehaviour
     }
     private void OnTriggerExit(Collider collider)
     {
-        if(collider.gameObject.GetComponent<Women>())
+        if(collider.gameObject.GetComponent<Woman>())
         {
-            player.Remove(collider.gameObject.GetComponent<Women>());
+            player.Remove(collider.gameObject.GetComponent<Woman>());
         }
 
         if (collider.gameObject.GetComponent<Man>())

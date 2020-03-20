@@ -20,16 +20,18 @@ public class FarmStats : MonoBehaviour
 
     //private
     private Player woman;
+    private Player man;
 
     private void Start()
     {
-        if (GetComponent<Women>())
+        if (GetComponent<Woman>())
         {
-            woman = GetComponent<Player>();
+            woman = GetComponent<Woman>();
             UIManagerFarm.Instance.WaterGirl(currentWaterCarryAmount, maxWaterCarryAmount);
         }
         else
         {
+            man = GetComponent<Man>();
             UIManagerFarm.Instance.SeedsBoy(currentSeedCarryAmount, maxSeedCarryAmount);
         }
     }
@@ -65,12 +67,14 @@ public class FarmStats : MonoBehaviour
             currentWaterCarryAmount = 0;
             outOfWater = true;
 
+            woman.gameObject.GetComponent<Interactions>().enabled = true;
             woman.SetAnimation("waterIsEmpty", true);
         }
         else
         {
             outOfWater = false;
 
+            woman.gameObject.GetComponent<Interactions>().enabled = false;
             woman.SetAnimation("waterIsEmpty", false);
         }
 
@@ -84,6 +88,11 @@ public class FarmStats : MonoBehaviour
         if (currentSeedCarryAmount > maxSeedCarryAmount)
         {
             currentSeedCarryAmount = maxSeedCarryAmount;
+        }
+        else
+        {
+            man.SetAnimation("isHarvestingPlant", true);
+            StartCoroutine(man.SetanimationBoolFalse("isHarvestingPlant", 1f));
         }
 
         if (currentSeedCarryAmount <= 0)

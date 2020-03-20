@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0.031101592, b: 0.12319717, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0.03110183, b: 0.12319717, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5537,6 +5537,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 405276166, guid: 043e2e0a0dfed47418ce6916294c6016, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3008251bf39f93e4985e37239c2b3d18, type: 2}
     - target: {fileID: 418716584, guid: 043e2e0a0dfed47418ce6916294c6016, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -5574,6 +5578,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 4.302683
+      objectReference: {fileID: 0}
+    - target: {fileID: 375724254576425482, guid: 043e2e0a0dfed47418ce6916294c6016,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.10959597
+      objectReference: {fileID: 0}
+    - target: {fileID: 375724254576425482, guid: 043e2e0a0dfed47418ce6916294c6016,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.043139186
       objectReference: {fileID: 0}
     - target: {fileID: 375724255923560157, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
@@ -5770,6 +5784,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 171.66844
       objectReference: {fileID: 0}
+    - target: {fileID: 2246940569192453051, guid: 043e2e0a0dfed47418ce6916294c6016,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.6761707
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246940569192453051, guid: 043e2e0a0dfed47418ce6916294c6016,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.3278366
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246940569192453051, guid: 043e2e0a0dfed47418ce6916294c6016,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.51881903
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246940569192453051, guid: 043e2e0a0dfed47418ce6916294c6016,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.40760678
+      objectReference: {fileID: 0}
     - target: {fileID: 2742993184330690159, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5904,6 +5938,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -3.8270166
+      objectReference: {fileID: 0}
+    - target: {fileID: 4557921530800621780, guid: 043e2e0a0dfed47418ce6916294c6016,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.06212616
+      objectReference: {fileID: 0}
+    - target: {fileID: 4557921530800621780, guid: 043e2e0a0dfed47418ce6916294c6016,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.09039296
       objectReference: {fileID: 0}
     - target: {fileID: 4557921531600907267, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
@@ -6223,7 +6267,7 @@ PrefabInstance:
     - target: {fileID: 5089726617034863005, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
       propertyPath: movementSpeed
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5089726617043079175, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
@@ -6278,7 +6322,7 @@ PrefabInstance:
     - target: {fileID: 5089726617397483447, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
       propertyPath: movementSpeed
-      value: 2.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5089726617667668133, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
@@ -6779,6 +6823,8 @@ PrefabInstance:
     - {fileID: 5089726616564723983, guid: 043e2e0a0dfed47418ce6916294c6016, type: 3}
     - {fileID: 418716586, guid: 043e2e0a0dfed47418ce6916294c6016, type: 3}
     - {fileID: 418716584, guid: 043e2e0a0dfed47418ce6916294c6016, type: 3}
+    - {fileID: 3967830176231800619, guid: 043e2e0a0dfed47418ce6916294c6016, type: 3}
+    - {fileID: 8405349657223773077, guid: 043e2e0a0dfed47418ce6916294c6016, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 043e2e0a0dfed47418ce6916294c6016, type: 3}
 --- !u!4 &254964996 stripped
 Transform:
