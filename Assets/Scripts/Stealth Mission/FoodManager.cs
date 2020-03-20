@@ -9,8 +9,8 @@ public class FoodManager : MonoBehaviour
     [SerializeField] private int foodToCollect;
     [SerializeField] private GameObject lastFood;
     [SerializeField] private GrabFood lastFoodScript;
-
     [SerializeField] private TextMeshProUGUI foodCollectedUI;
+    [SerializeField] private GameObject[] objectsToSetActive; //Objects that needs to set active after the last mais has been taken
 
     //private
     private int currentFoodCollected;
@@ -21,6 +21,11 @@ public class FoodManager : MonoBehaviour
         lastFoodScript.enabled = false;
 
         foodCollectedUI.text = currentFoodCollected + "/" + (foodToCollect + 1);
+
+        for (int i = 0; i < objectsToSetActive.Length; i++)
+        {
+            objectsToSetActive[i].SetActive(false);
+        }
     }
 
     public void AddFoodNumber()
@@ -32,6 +37,16 @@ public class FoodManager : MonoBehaviour
         {
             lastFood.SetActive(true);
             lastFoodScript.enabled = true;
+        }
+
+        if(currentFoodCollected == foodToCollect + 1)
+        {
+            for (int i = 0; i < objectsToSetActive.Length; i++)
+            {
+                objectsToSetActive[i].SetActive(true);
+            }
+
+            this.enabled = false;
         }
     }
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using TMPro;
 
 public enum StateEnum
 {
@@ -12,7 +13,7 @@ public enum StateEnum
     Talk
 }
 
-public class NPCStealth : MonoBehaviour
+public class NPCStealth : Interactable
 {
     //public
     public float chaseSpeed;
@@ -27,13 +28,17 @@ public class NPCStealth : MonoBehaviour
     public LayerMask targetMask;
     public LayerMask obstacleMask;
     public List<Transform> visibleTargets = new List<Transform>();
-    public string[] dialogueText;
+    public string dialogueTextMan;
+    public string dialogueTextWoman;
+    public TextMeshProUGUI dialogueUI;
+    public GameObject dialogueCanvas;
     public FSM fsm;
     public BlackBoard blackBoard = new BlackBoard();
 
     //public hide in inspector
     public bool following;
-    public Player talkingPlayer;
+    [HideInInspector] public Player talkingPlayer;
+    [HideInInspector] public string textPlayer;
 
     //private
     private bool playerColliding;
@@ -74,7 +79,7 @@ public class NPCStealth : MonoBehaviour
         {
             return;
         }
-
+        
         if(player != null && !following && talkingPlayer == null)
         {
             for (int i = 0; i < player.Count; i++)
@@ -82,37 +87,47 @@ public class NPCStealth : MonoBehaviour
                 if (player[i].interact)
                 {
                     talkingPlayer = player[i];
+                    if(player[i].GetComponent<Man>())
+                    {
+                        textPlayer = dialogueTextMan;
+                    }
+                    if(player[i].GetComponent<Woman>())
+                    {
+                        textPlayer = dialogueTextWoman;
+                    }
                     fsm.SwitchState(StateEnum.Talk);
                 }
             }
         }
     }
-
     private void OnTriggerEnter(Collider collider)
     {
         if(collider.gameObject.tag == "Player")
         {
             if (collider.GetComponent<Woman>())
             {
-                player.Add(collider.GetComponent<Woman>());
+                player.Add(collider.gameObject.GetComponent<Woman>());
             }
 
             if (collider.GetComponent<Man>())
             {
-                player.Add(collider.GetComponent<Man>());
+                player.Add(collider.gameObject.GetComponent<Man>());
             }
         }
     }
     private void OnTriggerExit(Collider collider)
     {
-        if(collider.gameObject.GetComponent<Woman>())
+        if (collider.gameObject.tag == "Player")
         {
-            player.Remove(collider.gameObject.GetComponent<Woman>());
-        }
+            if (collider.gameObject.GetComponent<Woman>())
+            {
+                player.Remove(collider.gameObject.GetComponent<Woman>());
+            }
 
-        if (collider.gameObject.GetComponent<Man>())
-        {
-            player.Remove(collider.gameObject.GetComponent<Man>());
+            if (collider.gameObject.GetComponent<Man>())
+            {
+                player.Remove(collider.gameObject.GetComponent<Man>());
+            }
         }
     }
     IEnumerator FindTargetsDelay(float delay)

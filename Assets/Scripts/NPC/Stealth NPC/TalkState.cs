@@ -15,12 +15,16 @@ public class TalkState : State
     {
         base.OnEnter(blackBoard);
         oldRotation = blackBoard.npcStealth.transform.rotation;
+        blackBoard.npcStealth.dialogueUI.text = "";
+        blackBoard.npcStealth.dialogueCanvas.SetActive(true);
+        blackBoard.npcStealth.dialogueUI.text = blackBoard.npcStealth.textPlayer;
     }
     public override void OnExit()
     {
         blackBoard.npcStealth.talkingPlayer.animationPlaying = false;
         blackBoard.npcStealth.talkingPlayer = null;
         blackBoard.npcStealth.transform.rotation = oldRotation;
+
     }
     public override void OnUpdate()
     {
@@ -33,6 +37,7 @@ public class TalkState : State
         if (blackBoard.npcStealth.talkingPlayer.deinteract)
         {
             blackBoard.npcStealth.talkingPlayer.animationPlaying = false;
+            blackBoard.npcStealth.dialogueCanvas.SetActive(false);
             fsm.SwitchState(StateEnum.Idle);
         }
         else

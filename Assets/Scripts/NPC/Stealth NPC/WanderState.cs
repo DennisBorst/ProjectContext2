@@ -28,7 +28,6 @@ public class WanderState : State
     {
         blackBoard.npcStealth.SetAnimation("isWalking", true);
         distanceToLocation = Mathf.Abs(Vector3.Distance(blackBoard.npcStealth.transform.position, targetPoint.transform.position));
-        Debug.Log(distanceToLocation);
 
         if (distanceFromDestination >= distanceToLocation)
         {
