@@ -21,6 +21,7 @@ public class NPCStealth : MonoBehaviour
     [Range(0, 360)]
     public float viewAngle;
     public bool idleNPC;
+    public bool canTalk;
     public Transform[] wanderPoints;
     public StateEnum startState;
     public LayerMask targetMask;
@@ -67,6 +68,11 @@ public class NPCStealth : MonoBehaviour
         if (fsm != null)
         {
             fsm.OnUpdate();
+        }
+
+        if (!canTalk)
+        {
+            return;
         }
 
         if(player != null && !following && talkingPlayer == null)
