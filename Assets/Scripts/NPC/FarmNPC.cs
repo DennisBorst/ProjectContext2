@@ -30,7 +30,7 @@ public class FarmNPC : Interactable
 
     private void Start()
     {
-        dialogueTextUI = GetComponentInChildren<TextMeshProUGUI>();
+        dialogueTextUI = canvasDialogue.GetComponentInChildren<TextMeshProUGUI>();
         mainCamera = FindObjectOfType<Camera>();
 
         canvasDialogue.SetActive(false);
