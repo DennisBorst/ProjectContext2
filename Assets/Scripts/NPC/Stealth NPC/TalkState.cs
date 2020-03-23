@@ -14,7 +14,7 @@ public class TalkState : State
     public override void OnEnter(BlackBoard blackBoard)
     {
         base.OnEnter(blackBoard);
-        oldRotation = blackBoard.npcStealth.transform.rotation;
+        oldRotation = blackBoard.npcStealth.npcObject.transform.rotation;
         blackBoard.npcStealth.dialogueUI.text = "";
         blackBoard.npcStealth.dialogueCanvas.SetActive(true);
         blackBoard.npcStealth.dialogueUI.text = blackBoard.npcStealth.textPlayer;
@@ -23,21 +23,21 @@ public class TalkState : State
     {
         blackBoard.npcStealth.talkingPlayer.animationPlaying = false;
         blackBoard.npcStealth.talkingPlayer = null;
-        blackBoard.npcStealth.transform.rotation = oldRotation;
+        blackBoard.npcStealth.dialogueCanvas.SetActive(false);
+        blackBoard.npcStealth.npcObject.transform.rotation = oldRotation;
 
     }
     public override void OnUpdate()
     {
-        Vector3 lookPos = blackBoard.npcStealth.talkingPlayer.transform.position - blackBoard.npcStealth.transform.position;
+        Vector3 lookPos = blackBoard.npcStealth.talkingPlayer.transform.position - blackBoard.npcStealth.npcObject.transform.position;
         Quaternion lookRot = Quaternion.LookRotation(lookPos, Vector3.up);
         float eulerY = lookRot.eulerAngles.y;
         Quaternion rotation = Quaternion.Euler(0, eulerY, 0);
-        blackBoard.npcStealth.transform.rotation = Quaternion.Slerp(blackBoard.npcStealth.transform.rotation, rotation, Time.deltaTime * damping);
+        blackBoard.npcStealth.npcObject.transform.rotation = Quaternion.Slerp(blackBoard.npcStealth.npcObject.transform.rotation, rotation, Time.deltaTime * damping);
 
         if (blackBoard.npcStealth.talkingPlayer.deinteract)
         {
             blackBoard.npcStealth.talkingPlayer.animationPlaying = false;
-            blackBoard.npcStealth.dialogueCanvas.SetActive(false);
             fsm.SwitchState(StateEnum.Idle);
         }
         else

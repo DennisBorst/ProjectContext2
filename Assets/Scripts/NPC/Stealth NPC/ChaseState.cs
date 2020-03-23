@@ -19,6 +19,7 @@ public class ChaseState : State
     {
         base.OnEnter(blackBoard);
         blackBoard.navMeshAgent.speed = blackBoard.npcStealth.chaseSpeed;
+        blackBoard.npcStealth.angryItem.SetActive(true);
         currentOutOfSightTime = outOfSightTimer;
     }
     public override void OnExit()
@@ -30,6 +31,7 @@ public class ChaseState : State
         if (!blackBoard.npcStealth.following)
         {
             distToLastPlayerPos = Mathf.Abs(Vector3.Distance(blackBoard.npcStealth.transform.position, lastPlayerPosition));
+            blackBoard.npcStealth.angryItem.SetActive(false);
 
             if (distToLastPlayerPos <= 1f)
             {
