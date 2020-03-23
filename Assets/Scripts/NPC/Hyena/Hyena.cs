@@ -48,7 +48,7 @@ public class Hyena : MonoBehaviour
             anim.SetBool(state, val);
         }
     }
-    IEnumerator SetanimationBoolFalse(string val, float duration)
+    public IEnumerator SetanimationBoolFalse(string val, float duration)
     {
         yield return new WaitForSeconds(duration);
         anim.SetBool(val, false);

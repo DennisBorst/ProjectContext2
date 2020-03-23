@@ -6,8 +6,10 @@ public class IdleHyena : State
 {
     private float distToPlayer;
     private float distToBegin;
+    private float scareTime = 0.3f;
     private bool setPosition = false;
     private bool scared = false;
+    private bool scareAnimActivated;
     private Vector3 beginPosition;
 
     public IdleHyena(StateEnum id)
@@ -32,16 +34,33 @@ public class IdleHyena : State
     {
         if (scared)
         {
-            distToBegin = Mathf.Abs(Vector3.Distance(blackBoard.hyena.transform.position, beginPosition));
-
-            if (distToBegin < 1)
+            //Bounce Back animatie
+            if (!scareAnimActivated)
             {
-                blackBoard.hyena.SetAnimation("isRunning", false);
-                return;
-            }
+                scareTime = Timer(scareTime);
+                if(scareTime > 0)
+                {
+                    blackBoard.hyena.SetAnimation("isRunning", true);
+                    return;
+                }
 
-            blackBoard.navMeshAgent.destination = beginPosition;
-            blackBoard.hyena.SetAnimation("isRunning", true);
+                scareAnimActivated = true;
+                blackBoard.hyena.SetAnimation("bounceBack", true);
+                blackBoard.hyena.StartCoroutine(blackBoard.hyena.SetanimationBoolFalse("bounceBack", 1.1f));
+            }
+            else
+            {
+                distToBegin = Mathf.Abs(Vector3.Distance(blackBoard.hyena.transform.position, beginPosition));
+
+                if (distToBegin < 1)
+                {
+                    blackBoard.hyena.SetAnimation("isRunning", false);
+                    return;
+                }
+
+                blackBoard.navMeshAgent.destination = beginPosition;
+                blackBoard.hyena.SetAnimation("isRunning", true);
+            }
             return;
         }
 
@@ -52,5 +71,11 @@ public class IdleHyena : State
         {
             fsm.SwitchState(StateEnum.Wander);
         }
+    }
+
+    private float Timer(float timer)
+    {
+        timer -= Time.deltaTime;
+        return timer;
     }
 }
