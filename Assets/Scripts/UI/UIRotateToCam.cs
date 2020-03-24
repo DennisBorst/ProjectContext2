@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class UIRotateToCam : MonoBehaviour
 {
-    //private
-    private GameObject camera;
+    [SerializeField] private GameObject camera;
 
     private void Start()
     {
-        camera = GameObject.FindGameObjectWithTag("MainCamera");
+        if(camera == null)
+        {
+            camera = GameObject.FindGameObjectWithTag("MainCamera");
+        }
     }
     private void Update()
     {

@@ -6,32 +6,35 @@ using TMPro;
 public class FarmNPC : Interactable
 {
     //private serialized
+    [SerializeField] private bool cinematicAfterTalk;
     [SerializeField] private string[] dialogueTextMan;
     [SerializeField] private string[] dialogueTextWoman;
     [SerializeField] private Transform teleportMan;
     [SerializeField] private Transform teleportWoman;
     [SerializeField] private GameObject canvasDialogue;
     [SerializeField] private GameObject farmIcons;
+    [SerializeField] private GameObject cinematic;
     [SerializeField] private Animator anim;
+    [SerializeField] private Camera mainCamera;
 
     //private
     private float damping = 5f;
     private int currentTextNumber;
     private bool interactingMan;
     private bool interactingWoman;
-    private bool womanInRange;
+    private bool done;
     private Vector3 lookPos;
     private TextMeshProUGUI dialogueTextUI;
-    private Camera mainCamera;
     private Player manScript;
     private Player womanScript;
     private Player talkingPlayer;
     private List<Player> player = new List<Player>();
+    private Animator animNPC;
 
     private void Start()
     {
         dialogueTextUI = canvasDialogue.GetComponentInChildren<TextMeshProUGUI>();
-        mainCamera = FindObjectOfType<Camera>();
+        animNPC = GetComponentInChildren<Animator>();
 
         canvasDialogue.SetActive(false);
         dialogueTextUI.text = "";
@@ -43,7 +46,16 @@ public class FarmNPC : Interactable
         InteractingMan();
         InteractingWoman();
         TurnCanvas();
-        TurnCharacter();
+        //TurnCharacter();
+
+        if(interactingMan || interactingWoman)
+        {
+            animNPC.SetBool("idle", true);
+        }
+        else if(!done)
+        {
+            animNPC.SetBool("idle", false);
+        }
     }
 
     private void InteractingMan()
@@ -54,9 +66,20 @@ public class FarmNPC : Interactable
             {
                 if (currentTextNumber == dialogueTextMan.Length)
                 {
+                    done = true;
                     interactingMan = false;
-                    anim.SetTrigger("FadeOut");
-                    StartCoroutine(Fade());
+
+                    if (cinematic)
+                    {
+                        cinematic.SetActive(true);
+                    }
+                    else
+                    {
+                        anim.SetTrigger("FadeOut");
+                        StartCoroutine(Fade());
+                    }
+
+                    this.enabled = false;
                 }
                 else
                 {
@@ -93,12 +116,22 @@ public class FarmNPC : Interactable
         {
             if (Input.GetKeyDown(KeyCode.Joystick2Button0))
             {
-
                 if (currentTextNumber == dialogueTextWoman.Length)
                 {
+                    done = true;
                     interactingWoman = false;
-                    anim.SetTrigger("FadeOut");
-                    StartCoroutine(Fade());
+
+                    if (cinematic)
+                    {
+                        cinematic.SetActive(true);
+                    }
+                    else
+                    {
+                        anim.SetTrigger("FadeOut");
+                        StartCoroutine(Fade());
+                    }
+
+                    this.enabled = false;
                 }
                 else
                 {

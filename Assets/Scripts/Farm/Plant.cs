@@ -120,15 +120,14 @@ public class Plant : Interactable
                     return;
                 }
 
-                if (!planted && !farmStatsBoy.outOfSeeds)
+                if (!planted && farmStatsBoy.currentSeedCarryAmount > 0 && !man.animationPlaying)
                 {
                     ResetPlant();
                     PlantSeed();
-                    farmStatsBoy.ChangeSeedNumber(-1);
                     return;
                 }
                 
-                if (finished && !farmStatsBoy.carryingMais)
+                if (finished && !farmStatsBoy.carryingMais && !man.animationPlaying)
                 {
                     //Get some food 
                     Debug.Log("You harvest a plant");
@@ -164,8 +163,10 @@ public class Plant : Interactable
     {
         planted = true;
         plantStages[0].SetActive(true);
-        StartCoroutine(man.SetanimationBoolFalse("isPlacingSeed", 1.4f));
+        man.animationPlaying = true;
+        farmStatsBoy.ChangeSeedNumber(-1);
         man.SetAnimation("isPlacingSeed", true);
+        StartCoroutine(man.SetanimationBoolFalse("isPlacingSeed", 1.4f));
         FMODUnity.RuntimeManager.PlayOneShot(PlantSeedEvent, transform.position);
 
     }

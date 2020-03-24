@@ -9,7 +9,9 @@ public class DialogueNPC : Interactable
     [SerializeField] private string[] dialogueTextMan;
     [SerializeField] private string[] dialogueTextWoman;
     [SerializeField] private GameObject canvasDialogue;
-
+    [SerializeField] private GameObject npcObject;
+    [SerializeField] private Camera mainCamera;
+    
     //private
     private float damping = 5f;
     private int currentTextNumber;
@@ -18,7 +20,6 @@ public class DialogueNPC : Interactable
     private bool womanInRange;
     private Vector3 lookPos;
     private TextMeshProUGUI dialogueTextUI;
-    private Camera mainCamera;
     private Player manScript;
     private Player womanScript;
     private Player talkingPlayer;
@@ -27,7 +28,6 @@ public class DialogueNPC : Interactable
     private void Start()
     {
         dialogueTextUI = canvasDialogue.GetComponentInChildren<TextMeshProUGUI>();
-        mainCamera = FindObjectOfType<Camera>();
 
         canvasDialogue.SetActive(false);
         dialogueTextUI.text = "";
@@ -38,7 +38,7 @@ public class DialogueNPC : Interactable
     {
         InteractingMan();
         InteractingWoman();
-        TurnCanvas();
+        //TurnCanvas();
         TurnCharacter();
     }
 
@@ -142,7 +142,7 @@ public class DialogueNPC : Interactable
             Quaternion lookRot = Quaternion.LookRotation(lookPos, Vector3.up);
             float eulerY = lookRot.eulerAngles.y;
             Quaternion rotation = Quaternion.Euler(0, eulerY, 0);
-            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * damping);
+            npcObject.transform.rotation = Quaternion.Slerp(npcObject.transform.rotation, rotation, Time.deltaTime * damping);
         }
     }
 

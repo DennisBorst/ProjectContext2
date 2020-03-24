@@ -36,6 +36,8 @@ public class IncreaseSeedStats : Interactable
             if (Input.GetKeyDown(KeyCode.Joystick1Button0))
             {
                 farmStats.ChangeSeedNumber(increaseStat);
+                man.SetAnimation("isHarvestingPlant", true);
+                StartCoroutine(man.SetanimationBoolFalse("isHarvestingPlant", 1f));
             }
         }
     }

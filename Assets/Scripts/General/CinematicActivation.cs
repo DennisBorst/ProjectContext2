@@ -10,6 +10,7 @@ public class CinematicActivation : MonoBehaviour
     [SerializeField] private bool endCinematic;
     [SerializeField] private GameObject[] deActiveObject;
     [SerializeField] private GameObject[] objectsToDisableForEver;
+    [SerializeField] private GameObject[] activateObject;
 
     //private
     private float currentCinematicTimer;
@@ -40,6 +41,11 @@ public class CinematicActivation : MonoBehaviour
         {
             objectsToDisableForEver[i].SetActive(false);
         }
+
+        for (int i = 0; i < activateObject.Length; i++)
+        {
+            activateObject[i].SetActive(true);
+        }
     }
 
     // Update is called once per frame
@@ -51,8 +57,14 @@ public class CinematicActivation : MonoBehaviour
         {
             if (endCinematic)
             {
-                Destroy(CheckPointManager.Instance.gameObject);
-                ambienceEvent.GetComponent<FMODUnity.StudioEventEmitter>().Stop();
+                if(CheckPointManager.Instance != null)
+                {
+                    Destroy(CheckPointManager.Instance.gameObject);
+                }
+                if (ambienceEvent != null)
+                {
+                    ambienceEvent.GetComponent<FMODUnity.StudioEventEmitter>().Stop();
+                }
                 GameManager.Instance.LoadNextLevel();
                 return;
             }
