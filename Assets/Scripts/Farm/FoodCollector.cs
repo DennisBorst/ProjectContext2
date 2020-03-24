@@ -33,7 +33,10 @@ public class FoodCollector : Interactable
     private void Start()
     {
         UIManagerFarm.Instance.MaisChange(currentFoodCarryAmount, maxFoodCarryAmount);
-        cinematic.SetActive(false);
+        if(cinematic != null)
+        {
+            cinematic.SetActive(false);
+        }
 
         for (int i = 0; i < cornObjects.Length; i++)
         {

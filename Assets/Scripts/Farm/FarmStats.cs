@@ -89,11 +89,6 @@ public class FarmStats : MonoBehaviour
         {
             currentSeedCarryAmount = maxSeedCarryAmount;
         }
-        else
-        {
-            man.SetAnimation("isHarvestingPlant", true);
-            StartCoroutine(man.SetanimationBoolFalse("isHarvestingPlant", 1f));
-        }
 
         if (currentSeedCarryAmount <= 0)
         {
