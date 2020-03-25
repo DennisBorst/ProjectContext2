@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEditor;
 
+/*
 [CustomEditor(typeof(NPCStealth))]
 public class FieldOfViewEditor : Editor
 {
@@ -23,3 +24,4 @@ public class FieldOfViewEditor : Editor
         }
     }
 }
+*/
