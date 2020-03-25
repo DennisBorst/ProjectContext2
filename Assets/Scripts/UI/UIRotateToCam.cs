@@ -15,6 +15,9 @@ public class UIRotateToCam : MonoBehaviour
     }
     private void Update()
     {
-        this.transform.LookAt(camera.transform);
+        if(camera != null)
+        {
+            this.transform.LookAt(camera.transform);
+        }
     }
 }
