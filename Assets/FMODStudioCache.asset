@@ -79,13 +79,13 @@ MonoBehaviour:
   Path: event:/Music/Level_01
   guid: 99342c05b00d054ab11a5bcdbfdd81d3
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 2429386258886435625}
-  - {fileID: -4791625177183949323}
+  - {fileID: 9039178067714892149}
+  - {fileID: 7669595122457602971}
   MinDistance: 0
   MaxDistance: 0
   Length: 221137
@@ -153,6 +153,42 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
+--- !u!114 &-8060318694961045149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: LeftRight
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &-7968210452566139487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: E:\Game Design\Unity\ProjectContext2\ProjectContext2_FMOD\Build\Desktop\Master
+    Bank.bank
+  lastModified: 637205636284039479
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 31253376
+  Exists: 1
 --- !u!114 &-7898547363165748063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,7 +284,7 @@ MonoBehaviour:
   Path: event:/PlantSeed
   guid: 515a1b43e03c074fb35c09ac51bb5ad9
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -535,7 +571,7 @@ MonoBehaviour:
   Path: event:/Voice_Over/03_03
   guid: 9e7e9ef2a4887241868c41492cbd065f
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -590,6 +626,22 @@ MonoBehaviour:
   Name: GirlMusic
   Min: 0
   Max: 1
+  Default: 0
+--- !u!114 &-5866122901325889599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FS_Surface
+  Min: 0
+  Max: 2
   Default: 0
 --- !u!114 &-5790559295377182547
 MonoBehaviour:
@@ -674,7 +726,7 @@ MonoBehaviour:
   Path: event:/AmbienceChapter2
   guid: c15829d7ade8c549bc37e69a5d90d1f8
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -832,7 +884,7 @@ MonoBehaviour:
   Path: event:/TorchWave
   guid: 91a3be9f5dea67419de1d60d8490ed52
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -919,7 +971,7 @@ MonoBehaviour:
   Path: event:/Voice_Over/04_01
   guid: 72d5db1629aa454da4fb8dbb5a6786ab
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -942,7 +994,7 @@ MonoBehaviour:
   Path: event:/WaterGrab
   guid: ddc4b1ca06aa1d40b5d5a70c35687a2b
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1049,7 +1101,7 @@ MonoBehaviour:
   Path: event:/Music/Level_04_hyena
   guid: a2a04a1ce7621c4492e10bbfbbeba95f
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -1157,7 +1209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: ProjectContext2_FMOD\Build\Desktop\Master Bank.strings.bank
-  lastModified: 637205755717015885
+  lastModified: 637205636284139244
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -1290,12 +1342,12 @@ MonoBehaviour:
   Path: event:/LiftLoop
   guid: 3b371712136ac24db5af5f1d9998d09a
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 215270871034911305}
+  - {fileID: -8060318694961045149}
   MinDistance: 1
   MaxDistance: 100
   Length: 6454
@@ -1314,7 +1366,7 @@ MonoBehaviour:
   Path: event:/Music/Level_03_night
   guid: 95608c6cf17e3048aa7fddedd055e189
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -1441,7 +1493,7 @@ MonoBehaviour:
   Path: event:/Voice_Over/04_02
   guid: a57350707f813349b6c06fd8889fcf3b
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1747,7 +1799,7 @@ MonoBehaviour:
   Path: event:/PutDownCrop
   guid: d53a40ab0cab7e438791177e5281e9a6
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1834,7 +1886,7 @@ MonoBehaviour:
   Path: event:/Voice_Over/03_04
   guid: caf95fcca5ad3b4394843b820c444338
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1969,12 +2021,12 @@ MonoBehaviour:
   Path: event:/FS_Girl
   guid: 66a068749ea2834aa4bf161d41d54246
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -2512823248123801522}
+  - {fileID: 6977847248719937223}
   MinDistance: 10
   MaxDistance: 20
   Length: 350
@@ -2008,7 +2060,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -3492375777637848666}
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   EditorEvents:
   - {fileID: 6150923023460272218}
   - {fileID: 5806223347118298409}
@@ -2047,9 +2099,9 @@ MonoBehaviour:
   - {fileID: 9187656280581507107}
   - {fileID: 6477120464490030706}
   - {fileID: -3845317243287468701}
-  MasterBankRef: {fileID: 3703120513765793425}
+  MasterBankRef: {fileID: -7968210452566139487}
   StringsBankRef: {fileID: -3492375777637848666}
-  stringsBankWriteTime: 637205755717015885
+  stringsBankWriteTime: 637205636284139244
   cacheVersion: 2
 --- !u!114 &215270871034911305
 MonoBehaviour:
@@ -2114,7 +2166,7 @@ MonoBehaviour:
   Path: event:/LiftLoopRight
   guid: 4a3037d0a339b140914cf44a7348c910
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -2137,7 +2189,7 @@ MonoBehaviour:
   Path: event:/Gate
   guid: 7168ce2e1362034eb85fa8d3861dd4be
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2208,7 +2260,7 @@ MonoBehaviour:
   Path: event:/Voice_Over/04_03
   guid: 3f2858d82440c44c8b7ce088eae4382a
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2475,7 +2527,7 @@ MonoBehaviour:
   Path: event:/WaterPlant
   guid: 3803118f74891e42beb861e5c86b415a
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2546,12 +2598,12 @@ MonoBehaviour:
   Path: event:/FS_Boy
   guid: 46dda61ac4776b42b86b984ae68b4bf5
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 4035854891627775094}
+  - {fileID: -5866122901325889599}
   MinDistance: 1
   MaxDistance: 20
   Length: 350
@@ -2602,7 +2654,7 @@ MonoBehaviour:
   Path: event:/Fire
   guid: 1cdc5ceee433aa4db367f697468c26f6
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -2673,7 +2725,7 @@ MonoBehaviour:
   Path: event:/Music/Ending
   guid: 4e4a7502f787ae499a6d5c98b6f48851
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -2776,7 +2828,7 @@ MonoBehaviour:
   Path: event:/PlankBridge
   guid: d19e55959e4fc24eb8be290e5eb36258
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2847,7 +2899,7 @@ MonoBehaviour:
   Path: event:/Voice_Over/02_02
   guid: 995201d3f5075e498c0b39203ac8902a
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2954,7 +3006,7 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 31253376
-  Exists: 1
+  Exists: 0
 --- !u!114 &3720922709445129318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2970,7 +3022,7 @@ MonoBehaviour:
   Path: event:/Music/Level_03_day
   guid: 2b80a8dc45a53444ab52293ae63a1df9
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -3103,6 +3155,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: LeftRight
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &4326671512296946615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: GirlMusic
   Min: 0
   Max: 1
   Default: 0
@@ -3349,7 +3417,7 @@ MonoBehaviour:
   Path: event:/AmbienceChapter1
   guid: ad1967f3d9da6740ba244756e9b63eae
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -3440,7 +3508,7 @@ MonoBehaviour:
   Path: event:/Voice_Over/02_01
   guid: b3e423cb74c0af4c9b3b317b18cc03e3
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3495,7 +3563,7 @@ MonoBehaviour:
   Path: event:/Voice_Over/03_02
   guid: 9f0e5b14457ac44997953e17f407ea23
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3550,7 +3618,7 @@ MonoBehaviour:
   Path: event:/Music/Intro_01
   guid: 18affe6bd53dcd408163658b67588d30
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -3621,7 +3689,7 @@ MonoBehaviour:
   Path: event:/CutCrop
   guid: 0931cb78f28aad4d86b485b17336feef
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -3644,13 +3712,13 @@ MonoBehaviour:
   Path: event:/Music/Level_02
   guid: 3ad76a787fa35047b8d6fb615a107a6d
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -2149258767553514833}
-  - {fileID: -6841574036846588947}
+  - {fileID: 4326671512296946615}
+  - {fileID: 8826335606574818035}
   MinDistance: 0
   MaxDistance: 0
   Length: 147000
@@ -3701,7 +3769,7 @@ MonoBehaviour:
   Path: event:/Voice_Over/01_01
   guid: 00337c69d8918e4d9e50293756d1a3c6
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -3740,7 +3808,7 @@ MonoBehaviour:
   Path: event:/Voice_Over/05_01
   guid: dd2f1df0c7fc0f4f8fbab006ad3e4904
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3779,7 +3847,7 @@ MonoBehaviour:
   Path: event:/Music/Level_03_chase
   guid: 4b77f194e9bd4c439a2a9cf5dda222ba
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -3788,6 +3856,22 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 125235
 --- !u!114 &6752057410058619389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FS_Surface
+  Min: 0
+  Max: 2
+  Default: 0
+--- !u!114 &6977847248719937223
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3932,6 +4016,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: LeftRight
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &7669595122457602971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: GirlMusic
   Min: 0
   Max: 1
   Default: 0
@@ -4094,7 +4194,7 @@ MonoBehaviour:
   Path: event:/AngryPeople
   guid: a38f7299b0aa444a843878e71f2e73d8
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -4181,7 +4281,7 @@ MonoBehaviour:
   Path: event:/Voice_Over/01_02
   guid: dfc5fcabff8e7645b99a5498c9285295
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -4189,6 +4289,22 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 15300
+--- !u!114 &8826335606574818035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: BoyMusic
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &8836703069191598666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4204,7 +4320,7 @@ MonoBehaviour:
   Path: event:/Voice_Over/05_02
   guid: 284db536cde3e2449839ac88c8886a70
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -4225,6 +4341,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: GirlMusic
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &9039178067714892149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: BoyMusic
   Min: 0
   Max: 1
   Default: 0
@@ -4275,7 +4407,7 @@ MonoBehaviour:
   Path: event:/Voice_Over/03_01
   guid: cd93fc719ca66741b4aea3046272d29a
   Banks:
-  - {fileID: 3703120513765793425}
+  - {fileID: -7968210452566139487}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
