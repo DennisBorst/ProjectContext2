@@ -16,6 +16,11 @@ public class CheckPointManager : MonoBehaviour
 
     private void Awake()
     {
+        if(CheckPointManager.Instance != null)
+        {
+            Destroy(CheckPointManager.Instance.gameObject);
+        }
+
         instance = this;
         thisEnabled = true;
 

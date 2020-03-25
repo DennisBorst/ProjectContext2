@@ -6,13 +6,9 @@ public class ClimbOn : Interactable
 {
     //private Serialized
     [SerializeField] private float walkToBeginSpeed;
-    [SerializeField] private float walkToEndSpeed;
-    [SerializeField] private float climbSpeed;
     [SerializeField] private float distanceToClimb;
-    [SerializeField] private float distanceToEnd;
     [SerializeField] private Transform[] climbBegin;
     [SerializeField] private Transform[] climbEnd;
-    [SerializeField] private Transform[] walkEnd;
 
     //private
     private float climbAnimationTime = 4.183f;
@@ -20,8 +16,6 @@ public class ClimbOn : Interactable
     private float currentAnimTimeWoman;
     private bool teleportedMan;
     private bool teleportedWoman;
-    private bool animMan;
-    private bool animWoman;
 
     private void Start()
     {
@@ -63,21 +57,21 @@ public class ClimbOn : Interactable
             if (man.interact && !teleportedMan)
             {
                 float distance = Vector3.Distance(man.gameObject.transform.position, climbBegin[0].position);
-                man.animationPlaying = true;
-                man.transform.position = Vector3.MoveTowards(man.transform.position, climbBegin[0].position, walkToBeginSpeed);
-                man.playerObject.transform.eulerAngles = climbBegin[0].eulerAngles;
 
                 if (distance <= distanceToClimb)
                 {
+                    man.walking = false;
                     man.SetAnimation("isClimbing", true);
                     man.SetanimationBoolFalse("isClimbing", climbAnimationTime);
                     teleportedMan = true;
-                    //StartCoroutine(ClimbTime(true));
+                    return;
                 }
-                else
-                {
-                    man.SetAnimation("isWalking", true);
-                }
+
+                man.animationPlaying = true;
+                man.walking = true;
+                man.SetAnimation("isWalking", true);
+                man.transform.position = Vector3.MoveTowards(man.transform.position, climbBegin[0].position, walkToBeginSpeed);
+                man.playerObject.transform.eulerAngles = climbBegin[0].eulerAngles;
             }
         }
 
@@ -88,10 +82,10 @@ public class ClimbOn : Interactable
             if(currentAnimTimeMan <= 0)
             {
                 man.transform.position = climbEnd[0].position;
+                man.SetAnimation("isClimbing", false);
             }
         }
     }
-
 
     private void InputWoman()
     {
@@ -100,20 +94,22 @@ public class ClimbOn : Interactable
             if (woman.interact && !teleportedWoman)
             {
                 float distance = Vector3.Distance(woman.gameObject.transform.position, climbBegin[1].position);
-                woman.animationPlaying = true;
-                woman.transform.position = Vector3.MoveTowards(woman.transform.position, climbBegin[1].position, walkToBeginSpeed);
-                woman.playerObject.transform.eulerAngles = climbBegin[1].eulerAngles;
 
                 if (distance <= distanceToClimb)
                 {
+                    woman.walking = false;
                     woman.SetAnimation("isClimbing", true);
                     woman.SetanimationBoolFalse("isClimbing", climbAnimationTime);
                     teleportedWoman = true;
+                    return;
                 }
-                else
-                {
-                    woman.SetAnimation("isWalking", true);
-                }
+
+                woman.animationPlaying = true;
+                woman.walking = true;
+                woman.SetAnimation("isWalking", true);
+                woman.transform.position = Vector3.MoveTowards(woman.transform.position, climbBegin[1].position, walkToBeginSpeed);
+                woman.playerObject.transform.eulerAngles = climbBegin[1].eulerAngles;
+
             }
         }
 
@@ -124,6 +120,7 @@ public class ClimbOn : Interactable
             if (currentAnimTimeWoman <= 0)
             {
                 woman.transform.position = climbEnd[1].position;
+                woman.SetAnimation("isClimbing", false);
             }
         }
     }

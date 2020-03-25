@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public bool deinteract;
     public bool funInteract;
     public bool animationPlaying;
+    [HideInInspector] public bool walking = false;
     public float inputX { get; set; }
     public float inputZ { get; set; }
     public GameObject playerObject;
@@ -51,7 +52,7 @@ public class Player : MonoBehaviour
 
         currentMovementSpeed = movementSpeed;
 
-        walkingInstance = FMODUnity.RuntimeManager.CreateInstance(walkingEvent);
+        //walkingInstance = FMODUnity.RuntimeManager.CreateInstance(walkingEvent);
     }
     public virtual void Update()
     {
@@ -67,10 +68,15 @@ public class Player : MonoBehaviour
         inputX = x_input;
         inputZ = z_input;
 
+
         if (animationPlaying)
         {
             rb.isKinematic = true;
-            SetAnimation("isWalking", false);
+            if (!walking)
+            {
+                SetAnimation("isWalking", false);
+            }
+
             GetComponent<FMODUnity.StudioEventEmitter>().Stop();
             return;
         }

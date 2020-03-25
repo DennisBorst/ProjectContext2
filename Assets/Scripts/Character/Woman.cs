@@ -8,7 +8,7 @@ public class Woman : Player
     public override void Start()
     {
         base.Start();
-        if (CheckPointManager.Instance.thisEnabled)
+        if (CheckPointManager.Instance != null)
         {
             cpm = CheckPointManager.Instance.lastCheckPoint;
             this.transform.position = new Vector3(cpm.x, cpm.y, cpm.z - 0.5f);
