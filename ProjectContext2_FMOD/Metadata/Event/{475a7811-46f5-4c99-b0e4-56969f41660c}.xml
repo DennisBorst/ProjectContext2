@@ -253,10 +253,10 @@
             <value>5.5</value>
         </property>
         <property name="minimumTimeBetweenSounds">
-            <value>8500</value>
+            <value>4500</value>
         </property>
         <property name="maximumTimeBetweenSounds">
-            <value>15000</value>
+            <value>7150</value>
         </property>
         <property name="minimumScatterDistance">
             <value>90</value>
@@ -264,13 +264,16 @@
         <property name="maximumScatterDistance">
             <value>150</value>
         </property>
+        <relationship name="modulators">
+            <destination>{78437fd3-b9f2-4433-8f7c-20438457b3f8}</destination>
+        </relationship>
         <relationship name="sound">
             <destination>{311eeb0a-7d64-4429-9aeb-a8160a80bfa5}</destination>
         </relationship>
     </object>
     <object class="EventMixerGroup" id="{0189c861-85b6-44aa-96c9-74b46eb7a042}">
         <property name="volume">
-            <value>2</value>
+            <value>10</value>
         </property>
         <property name="overridingInputFormat">
             <value>1</value>
@@ -302,10 +305,10 @@
             <value>8.5</value>
         </property>
         <property name="minimumTimeBetweenSounds">
-            <value>11000</value>
+            <value>8000</value>
         </property>
         <property name="maximumTimeBetweenSounds">
-            <value>20000</value>
+            <value>10000</value>
         </property>
         <property name="minimumScatterDistance">
             <value>100</value>
@@ -319,7 +322,7 @@
     </object>
     <object class="EventMixerGroup" id="{7f92a469-bf3d-4ad7-8dc6-3ba5140cf41d}">
         <property name="volume">
-            <value>2.5</value>
+            <value>10</value>
         </property>
         <property name="overridingInputFormat">
             <value>1</value>
@@ -416,6 +419,14 @@
         </property>
         <property name="outputFormatOverridden">
             <value>true</value>
+        </property>
+    </object>
+    <object class="RandomizerModulator" id="{78437fd3-b9f2-4433-8f7c-20438457b3f8}">
+        <property name="nameOfPropertyBeingModulated">
+            <value>pitch</value>
+        </property>
+        <property name="amount">
+            <value>2.5</value>
         </property>
     </object>
     <object class="MultiSound" id="{311eeb0a-7d64-4429-9aeb-a8160a80bfa5}">
