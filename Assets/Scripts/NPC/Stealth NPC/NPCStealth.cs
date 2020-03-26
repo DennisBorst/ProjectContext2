@@ -31,7 +31,6 @@ public class NPCStealth : Interactable
     public string dialogueTextMan;
     public string dialogueTextWoman;
     public TextMeshProUGUI dialogueUI;
-    public GameObject npcObject;
     public GameObject angryItem;
     public GameObject dialogueCanvas;
     public FSM fsm;
