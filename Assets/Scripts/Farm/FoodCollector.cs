@@ -9,6 +9,7 @@ public class FoodCollector : Interactable
     [SerializeField] private float timeToCinematic;
     [SerializeField] private Animator anim;
     [SerializeField] private GameObject particles;
+    [SerializeField] private GameObject disableParticle;
     [SerializeField] private GameObject cinematic;
     [SerializeField] private GameObject[] cornObjects;
 
@@ -86,6 +87,7 @@ public class FoodCollector : Interactable
     private void EndLevel()
     {
         particles.SetActive(true);
+        disableParticle.SetActive(false);
 
         if (manCollding && womanCollding)
         {

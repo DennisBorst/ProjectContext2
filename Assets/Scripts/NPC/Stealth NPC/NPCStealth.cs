@@ -31,7 +31,6 @@ public class NPCStealth : Interactable
     public string dialogueTextMan;
     public string dialogueTextWoman;
     public TextMeshProUGUI dialogueUI;
-    public GameObject angryItem;
     public GameObject dialogueCanvas;
     public FSM fsm;
     public BlackBoard blackBoard = new BlackBoard();
@@ -54,7 +53,6 @@ public class NPCStealth : Interactable
         blackBoard.players = visibleTargets;
         blackBoard.navMeshAgent = GetComponent<NavMeshAgent>();
         blackBoard.npcStealth = this;
-        angryItem.SetActive(false);
 
         anim = GetComponentInChildren<Animator>();
 
