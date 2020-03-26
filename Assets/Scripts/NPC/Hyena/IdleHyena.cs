@@ -6,7 +6,7 @@ public class IdleHyena : State
 {
     private float distToPlayer;
     private float distToBegin;
-    private float scareTime = 0.3f;
+    private float scareTime = 0.15f;
     private bool setPosition = false;
     private bool scared = false;
     private bool scareAnimActivated;

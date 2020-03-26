@@ -28,7 +28,7 @@ public class Torch : Interactable
             //torchSound.GetComponent<FMODUnity.StudioEventEmitter>().Play();
             woman.animationPlaying = true;
             woman.SetAnimation("isAttacking", true);
-            StartCoroutine(woman.SetanimationBoolFalse("isAttacking", 2.4f));
+            StartCoroutine(woman.SetanimationBoolFalse("isAttacking", 1.6f));
         }
     }
 }

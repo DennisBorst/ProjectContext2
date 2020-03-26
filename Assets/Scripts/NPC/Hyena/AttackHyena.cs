@@ -31,6 +31,7 @@ public class AttackHyena : State
         if(distanceToPlayer <= blackBoard.hyena.attackDistance)
         {
             Debug.Log("Game Over");
+            GameManager.Instance.Reload(1);
         }
 
         if (blackBoard.playerScripts[1].interact)
