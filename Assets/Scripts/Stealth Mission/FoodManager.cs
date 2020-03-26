@@ -46,6 +46,8 @@ public class FoodManager : MonoBehaviour
                 objectsToSetActive[i].SetActive(true);
             }
 
+            GetComponent<FMODUnity.StudioEventEmitter>().Play();
+
             this.enabled = false;
         }
     }
