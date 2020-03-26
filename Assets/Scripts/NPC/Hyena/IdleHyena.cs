@@ -40,12 +40,12 @@ public class IdleHyena : State
                 scareTime = Timer(scareTime);
                 if(scareTime > 0)
                 {
-                    blackBoard.hyena.fmod.Play();
                     blackBoard.hyena.SetAnimation("isRunning", true);
                     return;
                 }
 
                 scareAnimActivated = true;
+                blackBoard.hyena.fmod.Play();
                 blackBoard.hyena.SetAnimation("bounceBack", true);
                 blackBoard.hyena.StartCoroutine(blackBoard.hyena.SetanimationBoolFalse("bounceBack", 1.1f));
             }

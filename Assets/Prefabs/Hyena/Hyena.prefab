@@ -1,5 +1,28 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &6188740208145699166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116115979411280756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Environment/HyenaSnarl
+  PlayEvent: 1
+  StopEvent: 2
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &5751585534407375705
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,6 +36,7 @@ GameObject:
   - component: {fileID: 5751585534407375707}
   - component: {fileID: 5751585534407375686}
   - component: {fileID: 5751585534407375706}
+  - component: {fileID: 1072855766061356465}
   m_Layer: 0
   m_Name: Hyena
   m_TagString: Untagged
@@ -107,7 +131,31 @@ MonoBehaviour:
   players:
   - {fileID: 0}
   - {fileID: 0}
+  fmod: {fileID: 0}
   startState: 0
+--- !u!114 &1072855766061356465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5751585534407375705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Environment/HyenaHurt
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 1
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &5751585534848816780
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,6 +515,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3751e3809e528014b8bae256b121cfd3, type: 3}
+--- !u!1 &116115979411280756 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8900242497179361011, guid: 3751e3809e528014b8bae256b121cfd3,
+    type: 3}
+  m_PrefabInstance: {fileID: 8797928912198323591}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4019426412906193255 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5611303431284255968, guid: 3751e3809e528014b8bae256b121cfd3,

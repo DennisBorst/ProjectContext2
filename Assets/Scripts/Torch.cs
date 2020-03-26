@@ -25,7 +25,7 @@ public class Torch : Interactable
 
         if (Input.GetKeyDown(KeyCode.Joystick2Button0) && !woman.animationPlaying)
         {
-            //torchSound.GetComponent<FMODUnity.StudioEventEmitter>().Play();
+            torchSound.GetComponent<FMODUnity.StudioEventEmitter>().Play();
             woman.animationPlaying = true;
             woman.SetAnimation("isAttacking", true);
             StartCoroutine(woman.SetanimationBoolFalse("isAttacking", 1.6f));
