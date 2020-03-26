@@ -433,8 +433,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5089726616946185809}
-  m_LocalRotation: {x: 0.102361806, y: -0.8146135, z: 0.15149009, w: 0.55043405}
-  m_LocalPosition: {x: -59.667942, y: 9.202522, z: 1.46978}
+  m_LocalRotation: {x: 0.5000001, y: -0, z: -0, w: 0.8660253}
+  m_LocalPosition: {x: 6.040001, y: 32.982002, z: -70.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5089726617751352290}
@@ -463,9 +463,9 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
+  near clip plane: 0.1
+  far clip plane: 5000
+  field of view: 40
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -732,6 +732,7 @@ MonoBehaviour:
   deinteract: 0
   funInteract: 0
   animationPlaying: 0
+  walking: 0
   playerObject: {fileID: 5089726617669670950}
   camera: {fileID: 5089726616946185811}
   walkingSounds:
@@ -956,6 +957,7 @@ MonoBehaviour:
   deinteract: 0
   funInteract: 0
   animationPlaying: 0
+  walking: 0
   playerObject: {fileID: 5089726616910967746}
   camera: {fileID: 5089726616946185811}
   walkingSounds:
