@@ -40,6 +40,7 @@ public class IdleHyena : State
                 scareTime = Timer(scareTime);
                 if(scareTime > 0)
                 {
+                    blackBoard.hyena.fmod.Play();
                     blackBoard.hyena.SetAnimation("isRunning", true);
                     return;
                 }

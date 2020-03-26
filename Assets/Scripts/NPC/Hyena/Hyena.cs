@@ -11,6 +11,7 @@ public class Hyena : MonoBehaviour
     public float distanceFromPlayer;
     public float attackDistance;
     public Player[] players;
+    [HideInInspector] public FMODUnity.StudioEventEmitter fmod;
 
     public StateEnum startState;
     public FSM fsm;
@@ -19,13 +20,13 @@ public class Hyena : MonoBehaviour
     //private
     private Animator anim;
 
-
     void Start()
     {
         blackBoard.playerScripts = players;
         blackBoard.hyena = this;
         blackBoard.navMeshAgent = GetComponent<NavMeshAgent>();
         anim = GetComponentInChildren<Animator>();
+        fmod = GetComponent<FMODUnity.StudioEventEmitter>();
 
         fsm = new FSM(blackBoard, startState,
             new IdleHyena(StateEnum.Idle),
