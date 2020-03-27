@@ -11,7 +11,8 @@ public class DialogueNPC : Interactable
     [SerializeField] private GameObject canvasDialogue;
     [SerializeField] private GameObject npcObject;
     [SerializeField] private Camera mainCamera;
-    
+    [SerializeField] private TextMeshProUGUI dialogueTextUI;
+
     //private
     private float damping = 5f;
     private int currentTextNumber;
@@ -19,7 +20,6 @@ public class DialogueNPC : Interactable
     private bool interactingWoman;
     private bool womanInRange;
     private Vector3 lookPos;
-    private TextMeshProUGUI dialogueTextUI;
     private Player manScript;
     private Player womanScript;
     private Player talkingPlayer;
@@ -27,8 +27,6 @@ public class DialogueNPC : Interactable
 
     private void Start()
     {
-        dialogueTextUI = canvasDialogue.GetComponentInChildren<TextMeshProUGUI>();
-
         canvasDialogue.SetActive(false);
         dialogueTextUI.text = "";
         currentTextNumber = 0;

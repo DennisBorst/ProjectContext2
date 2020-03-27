@@ -19,14 +19,15 @@ public class ChaseState : State
     {
         base.OnEnter(blackBoard);
         blackBoard.navMeshAgent.speed = blackBoard.npcStealth.chaseSpeed;
+        blackBoard.npcStealth.exclamtionMark.SetActive(true);
         currentOutOfSightTime = outOfSightTimer;
     }
     public override void OnExit()
     {
-
     }
     public override void OnUpdate()
     {
+        /*
         if (!blackBoard.npcStealth.following)
         {
             distToLastPlayerPos = Mathf.Abs(Vector3.Distance(blackBoard.npcStealth.transform.position, lastPlayerPosition));
@@ -37,6 +38,7 @@ public class ChaseState : State
             }
             return;
         }
+        */
         Debug.Log(currentOutOfSightTime);
 
         blackBoard.npcStealth.SetAnimation("isRunning", true);
@@ -76,8 +78,10 @@ public class ChaseState : State
         if (currentOutOfSightTime <= 0)
         {
             blackBoard.npcStealth.following = false;
-            lastPlayerPosition = blackBoard.players[0].transform.position;
-            blackBoard.navMeshAgent.destination = lastPlayerPosition;
+            blackBoard.npcStealth.exclamtionMark.SetActive(false);
+            fsm.SwitchState(StateEnum.Idle);
+            //lastPlayerPosition = blackBoard.players[0].transform.position;
+            //blackBoard.navMeshAgent.destination = lastPlayerPosition;
         }
     }
 

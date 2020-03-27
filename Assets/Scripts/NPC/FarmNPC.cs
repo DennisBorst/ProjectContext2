@@ -16,6 +16,7 @@ public class FarmNPC : Interactable
     [SerializeField] private GameObject cinematic;
     [SerializeField] private Animator anim;
     [SerializeField] private Camera mainCamera;
+    [SerializeField] private TextMeshProUGUI dialogueTextUI;
 
     //private
     private float damping = 5f;
@@ -24,7 +25,6 @@ public class FarmNPC : Interactable
     private bool interactingWoman;
     private bool done;
     private Vector3 lookPos;
-    private TextMeshProUGUI dialogueTextUI;
     private Player manScript;
     private Player womanScript;
     private Player talkingPlayer;
@@ -33,7 +33,6 @@ public class FarmNPC : Interactable
 
     private void Start()
     {
-        dialogueTextUI = canvasDialogue.GetComponentInChildren<TextMeshProUGUI>();
         animNPC = GetComponentInChildren<Animator>();
 
         canvasDialogue.SetActive(false);

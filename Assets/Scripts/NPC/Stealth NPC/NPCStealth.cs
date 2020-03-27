@@ -32,6 +32,7 @@ public class NPCStealth : Interactable
     public string dialogueTextWoman;
     public TextMeshProUGUI dialogueUI;
     public GameObject dialogueCanvas;
+    public GameObject exclamtionMark;
     public FSM fsm;
     public BlackBoard blackBoard = new BlackBoard();
 
@@ -55,6 +56,8 @@ public class NPCStealth : Interactable
         blackBoard.npcStealth = this;
 
         anim = GetComponentInChildren<Animator>();
+        dialogueCanvas.SetActive(false);
+        exclamtionMark.SetActive(false);
 
         fsm = new FSM(blackBoard, startState, 
             new IdleState(StateEnum.Idle), 
