@@ -1,25 +1,44 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ObtainedPlants : MonoBehaviour
 {
     public int amountOfPlantToCollect;
     public int currentPlantCollected { get; set; }
 
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameObject tutorialObject;
+    [SerializeField] private GameObject womanInteractParticle;
+    [SerializeField] private TextMeshProUGUI woodText;
 
-    void Update()
+    private bool tutorialAlreadyActivated = false;
+
+    public void Start()
     {
-        
+        tutorialObject.SetActive(false);
     }
 
     public void AddPlantNumber()
     {
         currentPlantCollected++;
+        woodText.text = currentPlantCollected + "/" + amountOfPlantToCollect;
+
+        if(currentPlantCollected == amountOfPlantToCollect && !tutorialAlreadyActivated)
+        {
+            tutorialAlreadyActivated = true;
+            tutorialObject.SetActive(true);
+        }
+
+        if (currentPlantCollected == amountOfPlantToCollect)
+        {
+            womanInteractParticle.SetActive(true);
+        }
+    }
+
+    public void UpdateUI()
+    {
+        woodText.text = currentPlantCollected + "/" + amountOfPlantToCollect;
     }
 
     #region Singleton

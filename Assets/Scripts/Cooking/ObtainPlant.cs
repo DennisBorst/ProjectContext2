@@ -16,7 +16,8 @@ public class ObtainPlant : Interactable
                 return;
             }
 
-            ObtainedPlants.Instance.currentPlantCollected++;
+            //ObtainedPlants.Instance.currentPlantCollected++;
+            ObtainedPlants.Instance.AddPlantNumber();
             collected = true;
 
             woman.animationPlaying = true;

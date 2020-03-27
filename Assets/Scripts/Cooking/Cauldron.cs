@@ -11,6 +11,10 @@ public class Cauldron : Interactable
     [SerializeField] private bool manCanInteract;
     [SerializeField] private Vector2 startDirection;
     [SerializeField] private GameObject potObject;
+    [SerializeField] private GameObject logs;
+    [SerializeField] private GameObject manParticle;
+    [SerializeField] private GameObject womanParticle;
+    [SerializeField] private GameObject uiLog;
     [SerializeField] private Slider slider;
 
     //private
@@ -22,16 +26,18 @@ public class Cauldron : Interactable
     private Vector2 directionCount;
     private Vector3 lookPos;
 
+
     private void Start()
     {
         directionCount = startDirection;
         slider.maxValue = amountOfRoundsToTurn;
+        logs.SetActive(false);
+        manParticle.SetActive(false);
 
         if (womanCanInteract)
         {
             player = woman;
         }
-
     }
 
     private void Update()
@@ -39,16 +45,23 @@ public class Cauldron : Interactable
         if (!ingredientsAdded)
         {
             Debug.Log("Not enough ingredients");
+            logs.SetActive(false);
 
             if (womanCollding && woman.interact && ObtainedPlants.Instance.currentPlantCollected == ObtainedPlants.Instance.amountOfPlantToCollect)
             {
                 ingredientsAdded = true;
                 ObtainedPlants.Instance.currentPlantCollected = 0;
+                ObtainedPlants.Instance.UpdateUI();
+                womanParticle.SetActive(false);
 
                 //woman.SetAnimation("isHarvestingPlant", true);
                 //StartCoroutine(woman.SetanimationBoolFalse("isHarvestingPlant", 1.5f));
             }
             return;
+        }
+        else
+        {
+            logs.SetActive(true);
         }
 
         if (womanCanInteract)
@@ -57,7 +70,7 @@ public class Cauldron : Interactable
             CheckInput();
         }
 
-        if (!womanCanInteract)
+        if (!womanCanInteract && ingredientsAdded)
         {
             colliding = manCollding;
             CheckInput();
@@ -68,9 +81,16 @@ public class Cauldron : Interactable
     {
         if (colliding && !occupied)
         {
-            if (player.interact)
+            if (player == man)
             {
                 occupied = true;
+                manParticle.SetActive(true);
+                uiLog.SetActive(false);
+            }
+            else if (player.interact)
+            {
+                occupied = true;
+                womanParticle.SetActive(false);
                 player.animationPlaying = true;
                 player.SetAnimation("isWalking", false);
             }
@@ -78,7 +98,7 @@ public class Cauldron : Interactable
 
         if (occupied)
         {
-            if(player.deinteract)
+            if(player.deinteract && player != man)
             {
                 occupied = false;
                 player.animationPlaying = false;
@@ -130,6 +150,9 @@ public class Cauldron : Interactable
                 occupied = false;
                 womanCanInteract = false;
                 player.animationPlaying = false;
+                player.SetAnimation("isCooking", false);
+                womanParticle.SetActive(false);
+
                 player = man;
                 currentRound = 0;
                 slider.value = 0;
@@ -139,7 +162,7 @@ public class Cauldron : Interactable
 
             if(currentRound >= amountOfRoundsToTurn && player == man)
             {
-
+                GameManager.Instance.LoadNextLevelFade();
             }
         }
     }

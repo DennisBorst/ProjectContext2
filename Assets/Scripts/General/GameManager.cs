@@ -29,6 +29,12 @@ public class GameManager : MonoBehaviour
     {
         StartCoroutine(LoadNextLevelDelay());
     }
+
+    public void LoadNextLevelFade()
+    {
+        fadeOutAnim.SetTrigger("FadeOut");
+        StartCoroutine(LoadNextLevelDelay());
+    }
     public void Quit()
     {
         Application.Quit();
