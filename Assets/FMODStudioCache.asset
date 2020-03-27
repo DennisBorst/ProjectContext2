@@ -228,11 +228,11 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -4191179721943568093}
-  - {fileID: -163340679810418813}
+  - {fileID: 1266364062499440687}
+  - {fileID: 446514633481596556}
   MinDistance: 0
   MaxDistance: 0
-  Length: 221137
+  Length: 181137
 --- !u!114 &-8834187033899831397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,8 +461,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -4941071707046872922}
-  - {fileID: 1903067912006003085}
+  - {fileID: 5351839710309535348}
+  - {fileID: -4165679304437474969}
   MinDistance: 0
   MaxDistance: 0
   Length: 147000
@@ -798,7 +798,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: E:\Game Design\Unity\ProjectContext2\ProjectContext2_FMOD\Build\Desktop\Master
     Bank.bank
-  lastModified: 637209184746497788
+  lastModified: 637209222771268980
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -1135,8 +1135,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 3724194262181346120}
-  - {fileID: -8198785326635738830}
+  - {fileID: 574892222352405010}
+  - {fileID: 4812521588345577234}
   MinDistance: 0
   MaxDistance: 0
   Length: 147000
@@ -2060,9 +2060,9 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -7289283176969203475}
-  - {fileID: -1936488591849828218}
-  - {fileID: 349056247773863216}
+  - {fileID: 8169328722612378193}
+  - {fileID: -5023092805676491429}
+  - {fileID: 2756183776340758360}
   MinDistance: 0
   MaxDistance: 0
   Length: 147000
@@ -2477,6 +2477,22 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
+--- !u!114 &-5636389910340192576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: LeftRight
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &-5595809351089076690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2843,6 +2859,22 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &-5023092805676491429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: MusicOff
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &-5009635409089876388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2989,7 +3021,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -5100506647542365014}
+  - {fileID: -4774175752813579272}
   MinDistance: 1
   MaxDistance: 20
   Length: 350
@@ -3072,6 +3104,22 @@ MonoBehaviour:
   Name: HyenaON
   Min: 0
   Max: 1
+  Default: 0
+--- !u!114 &-4774175752813579272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FS_Surface
+  Min: 0
+  Max: 2
   Default: 0
 --- !u!114 &-4751124657768893154
 MonoBehaviour:
@@ -3408,6 +3456,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: BoyMusic
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &-4165679304437474969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: GirlMusic
   Min: 0
   Max: 1
   Default: 0
@@ -3853,7 +3917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: ProjectContext2_FMOD\Build\Desktop\Master Bank.strings.bank
-  lastModified: 637209184746667332
+  lastModified: 637209222771458515
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -4210,6 +4274,22 @@ MonoBehaviour:
   Name: BoyMusic
   Min: 0
   Max: 1
+  Default: 0
+--- !u!114 &-2886300397105889590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FS_Surface
+  Min: 0
+  Max: 2
   Default: 0
 --- !u!114 &-2869341347355539847
 MonoBehaviour:
@@ -5919,6 +5999,22 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &-807381059268251189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: GirlMusic
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &-756423499852672287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6000,6 +6096,22 @@ MonoBehaviour:
   Max: 1
   Default: 0
 --- !u!114 &-635577969531560539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: HyenaON
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &-620234659989504817
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6484,7 +6596,7 @@ MonoBehaviour:
   - {fileID: -7486698090931680031}
   MasterBankRef: {fileID: -7968210452566139487}
   StringsBankRef: {fileID: -3492375777637848666}
-  stringsBankWriteTime: 637209184746667332
+  stringsBankWriteTime: 637209222771458515
   cacheVersion: 2
 --- !u!114 &75994169500685176
 MonoBehaviour:
@@ -6742,6 +6854,22 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &446514633481596556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: GirlMusic
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &482014478147760599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6775,6 +6903,22 @@ MonoBehaviour:
   Max: 1
   Default: 0
 --- !u!114 &569982439356593341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: GirlMusic
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &574892222352405010
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7231,6 +7375,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: GirlMusic
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &1266364062499440687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: BoyMusic
   Min: 0
   Max: 1
   Default: 0
@@ -8242,6 +8402,22 @@ MonoBehaviour:
   Name: FS_Surface
   Min: 0
   Max: 2
+  Default: 0
+--- !u!114 &2756183776340758360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: GirlMusic
+  Min: 0
+  Max: 1
   Default: 0
 --- !u!114 &2803544387387276488
 MonoBehaviour:
@@ -9859,6 +10035,22 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 34446
+--- !u!114 &4812521588345577234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: BoyMusic
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &4822347926859247867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10270,6 +10462,22 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &5351839710309535348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: BoyMusic
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &5404587352169570011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10432,7 +10640,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -4787453894807961941}
+  - {fileID: -620234659989504817}
   MinDistance: 0
   MaxDistance: 0
   Length: 373968
@@ -10499,6 +10707,22 @@ MonoBehaviour:
   Name: FS_Surface
   Min: 0
   Max: 2
+  Default: 0
+--- !u!114 &5634930737249724377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: BoyMusic
+  Min: 0
+  Max: 1
   Default: 0
 --- !u!114 &5683545248683860861
 MonoBehaviour:
@@ -10852,8 +11076,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 4241519473117587485}
-  - {fileID: -2632262502647031674}
+  - {fileID: -807381059268251189}
+  - {fileID: 5634930737249724377}
   MinDistance: 0
   MaxDistance: 0
   Length: 147000
@@ -11035,7 +11259,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 5601730731885597219}
+  - {fileID: -2886300397105889590}
   MinDistance: 10
   MaxDistance: 20
   Length: 350
@@ -11990,6 +12214,22 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &8169328722612378193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: BoyMusic
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &8231653050076950051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12154,7 +12394,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 1567435759953858973}
+  - {fileID: -5636389910340192576}
   MinDistance: 1
   MaxDistance: 100
   Length: 6454

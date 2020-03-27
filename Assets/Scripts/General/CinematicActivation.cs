@@ -12,11 +12,14 @@ public class CinematicActivation : MonoBehaviour
     [SerializeField] private GameObject[] objectsToDisableForEver;
     [SerializeField] private GameObject[] activateObject;
 
+    //FMOD
+    [SerializeField] private GameObject[] fmodDisableEvents;
+    [SerializeField] private GameObject fmodAmbientMusicEvent;
+
     //private
     private float currentCinematicTimer;
 
-    //FMOD
-    [SerializeField] private GameObject[] fmodDisableEvents;
+
 
 
     // Start is called before the first frame update
@@ -67,6 +70,10 @@ public class CinematicActivation : MonoBehaviour
                 if(CheckPointManager.Instance != null)
                 {
                     Destroy(CheckPointManager.Instance.gameObject);
+                }
+                if (fmodAmbientMusicEvent != null)
+                {
+                    fmodAmbientMusicEvent.GetComponent<FMODUnity.StudioEventEmitter>().Stop();
                 }
                 GameManager.Instance.LoadNextLevel();
                 return;
