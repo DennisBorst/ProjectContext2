@@ -180,8 +180,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -3880501404905199385}
-  - {fileID: -7774217998092835786}
+  - {fileID: -6359162064055984198}
+  - {fileID: 4397442681770461913}
   MinDistance: 0
   MaxDistance: 0
   Length: 221137
@@ -381,11 +381,27 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 9129278700810880043}
-  - {fileID: -9017340755718549766}
+  - {fileID: -7147586130020552276}
+  - {fileID: 769336949556212720}
   MinDistance: 0
   MaxDistance: 0
   Length: 147000
+--- !u!114 &-8448438598556133762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: LeftRight
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &-8409490470835548224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -654,7 +670,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: E:\Game Design\Unity\ProjectContext2\ProjectContext2_FMOD\Build\Desktop\Master
     Bank.bank
-  lastModified: 637208608350897306
+  lastModified: 637208681493143820
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -1010,6 +1026,22 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 100
   Length: 1500
+--- !u!114 &-7147586130020552276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: BoyMusic
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &-7140497653640604817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1523,12 +1555,28 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -1288556858670081554}
-  - {fileID: -8504423570475006218}
-  - {fileID: -2081634467803783282}
+  - {fileID: -5346362089478829177}
+  - {fileID: 3737972636596810530}
+  - {fileID: -1741538749509679793}
   MinDistance: 0
   MaxDistance: 0
   Length: 147000
+--- !u!114 &-6359162064055984198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: BoyMusic
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &-6268889905261239619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1979,6 +2027,22 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &-5346362089478829177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: BoyMusic
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &-5339441582751753363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1994,6 +2058,22 @@ MonoBehaviour:
   Name: FS_Surface
   Min: 0
   Max: 2
+  Default: 0
+--- !u!114 &-5320874668608660795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: GirlMusic
+  Min: 0
+  Max: 1
   Default: 0
 --- !u!114 &-5302891384307841057
 MonoBehaviour:
@@ -2212,7 +2292,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 3026485199536965122}
+  - {fileID: 1806383730470684044}
   MinDistance: 1
   MaxDistance: 20
   Length: 350
@@ -2868,7 +2948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: ProjectContext2_FMOD\Build\Desktop\Master Bank.strings.bank
-  lastModified: 637208608351008858
+  lastModified: 637208681493362993
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -3131,6 +3211,22 @@ MonoBehaviour:
   Max: 1
   Default: 0
 --- !u!114 &-2915727582281565739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: BoyMusic
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &-2869341347355539847
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3716,6 +3812,22 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 5533
+--- !u!114 &-1741538749509679793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: GirlMusic
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &-1648608089589418630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4778,7 +4890,7 @@ MonoBehaviour:
   - {fileID: -2247976038313894153}
   MasterBankRef: {fileID: -7968210452566139487}
   StringsBankRef: {fileID: -3492375777637848666}
-  stringsBankWriteTime: 637208608351008858
+  stringsBankWriteTime: 637208681493362993
   cacheVersion: 2
 --- !u!114 &141631985304475521
 MonoBehaviour:
@@ -4964,6 +5076,22 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 5533
 --- !u!114 &749683290726633410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: GirlMusic
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &769336949556212720
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5208,6 +5336,22 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 20468
+--- !u!114 &1132320663361882680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: HyenaON
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &1144854663411752521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5540,6 +5684,22 @@ MonoBehaviour:
   Max: 1
   Default: 0
 --- !u!114 &1794132380803292991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FS_Surface
+  Min: 0
+  Max: 2
+  Default: 0
+--- !u!114 &1806383730470684044
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6592,6 +6752,22 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 105657
+--- !u!114 &3737972636596810530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: MusicOff
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &3747014693916776566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7003,6 +7179,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: LeftRight
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &4397442681770461913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: GirlMusic
   Min: 0
   Max: 1
   Default: 0
@@ -7654,7 +7846,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -4994717534773803398}
+  - {fileID: 1132320663361882680}
   MinDistance: 0
   MaxDistance: 0
   Length: 373968
@@ -7914,8 +8106,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 2215758587283007408}
-  - {fileID: 1916850935067941609}
+  - {fileID: -5320874668608660795}
+  - {fileID: -2869341347355539847}
   MinDistance: 0
   MaxDistance: 0
   Length: 147000
@@ -8081,7 +8273,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 1794132380803292991}
+  - {fileID: 7910136589067930118}
   MinDistance: 10
   MaxDistance: 20
   Length: 350
@@ -8725,6 +8917,22 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &7910136589067930118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FS_Surface
+  Min: 0
+  Max: 2
+  Default: 0
 --- !u!114 &7931720391920206034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8928,7 +9136,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -5505377510612018201}
+  - {fileID: -8448438598556133762}
   MinDistance: 1
   MaxDistance: 100
   Length: 6454
