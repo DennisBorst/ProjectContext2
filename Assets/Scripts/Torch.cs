@@ -19,8 +19,7 @@ public class Torch : Interactable
         if (!activated)
         {
             activated = true;
-            woman.SetAnimation("gotTorch", true);
-            StartCoroutine(woman.SetanimationBoolFalse("gotTorch", 2.2f));
+            //StartCoroutine(woman.SetanimationBoolFalse("gotTorch", 0.5f));
         }
 
         if (Input.GetKeyDown(KeyCode.Joystick2Button0) && !woman.animationPlaying)

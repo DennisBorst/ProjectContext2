@@ -14,22 +14,24 @@ public class UIDisable : Interactable
 
     private void Update()
     {
-        if (manCollding)
+        if (manCanDisable)
         {
-            if (man.interact)
+            if (manCollding)
             {
-                if (manCanDisable)
+                if (man.interact)
                 {
                     actived = true;
                 }
             }
         }
-        if (womanCollding)
+
+        if (womanCanDisable)
         {
-            if (woman.interact)
+            if (womanCollding)
             {
-                if (womanCanDisable)
+                if (woman.interact)
                 {
+
                     actived = true;
                 }
             }

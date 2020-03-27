@@ -17,6 +17,8 @@ public class Cauldron : Interactable
     [SerializeField] private GameObject uiLog;
     [SerializeField] private Slider slider;
 
+    [SerializeField] private GameObject fmodVoiceOverEvent;
+
     //private
     private int currentRound;
     private bool occupied;
@@ -152,6 +154,7 @@ public class Cauldron : Interactable
                 player.animationPlaying = false;
                 player.SetAnimation("isCooking", false);
                 womanParticle.SetActive(false);
+                fmodVoiceOverEvent.GetComponent<FMODUnity.StudioEventEmitter>().Play();
 
                 player = man;
                 currentRound = 0;
