@@ -57,7 +57,7 @@ public class NPCStealth : Interactable
 
         anim = GetComponentInChildren<Animator>();
         dialogueCanvas.SetActive(false);
-        exclamtionMark.SetActive(false);
+        if(exclamtionMark != null) { exclamtionMark.SetActive(false); }
 
         fsm = new FSM(blackBoard, startState, 
             new IdleState(StateEnum.Idle), 
