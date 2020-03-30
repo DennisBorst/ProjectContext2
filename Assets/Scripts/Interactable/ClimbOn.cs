@@ -11,7 +11,7 @@ public class ClimbOn : Interactable
     [SerializeField] private Transform[] climbEnd;
 
     //private
-    private float climbAnimationTime = 4.183f;
+    private float climbAnimationTime = 3.137f;
     private float currentAnimTimeMan;
     private float currentAnimTimeWoman;
     private bool teleportedMan;

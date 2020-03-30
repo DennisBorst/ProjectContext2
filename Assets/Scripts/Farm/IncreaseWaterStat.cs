@@ -50,7 +50,7 @@ public class IncreaseWaterStat : Interactable
                     FMODUnity.RuntimeManager.PlayOneShot(getWaterEvent, transform.position);
 
                     woman.SetAnimation("getWater", true);
-                    StartCoroutine(woman.SetanimationBoolFalse("getWater", 6f));
+                    StartCoroutine(woman.SetanimationBoolFalse("getWater", 4f));
                 }
             }
         }

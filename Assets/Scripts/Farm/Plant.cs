@@ -152,7 +152,7 @@ public class Plant : Interactable
                         currentWaterTime = waterTimer;
                         farmStatsGirl.ChangeWaterNumber(-waterNeeded);
                         woman.SetAnimation("giveWater", true);
-                        StartCoroutine(woman.SetanimationBoolFalse("giveWater", 3.55f));
+                        StartCoroutine(woman.SetanimationBoolFalse("giveWater", 2.72f));
                         FMODUnity.RuntimeManager.PlayOneShot(WaterPlantEvent, transform.position);
                     }
                 }
