@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0.027965343, b: 0.11058053, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9926,6 +9926,8 @@ Transform:
   - {fileID: 996175602}
   - {fileID: 253116158}
   - {fileID: 424535610}
+  - {fileID: 473906017}
+  - {fileID: 1847349094}
   - {fileID: 1961931125}
   - {fileID: 15553377}
   - {fileID: 404380484}
@@ -9994,8 +9996,6 @@ Transform:
   - {fileID: 1080663899}
   - {fileID: 46736258}
   - {fileID: 1889536233}
-  - {fileID: 473906017}
-  - {fileID: 1847349094}
   - {fileID: 226482247}
   - {fileID: 1288464814}
   - {fileID: 991154989}
@@ -20393,20 +20393,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoomUnityTry (132)
       objectReference: {fileID: 0}
+    - target: {fileID: 6398926816843011717, guid: e64e033195ef0654897f5c5bce1e397e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7968793885913703574, guid: e64e033195ef0654897f5c5bce1e397e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.41
+      value: 11.9
       objectReference: {fileID: 0}
     - target: {fileID: 7968793885913703574, guid: e64e033195ef0654897f5c5bce1e397e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 35.56
+      value: 34.29
       objectReference: {fileID: 0}
     - target: {fileID: 7968793885913703574, guid: e64e033195ef0654897f5c5bce1e397e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -53.66
+      value: -55.7
       objectReference: {fileID: 0}
     - target: {fileID: 7968793885913703574, guid: e64e033195ef0654897f5c5bce1e397e,
         type: 3}
@@ -20431,7 +20436,7 @@ PrefabInstance:
     - target: {fileID: 7968793885913703574, guid: e64e033195ef0654897f5c5bce1e397e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 205
+      value: 122
       objectReference: {fileID: 0}
     - target: {fileID: 7968793885913703574, guid: e64e033195ef0654897f5c5bce1e397e,
         type: 3}
@@ -20451,17 +20456,17 @@ PrefabInstance:
     - target: {fileID: 7968793885913703574, guid: e64e033195ef0654897f5c5bce1e397e,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 34.408
+      value: 25.882044
       objectReference: {fileID: 0}
     - target: {fileID: 7968793885913703574, guid: e64e033195ef0654897f5c5bce1e397e,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 34.408
+      value: 25.882044
       objectReference: {fileID: 0}
     - target: {fileID: 7968793885913703574, guid: e64e033195ef0654897f5c5bce1e397e,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 34.408
+      value: 25.882044
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e64e033195ef0654897f5c5bce1e397e, type: 3}
@@ -20989,15 +20994,13 @@ MonoBehaviour:
   endCinematic: 0
   deActiveObject:
   - {fileID: 1031542279}
-  - {fileID: 0}
+  - {fileID: 1031542270}
   - {fileID: 1031542278}
   - {fileID: 1031542277}
   - {fileID: 837823663}
-  - {fileID: 1031542270}
   objectsToDisableForEver:
   - {fileID: 1031542276}
   - {fileID: 2123482183}
-  - {fileID: 1257994102}
   activateObject: []
   fmodDisableEvents: []
   fmodAmbientMusicEvent: {fileID: 0}
@@ -48455,6 +48458,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.87719727
       objectReference: {fileID: 0}
+    - target: {fileID: 3655906771626336640, guid: 043e2e0a0dfed47418ce6916294c6016,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.1764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655906771626336640, guid: 043e2e0a0dfed47418ce6916294c6016,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.1764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655906771626336640, guid: 043e2e0a0dfed47418ce6916294c6016,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.3137255
+      objectReference: {fileID: 0}
     - target: {fileID: 3803363873694435028, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -49275,6 +49293,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 46.297306
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831329947095724886, guid: 043e2e0a0dfed47418ce6916294c6016,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.1764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831329947095724886, guid: 043e2e0a0dfed47418ce6916294c6016,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.1764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831329947095724886, guid: 043e2e0a0dfed47418ce6916294c6016,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.3137255
       objectReference: {fileID: 0}
     - target: {fileID: 7145646231814880578, guid: 043e2e0a0dfed47418ce6916294c6016,
         type: 3}
@@ -59965,12 +59998,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98403dd25f55c2d448c5b63756540614, type: 3}
---- !u!1 &1257994102 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8296172668387238015, guid: 043e2e0a0dfed47418ce6916294c6016,
-    type: 3}
-  m_PrefabInstance: {fileID: 1031542266}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1258412334 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1193731008810893819, guid: 48bc474adeef8f34188e52954234bcb7,
@@ -88221,17 +88248,17 @@ PrefabInstance:
     - target: {fileID: 7968793885913703574, guid: e64e033195ef0654897f5c5bce1e397e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.05
+      value: -4.65
       objectReference: {fileID: 0}
     - target: {fileID: 7968793885913703574, guid: e64e033195ef0654897f5c5bce1e397e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 36.19
+      value: 37.51
       objectReference: {fileID: 0}
     - target: {fileID: 7968793885913703574, guid: e64e033195ef0654897f5c5bce1e397e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -44.08
+      value: -45.6
       objectReference: {fileID: 0}
     - target: {fileID: 7968793885913703574, guid: e64e033195ef0654897f5c5bce1e397e,
         type: 3}
@@ -88256,7 +88283,7 @@ PrefabInstance:
     - target: {fileID: 7968793885913703574, guid: e64e033195ef0654897f5c5bce1e397e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 206
+      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 7968793885913703574, guid: e64e033195ef0654897f5c5bce1e397e,
         type: 3}
