@@ -61,6 +61,7 @@ public class Elevator : Interactable
             man.SetAnimation("isPullingRope", false);
             man.SetAnimation("stopsInteracting", true);
             man.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+            GetComponent<FMODUnity.StudioEventEmitter>().Stop();
             man.ResetCharacter(1);
         }
 
@@ -69,12 +70,10 @@ public class Elevator : Interactable
             WaitForPulling();
             man.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             man.ResetCharacter(-1);
-
         }
         else
         {
             man.SetAnimation("isPullingRope", false);
-
         }
 
         //Animationsw

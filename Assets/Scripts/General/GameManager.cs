@@ -29,20 +29,37 @@ public class GameManager : MonoBehaviour
     {
         StartCoroutine(LoadNextLevelDelay());
     }
-
     public void LoadNextLevelFade()
     {
         fadeOutAnim.SetTrigger("FadeOut");
         StartCoroutine(LoadNextLevelDelay());
     }
-    public void Quit()
+    public void NextLevel()
     {
-        Application.Quit();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void LoadIndexLevel(int buildindex)
+    {
+        fadeOutAnim.SetTrigger("FadeOut");
+        StartCoroutine(LoadIndexLevelDelay(buildindex));
     }
     IEnumerator LoadNextLevelDelay()
     {
         yield return new WaitForSeconds(nextLevelDelay);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        NextLevel();
+    }
+
+    IEnumerator LoadIndexLevelDelay(int buildindex)
+    {
+        yield return new WaitForSeconds(nextLevelDelay);
+        SceneManager.LoadScene(buildindex);
+
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 
     #region Singleton
@@ -50,6 +67,8 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public static GameManager Instance

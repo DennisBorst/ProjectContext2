@@ -93,7 +93,10 @@ public class FoodCollector : Interactable
         {
             missionFinished = false;
             //GameManager.Instance.LoadNextLevel();
-            anim.SetTrigger("FadeOut");
+            if(anim != null)
+            {
+                anim.SetTrigger("FadeOut");
+            }
             StartCoroutine(WaitForCinematic());
         }
     }
